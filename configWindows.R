@@ -4,7 +4,7 @@ dir_data <- 'D:/Data/SMART'
 dir_dataA <- 'D:/Data/Disk Number'
 
 source('D:/Git/R_Function/Rfun.R')
-source(file.path(dir_code,'SMARTFunc.R'))
+# source(file.path(dir_code,'SMARTFunc.R'))
 
 require('caret')
 require('e1071')
