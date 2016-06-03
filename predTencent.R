@@ -1,13 +1,7 @@
 # Disk Failure Predict on Tencent's dataset
 rm(list = ls())
 #@@@ CONFIGURE @@@#
-source(file.path('D:/Git/SMART','SMARTConfig.R'))
-library(caret)
-library(e1071)
-
-#@@@ Function @@@#
-source('D:/Git/R_Function/Rfun.R')
-source(file.path(dir_code,'SMARTFunc.R'))
+source('head.R')
 
 #@@@ LOAD DATA @@@#
 load(file.path(dir_data,'smartMerge_smart.Rda'))
@@ -48,7 +42,7 @@ smartPred <- function(smartP,tw = 12){
   testing <- factorX(subset(smartP, sn %in% snLabel$sn[-inTrain] & timeP3 <= tw))
   
   # 4.2 Model Training
-  smp <- sample(1:nrow(training),min(100000,nrow(training)))
+  smp <- sample(1:nrow(training),min(50000,nrow(training)))
   mod <- svm(training[smp,smartName],training$label[smp],
              type = 'C', kernel = 'radial', gamma = 0.1, cost = 10)
   predsmp <- predict(mod,training[smp,smartName])

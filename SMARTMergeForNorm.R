@@ -68,12 +68,15 @@ adjTime <- function(data){
 }
 
 smartN$seqTime <- smartN$time
-smart <- by(smart,factor(smart$sn),adjTime)
-save(smart,file = file.path(dir_data,'SMARTMerge_list.Rda'))
-smartF <- do.call(rbind,smart)
+#smart <- by(smart,factor(smart$sn),adjTime)
+#save(smart,file = file.path(dir_data,'SMARTMerge_list.Rda'))
+#smartF <- do.call(rbind,smart)
 names(smartN)[5:19] <- names(smartNeed)[c(7:9,21,10:20)]
-names(smartF)[5:19] <- names(smartNeed)[c(7:9,21,10:20)]
-save(smartF,smartN,file = file.path(dir_data,'SMARTMerge_Int2h.Rda'))
+#names(smartF)[5:19] <- names(smartNeed)[c(7:9,21,10:20)]
+smartN1 <- smartN
+load(file.path(dir_data,'SMARTMerge_Int2h.Rda'))
+smartN <- smartN1
+save(smartF,smartN,file = file.path(dir_data,'SMARTMerge_Int2h20d.Rda'))
 
  
 

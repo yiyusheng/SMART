@@ -1,11 +1,7 @@
 # Disk Failure Predict on Baidu's dataset
 rm(list = ls())
 #@@@ CONFIGURE @@@#
-source(file.path('D:/Git/SMART','SMARTConfig.R'))
-
-#@@@ Function @@@#
-source('D:/Git/R_Function/Rfun.R')
-source(file.path(dir_code,'SMARTFunc.R'))
+source('head.R')
 
 #@@@ LOAD DATA @@@#
 # smartBaidu <- read.table(file.path(dir_data,'Disk_SMART_dataset.txt'))
@@ -70,13 +66,16 @@ smartName <- names(smartBaidu[,3:14])
 library(caret)
 library(e1071)
 # Add time column
-t <- unlist(tapply(smartB1$sn,smartB1$sn,function(x)(1:length(x))/length(x)))
-t1 <- unlist(tapply(smartB1$sn,smartB1$sn,function(x)1:length(x)))
+# t <- unlist(tapply(smartB1$sn,smartB1$sn,function(x)(1:length(x))/length(x)))
+# t1 <- unlist(tapply(smartB1$sn,smartB1$sn,function(x)1:length(x)))
 t2 <- unlist(tapply(smartB1$sn,smartB1$sn,function(x)length(x):1))
-smartB1$time <- t   # standard time
-smartB1$timeA <- t1 # ordered time
+# smartB1$time <- t   # standard time
+# smartB1$timeA <- t1 # ordered time
 smartB1$timeB <- t2 # descend order
-smartB1 <- smartB1[,c('sn','label','time','timeA','timeB',smartName)]
+smartB1 <- smartB1[,c('sn','label','timeB',smartName)]
+smartB1$label <- as.numeric(fct2ori(smartB1$label))
+smartB1$label[smartB1$label == -1] <- 2
+smartB1$label <- smartB1$label - 1
 
 # Extract sn and label for data partition
 snLabel <- data.frame(sn = levels(smartB1$sn),
@@ -90,7 +89,7 @@ smartPred <- function(smartB1,tw = 12){
   testing <- factorX(subset(smartB1, sn %in% snLabel$sn[-inTrain]))
   
   # Model Training
-  smp <- sample(1:nrow(training),10000)
+  smp <- sample(1:nrow(training),50000)
   mod <- svm(training[smp,smartName],training$label[smp],
              type = 'C', kernel = 'radial', gamma = 0.1, cost = 10)# Model Testing
   
@@ -98,13 +97,12 @@ smartPred <- function(smartB1,tw = 12){
   # Model Testing
   pred <- predict(mod,testing[,smartName])
   testing$pred <- pred
+  r1 <- confusionMatrix(testing$pred,testing$label)
+  
   predDisk <- data.frame(sn = levels(testing$sn),
-                         predDisk = as.numeric(tapply(testing$pred,testing$sn,function(x){any(x == -1)})))
-  predDisk$label <- snLabel$label[-inTrain]
-  predDisk$label[predDisk$label == 2] <- 0
-  r <- table(predDisk[,c('predDisk','label')])
-  FDR <- r[2,2]/(r[2,2] + r[1,2])
-  FAR <- r[2,1]/(r[2,1] + r[1,1])
+                         predDisk = as.numeric(tapply(testing$pred,testing$sn,function(x){any(x == 1)})))
+  predDisk$label <- snLabel$label[match(predDisk$sn,snLabel$sn)]
+  r2 <- confusionMatrix(predDisk$predDisk,predDisk$label)
   
   
   # Visualization

@@ -3,6 +3,4 @@ if (osFlag){
   source('configWindows.R')
 }else{
   source('configLinux.R')
-  library(doMC)
-  registerDoMC(cores = 30)
 }
