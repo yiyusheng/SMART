@@ -72,3 +72,44 @@ ct1 <- subset(ct)
 # S6. sn_to_ip
 sti$create_time <- as.POSIXct(sti$create_time,tz = 'UTC')
 sti$last_time <- as.POSIXct(sti$last_time,tz = 'UTC')
+idxAc <- grep('SN: .*,',sti$alarm_content)
+
+strHw <- 'SN:.*[,;]'
+idxHw <- grep(strHw,sti$hwinfo)
+startHw <- regexpr(strHw,sti$hwinfo[idxHw])
+sn <- substr(sti$hwinfo[idxHw],startHw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+nohup: ignoring input
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+starting worker pid=54680 on localhost:11011 at 21:46:00.628
+starting worker pid=54689 on localhost:11011 at 21:46:00.919
+starting worker pid=54698 on localhost:11011 at 21:46:01.250
+starting worker pid=54707 on localhost:11011 at 21:46:01.543
+starting worker pid=54716 on localhost:11011 at 21:46:01.837
+Loading required package: caret
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: e1071
+Loading required package: scales
+Loading required package: reshape2
+Loading required package: grid
+automatically exporting the following variables from the local environment:
+  factorX, para, smartL, smartName, smartPred, snLabel 
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+numValues: 5, numResults: 0, stopped: TRUE
+tw:48	gamma:0.100	cost:10.000	w:0	FDR:83.744	FAR:0.518	time:241.578000.0s	countTr:30000.000000.0
+tw:48	gamma:0.100	cost:10.000	w:3	FDR:91.133	FAR:0.994	time:311.975000.0s	countTr:30000.000000.0
+tw:48	gamma:0.100	cost:10.000	w:26	FDR:96.223	FAR:3.364	time:686.682000.0s	countTr:30000.000000.0
+tw:48	gamma:0.100	cost:10.000	w:283	FDR:96.388	FAR:35.729	time:1346.631000.0s	countTr:30000.000000.0
+tw:48	gamma:0.100	cost:10.000	w:2684	FDR:97.373	FAR:58.252	time:1915.047000.0s	countTr:30000.000000.0
+got results for task 1
+numValues: 5, numResults: 1, stopped: TRUE
+returning status FALSE
+got results for task 2
+numValues: 5, numResults: 2, stopped: TRUE
+returning status FALSE
+got results for task 3
+numValues: 5, numResults: 3, stopped: TRUE
+returning status FALSE
+got results for task 4
+numValues: 5, numResults: 4, stopped: TRUE
+returning status FALSE
+got results for task 5
+numValues: 5, numResults: 5, stopped: TRUE
+first call to combine function
+evaluating call object to combine results:
+  fun(result.1, result.2, result.3, result.4, result.5)
+returning status TRUE

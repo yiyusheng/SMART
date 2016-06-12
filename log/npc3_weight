@@ -1,0 +1,552 @@
+nohup: ignoring input
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+starting worker pid=7394 on localhost:11808 at 11:36:53.455
+starting worker pid=7403 on localhost:11808 at 11:36:53.747
+starting worker pid=7412 on localhost:11808 at 11:36:54.038
+starting worker pid=7421 on localhost:11808 at 11:36:54.377
+starting worker pid=7430 on localhost:11808 at 11:36:54.712
+starting worker pid=7439 on localhost:11808 at 11:36:54.998
+starting worker pid=7448 on localhost:11808 at 11:36:55.290
+starting worker pid=7457 on localhost:11808 at 11:36:55.581
+starting worker pid=7466 on localhost:11808 at 11:36:55.882
+starting worker pid=7475 on localhost:11808 at 11:36:56.179
+starting worker pid=7484 on localhost:11808 at 11:36:56.474
+starting worker pid=7493 on localhost:11808 at 11:36:56.764
+starting worker pid=7502 on localhost:11808 at 11:36:57.060
+starting worker pid=7511 on localhost:11808 at 11:36:57.366
+starting worker pid=7520 on localhost:11808 at 11:36:57.658
+starting worker pid=7529 on localhost:11808 at 11:36:57.951
+starting worker pid=7539 on localhost:11808 at 11:36:58.248
+starting worker pid=7548 on localhost:11808 at 11:36:58.538
+starting worker pid=7557 on localhost:11808 at 11:36:58.828
+starting worker pid=7566 on localhost:11808 at 11:36:59.119
+starting worker pid=7575 on localhost:11808 at 11:36:59.404
+starting worker pid=7584 on localhost:11808 at 11:36:59.700
+starting worker pid=7593 on localhost:11808 at 11:36:59.987
+starting worker pid=7602 on localhost:11808 at 11:37:00.279
+starting worker pid=7611 on localhost:11808 at 11:37:00.572
+starting worker pid=7620 on localhost:11808 at 11:37:00.861
+starting worker pid=7629 on localhost:11808 at 11:37:01.183
+starting worker pid=7638 on localhost:11808 at 11:37:01.474
+starting worker pid=7647 on localhost:11808 at 11:37:01.776
+starting worker pid=7656 on localhost:11808 at 11:37:02.102
+starting worker pid=7665 on localhost:11808 at 11:37:02.398
+starting worker pid=7674 on localhost:11808 at 11:37:02.690
+starting worker pid=7683 on localhost:11808 at 11:37:02.977
+starting worker pid=7692 on localhost:11808 at 11:37:03.279
+starting worker pid=7701 on localhost:11808 at 11:37:03.570
+starting worker pid=7718 on localhost:11808 at 11:37:03.870
+starting worker pid=7727 on localhost:11808 at 11:37:04.177
+starting worker pid=7736 on localhost:11808 at 11:37:04.473
+starting worker pid=7745 on localhost:11808 at 11:37:04.765
+starting worker pid=7754 on localhost:11808 at 11:37:05.054
+starting worker pid=7763 on localhost:11808 at 11:37:05.351
+starting worker pid=7772 on localhost:11808 at 11:37:05.649
+starting worker pid=7781 on localhost:11808 at 11:37:05.949
+starting worker pid=7790 on localhost:11808 at 11:37:06.243
+starting worker pid=7799 on localhost:11808 at 11:37:06.531
+Loading required package: caret
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: e1071
+Loading required package: scales
+Loading required package: reshape2
+Loading required package: grid
+automatically exporting the following variables from the local environment:
+  factorX, para, smartL, smartName, smartPred, snLabel 
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+numValues: 96, numResults: 0, stopped: TRUE
+[1] "tw:12 gamma:0.100 cost:10.000 w1:5 w2:2 FDR:60.401 FAR:0.490 time:627.949000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:2 w2:2 FDR:80.702 FAR:0.896 time:679.924000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:1 w2:2 FDR:83.709 FAR:0.956 time:702.173000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:5 w2:1 FDR:57.644 FAR:0.467 time:718.153000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:1 w2:1 FDR:77.193 FAR:0.696 time:755.684000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:2 w2:1 FDR:65.664 FAR:0.660 time:756.791000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:10 w2:1 FDR:37.845 FAR:0.253 time:832.657000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:2 w2:2 FDR:85.213 FAR:0.852 time:851.885000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:1 w2:1 FDR:83.709 FAR:0.892 time:889.052000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:1 w2:2 FDR:83.208 FAR:0.837 time:909.442000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:2 w2:1 FDR:78.697 FAR:0.690 time:916.114000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:5 w2:1 FDR:65.664 FAR:0.513 time:918.004000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:10 w2:2 FDR:62.907 FAR:0.483 time:918.810000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:10 w2:1 FDR:45.865 FAR:0.281 time:951.139000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:5 w2:2 FDR:68.170 FAR:0.522 time:959.957000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:10 w2:2 FDR:64.662 FAR:0.483 time:995.591000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:1 w2:1 FDR:90.476 FAR:1.018 time:1064.882000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:2 w2:1 FDR:80.451 FAR:0.768 time:1077.821000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:5 w2:1 FDR:68.922 FAR:0.498 time:1094.034000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:5 w2:2 FDR:79.699 FAR:0.768 time:1105.458000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:2 w2:2 FDR:88.471 FAR:0.980 time:1132.382000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:2 w2:1 FDR:88.471 FAR:0.942 time:1256.033000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:10 w2:2 FDR:77.444 FAR:0.574 time:1273.091000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:1 w2:2 FDR:93.734 FAR:1.217 time:1309.170000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:1 w2:1 FDR:90.727 FAR:1.008 time:1314.895000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:5 w2:2 FDR:89.724 FAR:0.790 time:1342.567000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:2 w2:2 FDR:92.732 FAR:1.028 time:1356.587000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:5 w2:1 FDR:77.694 FAR:0.674 time:1360.630000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:1 w2:2 FDR:94.486 FAR:1.275 time:1379.876000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:1 w2:5 FDR:89.474 FAR:0.954 time:774.801000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:2 w2:5 FDR:89.724 FAR:1.002 time:751.862000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:5 w2:5 FDR:81.203 FAR:0.709 time:753.606000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:10 w2:1 FDR:69.925 FAR:0.491 time:1789.705000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:2 w2:1 FDR:92.732 FAR:1.005 time:1810.446000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:2 w2:5 FDR:90.977 FAR:1.090 time:958.973000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:10 w2:1 FDR:51.629 FAR:0.348 time:1971.140000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:1 w2:5 FDR:90.977 FAR:1.247 time:1227.949000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:2 w2:2 FDR:94.486 FAR:1.195 time:1987.683000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:5 w2:1 FDR:85.464 FAR:0.818 time:1993.833000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:5 w2:5 FDR:86.967 FAR:0.922 time:978.088000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:10 w2:2 FDR:88.972 FAR:0.690 time:1438.279000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:1 w2:1 FDR:94.236 FAR:1.153 time:2069.641000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:10 w2:5 FDR:62.155 FAR:0.490 time:831.482000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:1 w2:10 FDR:91.479 FAR:1.080 time:826.811000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:10 w2:5 FDR:84.461 FAR:0.622 time:946.833000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:1 w2:5 FDR:96.992 FAR:1.431 time:1474.420000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:5 w2:5 FDR:94.236 FAR:0.933 time:1211.147000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:2 w2:5 FDR:92.732 FAR:1.285 time:1428.985000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:5 w2:2 FDR:95.990 FAR:0.904 time:2353.420000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:10 w2:1 FDR:79.449 FAR:0.605 time:2408.617000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:2 w2:5 FDR:96.742 FAR:1.153 time:1512.394000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:2 w2:1 FDR:95.238 FAR:1.204 time:2490.527000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:5 w2:5 FDR:95.489 FAR:0.992 time:1434.345000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:1 w2:1 FDR:95.238 FAR:1.527 time:2536.717000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:10 w2:5 FDR:94.987 FAR:0.737 time:1360.614000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:1 w2:10 FDR:92.481 FAR:1.439 time:1305.722000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:1 w2:5 FDR:93.734 FAR:1.815 time:1878.725000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:2 w2:10 FDR:87.970 FAR:1.131 time:977.104000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:5 w2:10 FDR:83.960 FAR:0.967 time:802.814000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:5 w2:10 FDR:86.967 FAR:0.790 time:812.835000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:1 w2:2 FDR:97.494 FAR:1.613 time:2898.306000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:10 w2:5 FDR:97.494 FAR:0.849 time:1624.900000s"
+[1] "tw:12 gamma:0.100 cost:10.000 w1:10 w2:10 FDR:83.459 FAR:0.753 time:747.757000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:10 w2:2 FDR:94.737 FAR:0.767 time:2304.725000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:2 w2:10 FDR:90.977 FAR:1.284 time:1166.540000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:5 w2:1 FDR:94.737 FAR:0.891 time:3119.147000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:1 w2:10 FDR:97.494 FAR:1.534 time:1632.651000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:10 w2:1 FDR:95.238 FAR:0.824 time:3139.685000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:2 w2:2 FDR:98.496 FAR:1.410 time:3255.550000s"
+[1] "tw:24 gamma:0.100 cost:10.000 w1:10 w2:10 FDR:91.729 FAR:0.880 time:970.300000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:5 w2:5 FDR:97.243 FAR:1.217 time:2194.919000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:2 w2:5 FDR:96.742 FAR:1.509 time:2379.752000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:1 w2:2 FDR:97.995 FAR:1.807 time:3383.270000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:5 w2:10 FDR:95.238 FAR:1.194 time:1319.673000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:5 w2:2 FDR:94.987 FAR:1.072 time:3401.544000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:5 w2:10 FDR:96.491 FAR:1.197 time:1336.140000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:2 w2:10 FDR:95.739 FAR:1.182 time:1478.622000s"
+[1] "tw:48 gamma:0.100 cost:10.000 w1:10 w2:10 FDR:95.489 FAR:0.910 time:1191.913000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:10 w2:2 FDR:96.491 FAR:0.909 time:2874.813000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:5 w2:5 FDR:96.992 FAR:1.426 time:2512.881000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:10 w2:10 FDR:95.990 FAR:1.045 time:1364.087000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:1 w2:5 FDR:97.243 FAR:2.037 time:2882.085000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:2 w2:10 FDR:96.992 FAR:1.461 time:1835.699000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:2 w2:5 FDR:97.494 FAR:2.045 time:2985.918000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:10 w2:5 FDR:96.742 FAR:0.958 time:2694.206000s"
+[1] "tw:72 gamma:0.100 cost:10.000 w1:1 w2:10 FDR:97.243 FAR:2.549 time:2395.514000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:5 w2:10 FDR:97.744 FAR:1.603 time:1917.585000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:2 w2:10 FDR:97.494 FAR:1.910 time:2230.467000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:10 w2:10 FDR:97.744 FAR:1.152 time:1859.445000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:10 w2:5 FDR:96.742 FAR:1.061 time:2949.657000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:10 w2:10 FDR:96.742 FAR:1.414 time:2084.399000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:5 w2:10 FDR:97.744 FAR:1.680 time:2332.224000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:1 w2:5 FDR:97.494 FAR:2.649 time:3695.415000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:2 w2:10 FDR:99.248 FAR:4.440 time:2757.228000s"
+[1] "tw:144 gamma:0.100 cost:10.000 w1:1 w2:10 FDR:97.995 FAR:2.748 time:3114.145000s"
+[1] "tw:240 gamma:0.100 cost:10.000 w1:1 w2:10 FDR:98.997 FAR:6.473 time:3812.120000s"
+got results for task 1
+numValues: 96, numResults: 1, stopped: TRUE
+returning status FALSE
+got results for task 2
+numValues: 96, numResults: 2, stopped: TRUE
+returning status FALSE
+got results for task 3
+numValues: 96, numResults: 3, stopped: TRUE
+returning status FALSE
+got results for task 4
+numValues: 96, numResults: 4, stopped: TRUE
+returning status FALSE
+got results for task 5
+numValues: 96, numResults: 5, stopped: TRUE
+returning status FALSE
+got results for task 6
+numValues: 96, numResults: 6, stopped: TRUE
+returning status FALSE
+got results for task 7
+numValues: 96, numResults: 7, stopped: TRUE
+returning status FALSE
+got results for task 8
+numValues: 96, numResults: 8, stopped: TRUE
+returning status FALSE
+got results for task 9
+numValues: 96, numResults: 9, stopped: TRUE
+returning status FALSE
+got results for task 10
+numValues: 96, numResults: 10, stopped: TRUE
+returning status FALSE
+got results for task 11
+numValues: 96, numResults: 11, stopped: TRUE
+returning status FALSE
+got results for task 12
+numValues: 96, numResults: 12, stopped: TRUE
+returning status FALSE
+got results for task 13
+numValues: 96, numResults: 13, stopped: TRUE
+returning status FALSE
+got results for task 14
+numValues: 96, numResults: 14, stopped: TRUE
+returning status FALSE
+got results for task 15
+numValues: 96, numResults: 15, stopped: TRUE
+returning status FALSE
+got results for task 16
+numValues: 96, numResults: 16, stopped: TRUE
+returning status FALSE
+got results for task 17
+numValues: 96, numResults: 17, stopped: TRUE
+returning status FALSE
+got results for task 18
+numValues: 96, numResults: 18, stopped: TRUE
+returning status FALSE
+got results for task 19
+numValues: 96, numResults: 19, stopped: TRUE
+returning status FALSE
+got results for task 20
+numValues: 96, numResults: 20, stopped: TRUE
+returning status FALSE
+got results for task 21
+numValues: 96, numResults: 21, stopped: TRUE
+returning status FALSE
+got results for task 22
+numValues: 96, numResults: 22, stopped: TRUE
+returning status FALSE
+got results for task 23
+numValues: 96, numResults: 23, stopped: TRUE
+returning status FALSE
+got results for task 24
+numValues: 96, numResults: 24, stopped: TRUE
+returning status FALSE
+got results for task 25
+numValues: 96, numResults: 25, stopped: TRUE
+returning status FALSE
+got results for task 26
+numValues: 96, numResults: 26, stopped: TRUE
+returning status FALSE
+got results for task 27
+numValues: 96, numResults: 27, stopped: TRUE
+returning status FALSE
+got results for task 28
+numValues: 96, numResults: 28, stopped: TRUE
+returning status FALSE
+got results for task 29
+numValues: 96, numResults: 29, stopped: TRUE
+returning status FALSE
+got results for task 30
+numValues: 96, numResults: 30, stopped: TRUE
+returning status FALSE
+got results for task 31
+numValues: 96, numResults: 31, stopped: TRUE
+returning status FALSE
+got results for task 32
+numValues: 96, numResults: 32, stopped: TRUE
+returning status FALSE
+got results for task 33
+numValues: 96, numResults: 33, stopped: TRUE
+returning status FALSE
+got results for task 34
+numValues: 96, numResults: 34, stopped: TRUE
+returning status FALSE
+got results for task 35
+numValues: 96, numResults: 35, stopped: TRUE
+returning status FALSE
+got results for task 36
+numValues: 96, numResults: 36, stopped: TRUE
+returning status FALSE
+got results for task 37
+numValues: 96, numResults: 37, stopped: TRUE
+returning status FALSE
+got results for task 38
+numValues: 96, numResults: 38, stopped: TRUE
+returning status FALSE
+got results for task 39
+numValues: 96, numResults: 39, stopped: TRUE
+returning status FALSE
+got results for task 40
+numValues: 96, numResults: 40, stopped: TRUE
+returning status FALSE
+got results for task 41
+numValues: 96, numResults: 41, stopped: TRUE
+returning status FALSE
+got results for task 42
+numValues: 96, numResults: 42, stopped: TRUE
+returning status FALSE
+got results for task 43
+numValues: 96, numResults: 43, stopped: TRUE
+returning status FALSE
+got results for task 44
+numValues: 96, numResults: 44, stopped: TRUE
+returning status FALSE
+got results for task 45
+numValues: 96, numResults: 45, stopped: TRUE
+returning status FALSE
+got results for task 46
+numValues: 96, numResults: 46, stopped: TRUE
+returning status FALSE
+got results for task 47
+numValues: 96, numResults: 47, stopped: TRUE
+returning status FALSE
+got results for task 48
+numValues: 96, numResults: 48, stopped: TRUE
+returning status FALSE
+got results for task 49
+numValues: 96, numResults: 49, stopped: TRUE
+returning status FALSE
+got results for task 50
+numValues: 96, numResults: 50, stopped: TRUE
+returning status FALSE
+got results for task 51
+numValues: 96, numResults: 51, stopped: TRUE
+returning status FALSE
+got results for task 52
+numValues: 96, numResults: 52, stopped: TRUE
+returning status FALSE
+got results for task 53
+numValues: 96, numResults: 53, stopped: TRUE
+returning status FALSE
+got results for task 54
+numValues: 96, numResults: 54, stopped: TRUE
+returning status FALSE
+got results for task 55
+numValues: 96, numResults: 55, stopped: TRUE
+returning status FALSE
+got results for task 56
+numValues: 96, numResults: 56, stopped: TRUE
+returning status FALSE
+got results for task 57
+numValues: 96, numResults: 57, stopped: TRUE
+returning status FALSE
+got results for task 58
+numValues: 96, numResults: 58, stopped: TRUE
+returning status FALSE
+got results for task 59
+numValues: 96, numResults: 59, stopped: TRUE
+returning status FALSE
+got results for task 60
+numValues: 96, numResults: 60, stopped: TRUE
+returning status FALSE
+got results for task 61
+numValues: 96, numResults: 61, stopped: TRUE
+returning status FALSE
+got results for task 62
+numValues: 96, numResults: 62, stopped: TRUE
+returning status FALSE
+got results for task 63
+numValues: 96, numResults: 63, stopped: TRUE
+returning status FALSE
+got results for task 64
+numValues: 96, numResults: 64, stopped: TRUE
+returning status FALSE
+got results for task 65
+numValues: 96, numResults: 65, stopped: TRUE
+returning status FALSE
+got results for task 66
+numValues: 96, numResults: 66, stopped: TRUE
+returning status FALSE
+got results for task 67
+numValues: 96, numResults: 67, stopped: TRUE
+returning status FALSE
+got results for task 68
+numValues: 96, numResults: 68, stopped: TRUE
+returning status FALSE
+got results for task 69
+numValues: 96, numResults: 69, stopped: TRUE
+returning status FALSE
+got results for task 70
+numValues: 96, numResults: 70, stopped: TRUE
+returning status FALSE
+got results for task 71
+numValues: 96, numResults: 71, stopped: TRUE
+returning status FALSE
+got results for task 72
+numValues: 96, numResults: 72, stopped: TRUE
+returning status FALSE
+got results for task 73
+numValues: 96, numResults: 73, stopped: TRUE
+returning status FALSE
+got results for task 74
+numValues: 96, numResults: 74, stopped: TRUE
+returning status FALSE
+got results for task 75
+numValues: 96, numResults: 75, stopped: TRUE
+returning status FALSE
+got results for task 76
+numValues: 96, numResults: 76, stopped: TRUE
+returning status FALSE
+got results for task 77
+numValues: 96, numResults: 77, stopped: TRUE
+returning status FALSE
+got results for task 78
+numValues: 96, numResults: 78, stopped: TRUE
+returning status FALSE
+got results for task 79
+numValues: 96, numResults: 79, stopped: TRUE
+returning status FALSE
+got results for task 80
+numValues: 96, numResults: 80, stopped: TRUE
+returning status FALSE
+got results for task 81
+numValues: 96, numResults: 81, stopped: TRUE
+returning status FALSE
+got results for task 82
+numValues: 96, numResults: 82, stopped: TRUE
+returning status FALSE
+got results for task 83
+numValues: 96, numResults: 83, stopped: TRUE
+returning status FALSE
+got results for task 84
+numValues: 96, numResults: 84, stopped: TRUE
+returning status FALSE
+got results for task 85
+numValues: 96, numResults: 85, stopped: TRUE
+returning status FALSE
+got results for task 86
+numValues: 96, numResults: 86, stopped: TRUE
+returning status FALSE
+got results for task 87
+numValues: 96, numResults: 87, stopped: TRUE
+returning status FALSE
+got results for task 88
+numValues: 96, numResults: 88, stopped: TRUE
+returning status FALSE
+got results for task 89
+numValues: 96, numResults: 89, stopped: TRUE
+returning status FALSE
+got results for task 90
+numValues: 96, numResults: 90, stopped: TRUE
+returning status FALSE
+got results for task 91
+numValues: 96, numResults: 91, stopped: TRUE
+returning status FALSE
+got results for task 92
+numValues: 96, numResults: 92, stopped: TRUE
+returning status FALSE
+got results for task 93
+numValues: 96, numResults: 93, stopped: TRUE
+returning status FALSE
+got results for task 94
+numValues: 96, numResults: 94, stopped: TRUE
+returning status FALSE
+got results for task 95
+numValues: 96, numResults: 95, stopped: TRUE
+returning status FALSE
+got results for task 96
+numValues: 96, numResults: 96, stopped: TRUE
+first call to combine function
+evaluating call object to combine results:
+  fun(result.1, result.2, result.3, result.4, result.5, result.6, 
+    result.7, result.8, result.9, result.10, result.11, result.12, 
+    result.13, result.14, result.15, result.16, result.17, result.18, 
+    result.19, result.20, result.21, result.22, result.23, result.24, 
+    result.25, result.26, result.27, result.28, result.29, result.30, 
+    result.31, result.32, result.33, result.34, result.35, result.36, 
+    result.37, result.38, result.39, result.40, result.41, result.42, 
+    result.43, result.44, result.45, result.46, result.47, result.48, 
+    result.49, result.50, result.51, result.52, result.53, result.54, 
+    result.55, result.56, result.57, result.58, result.59, result.60, 
+    result.61, result.62, result.63, result.64, result.65, result.66, 
+    result.67, result.68, result.69, result.70, result.71, result.72, 
+    result.73, result.74, result.75, result.76, result.77, result.78, 
+    result.79, result.80, result.81, result.82, result.83, result.84, 
+    result.85, result.86, result.87, result.88, result.89, result.90, 
+    result.91, result.92, result.93, result.94, result.95, result.96)
+returning status TRUE

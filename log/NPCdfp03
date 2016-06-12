@@ -1,0 +1,213 @@
+nohup: ignoring input
+Loading required package: scales
+Loading required package: reshape2
+Loading required package: grid
+Loading required package: caret
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: e1071
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+starting worker pid=5932 on localhost:11554 at 20:26:44.566
+starting worker pid=5941 on localhost:11554 at 20:26:44.972
+starting worker pid=5951 on localhost:11554 at 20:26:45.348
+starting worker pid=5960 on localhost:11554 at 20:26:45.703
+starting worker pid=5969 on localhost:11554 at 20:26:46.052
+starting worker pid=5978 on localhost:11554 at 20:26:46.422
+starting worker pid=5987 on localhost:11554 at 20:26:46.783
+starting worker pid=5997 on localhost:11554 at 20:26:47.152
+starting worker pid=6006 on localhost:11554 at 20:26:47.510
+starting worker pid=6015 on localhost:11554 at 20:26:47.865
+starting worker pid=6024 on localhost:11554 at 20:26:48.223
+starting worker pid=6033 on localhost:11554 at 20:26:48.578
+starting worker pid=6042 on localhost:11554 at 20:26:48.929
+starting worker pid=6052 on localhost:11554 at 20:26:49.283
+starting worker pid=6061 on localhost:11554 at 20:26:49.635
+starting worker pid=6070 on localhost:11554 at 20:26:49.987
+starting worker pid=6079 on localhost:11554 at 20:26:50.340
+starting worker pid=6088 on localhost:11554 at 20:26:50.694
+starting worker pid=6097 on localhost:11554 at 20:26:51.090
+starting worker pid=6107 on localhost:11554 at 20:26:51.447
+starting worker pid=6116 on localhost:11554 at 20:26:51.796
+starting worker pid=6125 on localhost:11554 at 20:26:52.143
+starting worker pid=6134 on localhost:11554 at 20:26:52.487
+starting worker pid=6143 on localhost:11554 at 20:26:52.833
+starting worker pid=6153 on localhost:11554 at 20:26:53.179
+starting worker pid=6162 on localhost:11554 at 20:26:53.524
+starting worker pid=6171 on localhost:11554 at 20:26:53.873
+starting worker pid=6180 on localhost:11554 at 20:26:54.219
+starting worker pid=6189 on localhost:11554 at 20:26:54.566
+starting worker pid=6198 on localhost:11554 at 20:26:54.911
+starting worker pid=6208 on localhost:11554 at 20:26:55.256
+starting worker pid=6217 on localhost:11554 at 20:26:55.638
+starting worker pid=6226 on localhost:11554 at 20:26:56.004
+starting worker pid=6235 on localhost:11554 at 20:26:56.368
+starting worker pid=6244 on localhost:11554 at 20:26:56.733
+starting worker pid=6254 on localhost:11554 at 20:26:57.092
+starting worker pid=6263 on localhost:11554 at 20:26:57.448
+starting worker pid=6273 on localhost:11554 at 20:26:57.801
+starting worker pid=6282 on localhost:11554 at 20:26:58.154
+starting worker pid=6291 on localhost:11554 at 20:26:58.504
+starting worker pid=6300 on localhost:11554 at 20:26:58.853
+starting worker pid=6310 on localhost:11554 at 20:26:59.204
+starting worker pid=6319 on localhost:11554 at 20:26:59.554
+starting worker pid=6328 on localhost:11554 at 20:26:59.905
+starting worker pid=6337 on localhost:11554 at 20:27:00.292
+automatically exporting the following variables from the local environment:
+  factorX, para, smartL, smartName, smartPred, snLabel 
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+numValues: 216, numResults: 0, stopped: TRUE
+tw:12	gamma:0.005	cost:100.000	wp:0.010	w1:0.409	countTr:-1	countNeg:2000	FDR:92.053	FAR:0.162	time:753s
+tw:12	gamma:0.010	cost:200.000	wp:0.010	w1:0.415	countTr:-1	countNeg:2000	FDR:92.715	FAR:0.864	time:756s
+tw:12	gamma:0.050	cost:200.000	wp:0.010	w1:0.416	countTr:-1	countNeg:2000	FDR:94.536	FAR:0.672	time:775s
+tw:12	gamma:0.050	cost:50.000	wp:0.010	w1:0.417	countTr:-1	countNeg:2000	FDR:92.384	FAR:1.201	time:810s
+tw:12	gamma:0.005	cost:50.000	wp:0.010	w1:0.407	countTr:-1	countNeg:2000	FDR:91.060	FAR:1.029	time:828s
+tw:12	gamma:0.010	cost:50.000	wp:0.010	w1:0.416	countTr:-1	countNeg:2000	FDR:82.450	FAR:1.111	time:996s
+tw:12	gamma:0.050	cost:100.000	wp:0.010	w1:0.406	countTr:-1	countNeg:2000	FDR:90.232	FAR:1.002	time:1082s
+tw:12	gamma:0.001	cost:100.000	wp:0.010	w1:0.428	countTr:-1	countNeg:2000	FDR:88.907	FAR:0.672	time:1087s
+tw:12	gamma:0.010	cost:100.000	wp:0.010	w1:0.408	countTr:-1	countNeg:2000	FDR:84.603	FAR:1.022	time:1302s
+tw:12	gamma:0.005	cost:50.000	wp:0.050	w1:2.085	countTr:-1	countNeg:2000	FDR:91.722	FAR:0.832	time:1323s
+tw:12	gamma:0.001	cost:100.000	wp:0.050	w1:2.009	countTr:-1	countNeg:2000	FDR:93.709	FAR:0.641	time:1361s
+tw:12	gamma:0.001	cost:200.000	wp:0.010	w1:0.397	countTr:-1	countNeg:2000	FDR:77.318	FAR:0.327	time:1395s
+tw:12	gamma:0.010	cost:50.000	wp:0.050	w1:2.006	countTr:-1	countNeg:2000	FDR:92.219	FAR:0.480	time:1414s
+tw:12	gamma:0.005	cost:200.000	wp:0.010	w1:0.393	countTr:-1	countNeg:2000	FDR:88.245	FAR:0.960	time:1432s
+tw:12	gamma:0.001	cost:50.000	wp:0.050	w1:2.039	countTr:-1	countNeg:2000	FDR:91.722	FAR:0.948	time:1434s
+tw:12	gamma:0.050	cost:50.000	wp:0.050	w1:2.083	countTr:-1	countNeg:2000	FDR:95.199	FAR:1.165	time:1441s
+tw:12	gamma:0.010	cost:100.000	wp:0.050	w1:2.152	countTr:-1	countNeg:2000	FDR:94.040	FAR:1.068	time:1480s
+tw:12	gamma:0.001	cost:200.000	wp:0.100	w1:4.093	countTr:-1	countNeg:2000	FDR:93.543	FAR:0.698	time:1563s
+tw:12	gamma:0.005	cost:50.000	wp:0.100	w1:3.977	countTr:-1	countNeg:2000	FDR:93.874	FAR:0.642	time:1676s
+tw:12	gamma:0.001	cost:50.000	wp:0.010	w1:0.418	countTr:-1	countNeg:2000	FDR:76.656	FAR:0.173	time:1696s
+tw:12	gamma:0.001	cost:200.000	wp:0.050	w1:2.018	countTr:-1	countNeg:2000	FDR:93.046	FAR:0.993	time:1743s
+tw:12	gamma:0.001	cost:50.000	wp:0.100	w1:4.123	countTr:-1	countNeg:2000	FDR:94.205	FAR:1.626	time:1761s
+tw:12	gamma:0.010	cost:50.000	wp:0.100	w1:4.036	countTr:-1	countNeg:2000	FDR:95.695	FAR:0.984	time:1844s
+tw:12	gamma:0.005	cost:200.000	wp:0.100	w1:4.072	countTr:-1	countNeg:2000	FDR:95.199	FAR:0.163	time:1908s
+tw:12	gamma:0.010	cost:200.000	wp:0.050	w1:2.041	countTr:-1	countNeg:2000	FDR:94.205	FAR:0.705	time:1934s
+tw:12	gamma:0.001	cost:100.000	wp:0.100	w1:4.067	countTr:-1	countNeg:2000	FDR:94.536	FAR:0.503	time:1956s
+tw:12	gamma:0.005	cost:100.000	wp:0.050	w1:1.945	countTr:-1	countNeg:2000	FDR:91.060	FAR:0.312	time:1975s
+tw:24	gamma:0.001	cost:200.000	wp:0.050	w1:1.049	countTr:-1	countNeg:2000	FDR:92.715	FAR:0.829	time:2008s
+tw:12	gamma:0.005	cost:200.000	wp:0.050	w1:2.057	countTr:-1	countNeg:2000	FDR:91.225	FAR:1.391	time:2122s
+tw:12	gamma:0.005	cost:100.000	wp:0.100	w1:3.996	countTr:-1	countNeg:2000	FDR:93.709	FAR:1.299	time:2233s
+tw:24	gamma:0.001	cost:200.000	wp:0.010	w1:0.214	countTr:-1	countNeg:2000	FDR:81.623	FAR:0.717	time:2327s
+tw:24	gamma:0.010	cost:50.000	wp:0.010	w1:0.213	countTr:-1	countNeg:2000	FDR:88.907	FAR:0.509	time:1045s
+tw:24	gamma:0.001	cost:100.000	wp:0.100	w1:2.059	countTr:-1	countNeg:2000	FDR:95.199	FAR:0.655	time:2368s
+tw:24	gamma:0.001	cost:50.000	wp:0.050	w1:1.035	countTr:-1	countNeg:2000	FDR:93.377	FAR:1.169	time:2405s
+tw:12	gamma:0.010	cost:200.000	wp:0.100	w1:4.111	countTr:-1	countNeg:2000	FDR:94.205	FAR:1.155	time:2406s
+tw:12	gamma:0.010	cost:100.000	wp:0.100	w1:4.052	countTr:-1	countNeg:2000	FDR:95.199	FAR:0.877	time:2418s
+tw:24	gamma:0.001	cost:50.000	wp:0.010	w1:0.208	countTr:-1	countNeg:2000	FDR:89.735	FAR:0.670	time:2463s
+tw:24	gamma:0.010	cost:100.000	wp:0.010	w1:0.210	countTr:-1	countNeg:2000	FDR:91.225	FAR:1.370	time:1081s
+tw:24	gamma:0.005	cost:50.000	wp:0.010	w1:0.214	countTr:-1	countNeg:2000	FDR:72.682	FAR:0.865	time:1889s
+tw:24	gamma:0.001	cost:100.000	wp:0.010	w1:0.211	countTr:-1	countNeg:2000	FDR:67.715	FAR:0.000	time:2725s
+tw:24	gamma:0.001	cost:200.000	wp:0.100	w1:2.022	countTr:-1	countNeg:2000	FDR:94.205	FAR:0.462	time:2740s
+tw:24	gamma:0.010	cost:200.000	wp:0.010	w1:0.217	countTr:-1	countNeg:2000	FDR:87.748	FAR:1.019	time:1358s
+tw:24	gamma:0.005	cost:50.000	wp:0.050	w1:1.053	countTr:-1	countNeg:2000	FDR:93.543	FAR:0.987	time:2146s
+tw:24	gamma:0.005	cost:50.000	wp:0.100	w1:2.058	countTr:-1	countNeg:2000	FDR:93.543	FAR:0.816	time:2259s
+tw:12	gamma:0.050	cost:200.000	wp:0.050	w1:2.039	countTr:-1	countNeg:2000	FDR:94.868	FAR:1.290	time:3061s
+tw:12	gamma:0.050	cost:100.000	wp:0.100	w1:4.214	countTr:-1	countNeg:2000	FDR:94.702	FAR:0.496	time:3092s
+tw:24	gamma:0.001	cost:50.000	wp:0.100	w1:2.077	countTr:-1	countNeg:2000	FDR:95.530	FAR:0.803	time:3159s
+tw:24	gamma:0.050	cost:100.000	wp:0.010	w1:0.213	countTr:-1	countNeg:2000	FDR:95.695	FAR:0.514	time:1485s
+tw:24	gamma:0.010	cost:50.000	wp:0.050	w1:1.052	countTr:-1	countNeg:2000	FDR:93.543	FAR:0.861	time:2053s
+tw:12	gamma:0.050	cost:100.000	wp:0.050	w1:2.108	countTr:-1	countNeg:2000	FDR:95.033	FAR:0.707	time:3439s
+tw:24	gamma:0.001	cost:100.000	wp:0.050	w1:1.059	countTr:-1	countNeg:2000	FDR:91.722	FAR:0.176	time:3517s
+tw:24	gamma:0.050	cost:50.000	wp:0.010	w1:0.207	countTr:-1	countNeg:2000	FDR:90.232	FAR:0.659	time:1846s
+tw:24	gamma:0.005	cost:100.000	wp:0.100	w1:2.129	countTr:-1	countNeg:2000	FDR:94.536	FAR:1.858	time:2585s
+tw:24	gamma:0.005	cost:100.000	wp:0.050	w1:1.036	countTr:-1	countNeg:2000	FDR:93.709	FAR:0.668	time:2814s
+tw:24	gamma:0.050	cost:200.000	wp:0.010	w1:0.214	countTr:-1	countNeg:2000	FDR:92.219	FAR:0.864	time:1804s
+tw:24	gamma:0.005	cost:200.000	wp:0.010	w1:0.213	countTr:-1	countNeg:2000	FDR:82.285	FAR:0.491	time:2694s
+tw:24	gamma:0.005	cost:200.000	wp:0.050	w1:1.037	countTr:-1	countNeg:2000	FDR:93.046	FAR:0.336	time:2793s
+tw:12	gamma:0.050	cost:50.000	wp:0.100	w1:4.063	countTr:-1	countNeg:2000	FDR:94.868	FAR:1.015	time:3920s
+tw:24	gamma:0.010	cost:100.000	wp:0.100	w1:2.024	countTr:-1	countNeg:2000	FDR:94.371	FAR:0.799	time:2529s
+tw:24	gamma:0.010	cost:50.000	wp:0.100	w1:2.120	countTr:-1	countNeg:2000	FDR:93.874	FAR:0.842	time:2930s
+tw:24	gamma:0.010	cost:100.000	wp:0.050	w1:1.067	countTr:-1	countNeg:2000	FDR:95.033	FAR:0.853	time:2975s
+tw:24	gamma:0.005	cost:200.000	wp:0.100	w1:2.131	countTr:-1	countNeg:2000	FDR:95.695	FAR:1.155	time:3218s
+tw:24	gamma:0.005	cost:100.000	wp:0.010	w1:0.210	countTr:-1	countNeg:2000	FDR:69.040	FAR:0.330	time:3715s

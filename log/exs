@@ -1,0 +1,180 @@
+nohup: ignoring input
+Loading required package: caret
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: e1071
+Loading required package: scales
+Loading required package: reshape2
+Loading required package: grid
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+starting worker pid=7801 on localhost:11335 at 21:58:03.822
+starting worker pid=7802 on localhost:11335 at 21:58:03.846
+starting worker pid=7803 on localhost:11335 at 21:58:03.867
+starting worker pid=7804 on localhost:11335 at 21:58:03.888
+starting worker pid=7805 on localhost:11335 at 21:58:03.909
+starting worker pid=7806 on localhost:11335 at 21:58:03.931
+starting worker pid=7807 on localhost:11335 at 21:58:03.959
+starting worker pid=7808 on localhost:11335 at 21:58:03.979
+starting worker pid=7809 on localhost:11335 at 21:58:03.999
+starting worker pid=7810 on localhost:11335 at 21:58:04.020
+starting worker pid=7811 on localhost:11335 at 21:58:04.040
+starting worker pid=7812 on localhost:11335 at 21:58:04.060
+starting worker pid=7813 on localhost:11335 at 21:58:04.080
+starting worker pid=7814 on localhost:11335 at 21:58:04.100
+starting worker pid=7816 on localhost:11335 at 21:58:04.120
+starting worker pid=7817 on localhost:11335 at 21:58:04.142
+starting worker pid=7818 on localhost:11335 at 21:58:04.163
+starting worker pid=7819 on localhost:11335 at 21:58:04.185
+starting worker pid=7820 on localhost:11335 at 21:58:04.206
+starting worker pid=7821 on localhost:11335 at 21:58:04.228
+starting worker pid=7822 on localhost:11335 at 21:58:04.250
+starting worker pid=7823 on localhost:11335 at 21:58:04.274
+starting worker pid=7824 on localhost:11335 at 21:58:04.295
+starting worker pid=7825 on localhost:11335 at 21:58:04.317
+starting worker pid=7826 on localhost:11335 at 21:58:04.336
+starting worker pid=7827 on localhost:11335 at 21:58:04.357
+starting worker pid=7828 on localhost:11335 at 21:58:04.377
+starting worker pid=7829 on localhost:11335 at 21:58:04.398
+starting worker pid=7830 on localhost:11335 at 21:58:04.417
+starting worker pid=7831 on localhost:11335 at 21:58:04.438
+starting worker pid=7832 on localhost:11335 at 21:58:04.458
+starting worker pid=7833 on localhost:11335 at 21:58:04.479
+starting worker pid=7834 on localhost:11335 at 21:58:04.498
+starting worker pid=7835 on localhost:11335 at 21:58:04.519
+automatically exporting the following variables from the local environment:
+  dir_data5k, diskInfoSmp, Funio 
+numValues: 31, numResults: 0, stopped: TRUE
+[1] "smart_1.Rda"
+[1] "smart_2.Rda"
+[1] "smart_3.Rda"
+[1] "smart_4.Rda"
+[1] "smart_5.Rda"
+[1] "smart_6.Rda"
+[1] "smart_7.Rda"
+[1] "smart_8.Rda"
+[1] "smart_9.Rda"
+[1] "smart_10.Rda"
+[1] "smart_11.Rda"
+[1] "smart_22.Rda"
+[1][1][1] "smart_14.Rda"
+ "smart_15.Rda"
+ "smart_12.Rda"
+[1][1] "smart_21.Rda"
+ "smart_20.Rda"
+[1][1] "smart_25.Rda"
+ "smart_23.Rda"
+[1][1][1] "smart_24.Rda" "smart_18.Rda"
+
+ "smart_17.Rda"
+[1] "smart_16.Rda"
+[1] "smart_19.Rda"
+[1] "smart_13.Rda"
+[1] "smart_26.Rda"
+[1] "smart_27.Rda"
+[1] "smart_28.Rda"
+[1] "smart_29.Rda"
+[1] "smart_30.Rda"
+[1] "smart_31.Rda"
+got results for task 1
+numValues: 31, numResults: 1, stopped: TRUE
+returning status FALSE
+got results for task 2
+numValues: 31, numResults: 2, stopped: TRUE
+returning status FALSE
+got results for task 3
+numValues: 31, numResults: 3, stopped: TRUE
+returning status FALSE
+got results for task 4
+numValues: 31, numResults: 4, stopped: TRUE
+returning status FALSE
+got results for task 5
+numValues: 31, numResults: 5, stopped: TRUE
+returning status FALSE
+got results for task 6
+numValues: 31, numResults: 6, stopped: TRUE
+returning status FALSE
+got results for task 7
+numValues: 31, numResults: 7, stopped: TRUE
+returning status FALSE
+got results for task 8
+numValues: 31, numResults: 8, stopped: TRUE
+returning status FALSE
+got results for task 9
+numValues: 31, numResults: 9, stopped: TRUE
+returning status FALSE
+got results for task 10
+numValues: 31, numResults: 10, stopped: TRUE
+returning status FALSE
+got results for task 11
+numValues: 31, numResults: 11, stopped: TRUE
+returning status FALSE
+got results for task 12
+numValues: 31, numResults: 12, stopped: TRUE
+returning status FALSE
+got results for task 13
+numValues: 31, numResults: 13, stopped: TRUE
+returning status FALSE
+got results for task 14
+numValues: 31, numResults: 14, stopped: TRUE
+returning status FALSE
+got results for task 15
+numValues: 31, numResults: 15, stopped: TRUE
+returning status FALSE
+got results for task 16
+numValues: 31, numResults: 16, stopped: TRUE
+returning status FALSE
+got results for task 17
+numValues: 31, numResults: 17, stopped: TRUE
+returning status FALSE
+got results for task 18
+numValues: 31, numResults: 18, stopped: TRUE
+returning status FALSE
+got results for task 19
+numValues: 31, numResults: 19, stopped: TRUE
+returning status FALSE
+got results for task 20
+numValues: 31, numResults: 20, stopped: TRUE
+returning status FALSE
+got results for task 21
+numValues: 31, numResults: 21, stopped: TRUE
+returning status FALSE
+got results for task 22
+numValues: 31, numResults: 22, stopped: TRUE
+returning status FALSE
+got results for task 23
+numValues: 31, numResults: 23, stopped: TRUE
+returning status FALSE
+got results for task 24
+numValues: 31, numResults: 24, stopped: TRUE
+returning status FALSE
+got results for task 25
+numValues: 31, numResults: 25, stopped: TRUE
+returning status FALSE
+got results for task 26
+numValues: 31, numResults: 26, stopped: TRUE
+returning status FALSE
+got results for task 27
+numValues: 31, numResults: 27, stopped: TRUE
+returning status FALSE
+got results for task 28
+numValues: 31, numResults: 28, stopped: TRUE
+returning status FALSE
+got results for task 29
+numValues: 31, numResults: 29, stopped: TRUE
+returning status FALSE
+got results for task 30
+numValues: 31, numResults: 30, stopped: TRUE
+returning status FALSE
+got results for task 31
+numValues: 31, numResults: 31, stopped: TRUE
+first call to combine function
+evaluating call object to combine results:
+  fun(result.1, result.2, result.3, result.4, result.5, result.6, 
+    result.7, result.8, result.9, result.10, result.11, result.12, 
+    result.13, result.14, result.15, result.16, result.17, result.18, 
+    result.19, result.20, result.21, result.22, result.23, result.24, 
+    result.25, result.26, result.27, result.28, result.29, result.30, 
+    result.31)
+returning status TRUE

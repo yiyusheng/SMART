@@ -1,5 +1,4 @@
 # data prepare for AFR_io
-# 这个才表达的是原版的意思。
 names(cmdb)[3] <- 'svrid'
 names(data.f)[2] <- 'svrid'
 names(data.fAllDev)[2] <- 'svrid'
@@ -14,7 +13,6 @@ data.f$fsTime <- floor(data.f$failShiptime)
 data.f$fsTimeN <- cut(data.f$failShiptime,c(0,1/2,1:7),include.lowest = T)
 data.f$fsTimeN <- gsub('^\\[|^\\(|,.*$','',data.f$fsTimeN)
 
-# 上架时间计算
 cmdb$shiptimeToLeft <- floor(as.POSIXct('2014-06-01') - cmdb$use_time)
 cmdb$shiptimeToRight <- floor(as.POSIXct('2014-08-01') - cmdb$use_time)
 units(cmdb$shiptimeToLeft) <- 'days'
@@ -25,7 +23,6 @@ cmdb$shTimeN <- cut(cmdb$shiptimeToLeft,c(0,1/2,1:7),include.lowest = T)
 cmdb$shTimeN <- gsub('^\\[|^\\(|,.*$','',cmdb$shTimeN)
 cmdb$dClass <- ''
 
-# 给每个机器做标记
 class_C <- 'C1'
 class_B <- c('B5','B6','B1')
 # class_TS <- c('TS3','TS4','TS5','TS6')
@@ -34,7 +31,6 @@ cmdb$dClass[cmdb$dev_class_id %in% class_C] <- 'C'
 cmdb$dClass[cmdb$dev_class_id %in% class_B] <- 'B'
 cmdb$dClass[cmdb$dev_class_id %in% class_TS] <- 'TS'
 
-#加入容量选项，把没有容量信息的数据过滤（C1 588台，TS3 7台，TS6 35台，包含13个故障机）
 cmdbio <- subset(cmdb,svrid %in% mean_io$svrid & dev_class_id %in% c(class_C,class_TS))
 cmdbio$total <- disk_ip$total[match(cmdbio$ip,disk_ip$ip)]
 cmdbio <- subset(cmdbio,!is.na(total) & (dClass != 'C' | total %in% c(500,250,1000)))
@@ -45,7 +41,6 @@ cmdbio$dClass[cmdbio$dClass == 'TS' & cmdbio$totalMerge == 12000] <- 'TS1T'
 cmdbio$dClass[cmdbio$dClass == 'TS' & cmdbio$totalMerge == 24000] <- 'TS2T'
 mean_io <- subset(mean_io,svrid %in% factor(cmdbio$svrid))
 
-# 数据准备
 tmp.cmdb <- cmdbio
 tmp.f <- subset(data.f,svrid %in% cmdbio$svrid)
 tmp.f$total <- tmp.cmdb$total[match(tmp.f$ip,tmp.cmdb$ip)]
