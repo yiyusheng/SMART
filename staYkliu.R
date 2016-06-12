@@ -7,10 +7,11 @@ source('head.R')
 load(file.path(dir_data,'diskInfo.Rda'))
 load(file.path(dir_data,'ykliu_smart.Rda'))   #from ykliu
 load(file.path(dir_data,'extractSMART.Rda'))  #from york
-load(file.path(dir_data,'load_ftr_attridOld.Rda'))
-source(file.path(dir_code,'dataPrepareOld.R'))
+load(file.path(dir_data,'load_ftr_attrid.Rda'))
+# load(file.path(dir_data,'load_ftr_attridOld.Rda'))
+# source(file.path(dir_code,'dataPrepareOld.R'))
 
-######
+####################################
 # #S1. check dev_class_id and business of disk from ykliu
 # smartM <- smart
 # smartM <- mchAttr(smartM,diskInfo,'svrid','sn')
@@ -74,19 +75,20 @@ source(file.path(dir_code,'dataPrepareOld.R'))
 # save(smartM,file = file.path(dir_data,'smartM.Rda'))
 
 # S3. libsvm + caret on smartM
-load(file.path(dir_data,'smartM.Rda'))
-library(caret)
-library(e1071)
-smartM1 <- smartM[,c(5:19,21)]
-ctrl <- trainControl(method = 'repeatedcv',number = 10, repeats = 3)
-set.seed(100)
-# mod <- train(label~.,data = smartM1[sample(1:nrow(smartM1),1000),],method = 'svmLinear',trControl = ctrl)
-idx <- sample(1:nrow(smartM1),20000)
-idx.train <- idx[1:10000]
-idx.test <- idx[10001:20000]
-mod <- svm(smartM1[idx.train,c(1:15)],smartM1$label[idx.train],
-           type = 'C', kernel = 'radial', gamma = 0.1, cost = 10)
-pred <- predict(mod,smartM1[idx.test,c(1:15)])
-r <- table(pred,smartM1$label[idx.test])
-fdr <- r[2,2]/(r[2,1] + r[2,2])
-far <- r[2,1]/(r[2,1] + r[1,1])
+# load(file.path(dir_data,'smartM.Rda'))
+# library(caret)
+# library(e1071)
+# smartM1 <- smartM[,c(5:19,21)]
+# ctrl <- trainControl(method = 'repeatedcv',number = 10, repeats = 3)
+# set.seed(100)
+# # mod <- train(label~.,data = smartM1[sample(1:nrow(smartM1),1000),],method = 'svmLinear',trControl = ctrl)
+# idx <- sample(1:nrow(smartM1),20000)
+# idx.train <- idx[1:10000]
+# idx.test <- idx[10001:20000]
+# mod <- svm(smartM1[idx.train,c(1:15)],smartM1$label[idx.train],
+#            type = 'C', kernel = 'radial', gamma = 0.1, cost = 10)
+# pred <- predict(mod,smartM1[idx.test,c(1:15)])
+# r <- table(pred,smartM1$label[idx.test])
+# fdr <- r[2,2]/(r[2,1] + r[2,2])
+# far <- r[2,1]/(r[2,1] + r[1,1])
+
