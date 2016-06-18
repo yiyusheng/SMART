@@ -4,15 +4,30 @@ rm(list = ls())
 source('head.R')
 
 #@@@ LOAD DATA @@@#
-data <- read.table(file.path(dir_data,'NPCdfp02'),skip = 150,nrows = 240-150)
+dataA <- read.table(file.path(dir_code,'log','NPCdfp05'),skip = 135,nrows = 216)
+dataB <- read.table(file.path(dir_code,'log','NPCdfp06'),skip = 135,nrows = 120)
 ####################################
 # S1.Clean
-data$V10 <- NULL
-data <- data.frame(sapply(1:ncol(data),function(i){
-  as.numeric(gsub('.*:','',data[,i]))
-}))
-names(data) <- c('timeWindow','gamma','cost','w0','w1','countTr','countNeg','FDR','FAR')
-data <- data[order(data$FAR),]
+dataClean <- function(data){
+  data$V10 <- NULL
+  data <- data.frame(sapply(1:ncol(data),function(i){
+    as.numeric(gsub('.*:','',data[,i]))
+  }))
+  names(data) <- c('timeWindow','gamma','cost','w0','w1','countTr','countNeg','FDR','FAR')
+  data <- data[order(data[,1],data[,2],
+                     data[,3],data[,4],
+                     data[,5],data[,6],
+                     data[,7]),]
+  row.names(data) <- NULL
+  data
+}
+dataA <- dataClean(dataA)
+dataB <- dataClean(dataB)
+dataComp <- merge(dataA[,c(1:4,8,9)],dataB[,c(1:4,8,9)],by = c(names(dataA)[1:4]))
+names(dataComp)[5:8] <- c('FDRA','FARA','FDRB','FARB')
+dataComp <- dataComp[,c(1:4,5,7,6,8)]
+dataComp$diffFDR <- dataComp$FDRB - dataComp$FDRA
+dataComp$diffFAR <- dataComp$FARB - dataComp$FARA
 
 # S2.Plot
 data <- data[order(data$timeWindow,data$cost,data$gamma),]

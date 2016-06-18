@@ -11,4 +11,4 @@ require('grid')
 #require('ggplot2')
 
 # Config for linux GUI
-options('width' = 150)
+# options('width' = 150)

@@ -10,7 +10,7 @@
 #
 # Initial created: 2015-12-14 15:58:54
 #
-# Last   modified: 2016-06-07 09:38:06
+# Last   modified: 2016-06-16 17:50:42
 #
 #
 #
@@ -22,11 +22,6 @@ library('doParallel')
 fname <- paste('smart_',seq(1,31),'.Rda',sep='')
 dir_data5k <- file.path(dir_data,'smart5k')
 
-###############
-ck <- makeCluster(34, type = 'FORK', outfile = '')
-registerDoParallel(ck)
-###############
-
 #@@@ Function for parallel
 Funio <- function(fname){
     print(fname)
@@ -35,6 +30,10 @@ Funio <- function(fname){
     tmp
 }
 
+#@@@ Parallel configuration and Running
+require(doParallel)
+ck <- makeCluster(min(40,length(fname)), outfile = '')
+registerDoParallel(ck)
 r <- foreach(i = fname,.combine = rbind,.verbose = T) %dopar% Funio(i)
 r <- factorX(r)
 

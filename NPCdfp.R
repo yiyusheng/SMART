@@ -2,7 +2,7 @@
 rm(list = ls())
 #@@@ CONFIGURE @@@#
 source('head.R')
-require('caret')                                                                                      
+require('caret')
 require('e1071')
 
 #@@@ LOAD DATA @@@#
@@ -19,8 +19,15 @@ smartName <- smartName[smartName != 'Power_Cycle_Count_Value' &
 
 ####################################
 # S1. Label item for lead time prediction
-smartN <- subset(smartN,!(sn %in% smartF$sn))
-smartF <- subset(smartF,!(sn %in% smartN$sn))
+# For normal disk
+smartN <- factorX(subset(smartN,!(sn %in% smartF$sn)))
+# For failed disk
+maxFtime <- as.POSIXct(tapply(smartF$failed_time,smartF$sn,max),origin = '1970-01-01',tz = 'UTC')
+smartF$failed_time <- maxFtime[match(smartF$sn,names(maxFtime))]
+multiFtime <- tapply(smartF$failed_time,smartF$sn,function(x)length(unique(x)))
+smartF <- subset(smartF, !(sn %in% names(multiFtime)[multiFtime > 1]))
+smartF <- factorX(subset(smartF,!(sn %in% smartN$sn)))
+# Merge
 smartL <- rbind(smartF,smartN)
 smartL$restTime <- as.numeric(difftime(smartL$failed_time,smartL$time,tz = 'UTC',units = 'hours'))
 smartL$restTime[smartL$label == 0] <- -10000
@@ -95,7 +102,7 @@ smartPred <- function(tw = 48,ga = 0.1,co = 10,wP = 0.1, countTrain = -1, countN
   
   
   # 3.6 Result print
-  cat(sprintf('tw:%.0f\tgamma:%.3f\tcost:%.3f\twp:%.3f\tw1:%.3f\tcountTr:%.0f\tcountNeg:%.0f\tFDR:%.3f\tFAR:%.3f\ttime:%.0fs\n',
+  cat(sprintf('tw:%.0f\tgamma:%.3f\tcost:%.0f\twp:%.3f\tw1:%.3f\tcountTr:%.0f\tcountNeg:%.0f\tFDR:%.3f\tFAR:%.3f\ttime:%.0fs\n',
               tw,ga,co,
               wP,w[['1']],countTrain,countNeg,
               FDR*100,FAR*100,p2[3]-p1[3]))
@@ -103,26 +110,30 @@ smartPred <- function(tw = 48,ga = 0.1,co = 10,wP = 0.1, countTrain = -1, countN
   r
 }
 
-r <- smartPred()
+# r <- smartPred()
 # 4 Parameter setting
 # tw ga co wP countTrain countNeg
-# para <- expand.grid(c(12,24,48,72,144,244),c(0.001,0.005,0.01,0.05),c(50,100,200),c(0.1,0.01,0.05),-1,c(2000))
-#para <- expand.grid(c(24,48,72,144),
+para <- expand.grid(c(12,24,48,72,96),
+                    c(0.005,0.01,0.05),
+                    c(50,100,200,500),
+                    c(0.05,0.001),
+                    -1,c(2000))
+# para <- expand.grid(c(24,48,72,144),
 #                    c(10^c(-1,0,1),2,5),
 #                    c(10^c(-1,0,1),2,5),
 #                    c(0.05,0.1,0.2),
 #                    50000,
-#                    c(3000))
-# para <- para[order(para$Var1,para$Var2,para$Var3,para$Var4,para$Var5,para$Var6),]
+#                    c(2000))
+para <- para[order(para$Var1,para$Var2,para$Var3,para$Var4,para$Var5,para$Var6),]
 # 
 # # 5. Launch parallel tool
-# require(doParallel)
-# ck <- makeCluster(min(45,nrow(para)), outfile = '')
-# registerDoParallel(ck)
-# r <- foreach(i = 1:nrow(para),
-#              .combine = rbind,
-#              .verbose = T,
-#              .packages = c('caret','e1071')) %dopar% smartPred(para$Var1[i],
-#              para$Var2[i],para$Var3[i],para$Var4[i],para$Var5[i],para$Var6[i])
-# save(para,r,file = file.path(dir_data,'NPCdfp01.Rda'))
-# stopCluster(ck)
+require(doParallel)
+ck <- makeCluster(min(40,nrow(para)), outfile = '')
+registerDoParallel(ck)
+r <- foreach(i = 1:nrow(para),
+             .combine = rbind,
+             .verbose = T,
+             .packages = c('caret','e1071')) %dopar% smartPred(para$Var1[i],
+             para$Var2[i],para$Var3[i],para$Var4[i],para$Var5[i],para$Var6[i])
+save(para,r,file = file.path(dir_data,'NPCdfp06.Rda'))
+stopCluster(ck)
