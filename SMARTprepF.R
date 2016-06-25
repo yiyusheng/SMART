@@ -13,13 +13,13 @@ load(file.path(dir_data,'smartName.Rda'))
 
 ####################################
 # S1 Convert failed_time to POSIXct for ykliu's smart
-smart$failed_time <- ct$failed_time[match(smart$sn,ct$sn)]
+# smart$failed_time <- ct$failed_time[match(smart$sn,ct$sn)]
 smart$failed_time <- as.POSIXct(smart$failed_time,tz = 'UTC')
 smart$time <- as.POSIXct(smart$time,tz = 'UTC')
 smart$label <- 1
 
 # S2. Adjust time interval for failure disk
-int <- 48
+int <- 2
 timeseq <- seq.POSIXt(as.POSIXct('2014-06-01',tz = 'UTC'),as.POSIXct('2014-11-01',tz='UTC'),by = 3600*int)
 sn <- levels(smart$sn)
 

@@ -6,6 +6,7 @@ source('head.R')
 #@@@ LOAD DATA @@@#
 dataA <- read.table(file.path(dir_code,'log','NPCdfp05'),skip = 135,nrows = 216)
 dataB <- read.table(file.path(dir_code,'log','NPCdfp06'),skip = 135,nrows = 120)
+dataC <- read.table(file.path(dir_code,'log','NPCdfp07'),skip = 135,nrows = 120)
 ####################################
 # S1.Clean
 dataClean <- function(data){
@@ -23,22 +24,28 @@ dataClean <- function(data){
 }
 dataA <- dataClean(dataA)
 dataB <- dataClean(dataB)
-dataComp <- merge(dataA[,c(1:4,8,9)],dataB[,c(1:4,8,9)],by = c(names(dataA)[1:4]))
-names(dataComp)[5:8] <- c('FDRA','FARA','FDRB','FARB')
-dataComp <- dataComp[,c(1:4,5,7,6,8)]
-dataComp$diffFDR <- dataComp$FDRB - dataComp$FDRA
-dataComp$diffFAR <- dataComp$FARB - dataComp$FARA
+dataC <- dataClean(dataC)
+
+# Compare
+# dataComp <- merge(dataA[,c(1:4,8,9)],dataB[,c(1:4,8,9)],by = c(names(dataA)[1:4]))
+# names(dataComp)[5:8] <- c('FDRA','FARA','FDRB','FARB')
+# dataComp <- dataComp[,c(1:4,5,7,6,8)]
+# dataComp$diffFDR <- dataComp$FDRB - dataComp$FDRA
+# dataComp$diffFAR <- dataComp$FARB - dataComp$FARA
 
 # S2.Plot
+data <- dataC
 data <- data[order(data$timeWindow,data$cost,data$gamma),]
 uniTw <- unique(data$timeWindow)
-dataPlot <- subset(data,timeWindow %in% c(12,24,48,72,144,240))
+dataPlot <- data
+# dataPlot <- subset(data,timeWindow %in% c(12,24,48,72,144,240))
 dataPlot$timeWindow <- factor(dataPlot$timeWindow)
 levels(dataPlot$timeWindow) <- paste(levels(dataPlot$timeWindow),'hours',sep = ' ')
 p <- ggplot(dataPlot,aes(x = FAR,y = FDR,color = timeWindow,shape = timeWindow)) + 
   geom_point(size = 3) + xlab('False Alarm Rate (%)') + ylab('Failure Detection Rate (%)') + 
-  scale_x_continuous(breaks = seq(0,2,0.2)) +
-  scale_y_continuous(breaks = seq(50,100,10)) +
+  xlim(c(0,2)) + ylim(c(50,100)) +
+  # scale_x_continuous(breaks = seq(0,2,0.2)) +
+  # scale_y_continuous(breaks = seq(50,100,10)) +
   guides(shape = guide_legend(title='Time Window'),color = guide_legend(title = 'Time Window')) + 
   theme_bw() +
   theme(panel.background = element_rect(color = 'black'),
