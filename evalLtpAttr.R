@@ -24,16 +24,37 @@ smartF <- subset(smartF,restTime > -24*20)
 smartF$modelLtp <- modelLabel(smartF$model)
 smartF <- smartF[order(smartF$sn,smartF$time),]
 smartF <- factorX(smartF[,c('sn','modelLtp','label','failed_time','restTime','time',attrNeed)])
-smartF[,attrNeed] <- scale(smartF[,attrNeed])
+# smartF[,attrNeed] <- scale(smartF[,attrNeed])
 
 diskInfoF$modelLtp <- modelLabel(diskInfoF$model)
 
 ###@@@ FUNCTION @@@###
-plotAttrValue <- function(data,attr){
+plotAttrValue <- function(data,attr,yl){
   tmp <- factorX(subset(data,1==1,c('sn','time','restTime',attr)))
   names(tmp)[4] <- 'attr'
-  p <- ggplot(tmp,aes(x = time,y = attr,group = sn,color = factor(round(restTime/24/7)))) + geom_line() +
-    ylab(attr)
+  p <- ggplot(tmp,aes(x = time,y = attr,group = sn,color = sn)) + geom_line(size = 1) +
+    ylab(yl) + xlab('Time') + 
+    guides(group = guide_legend(title = NULL)) + guides(color = guide_legend(title = NULL)) +
+    theme_bw() +
+    theme(panel.background = element_rect(color = 'black'),
+          panel.grid.minor = element_line(size = 0.4),
+          panel.grid.major = element_line(colour = 'grey', linetype = 'dotted', size = 1),
+          #           panel.grid.major.x = element_blank(),
+          
+          plot.title = element_blank(),
+          axis.line = element_line(color = 'black'),
+          axis.text = element_text(size = 24),
+          axis.title = element_text(size = 26),
+          
+          legend.title = element_text(size = 20),
+          legend.key.width = unit(2,units = 'line'),
+          # legend.key.height = unit(2,units = 'line'),
+          legend.text = element_text(size = 20),
+          legend.position = c(0.02,0.0),
+          legend.justification = c(0,0),
+          legend.background = element_rect(fill = alpha('grey',0.5))
+    )
+  ggsave(file=file.path(dir_data,'figure',paste(attr,'.eps',sep='')), plot=p, width = 8, height = 6, dpi = 100)
   print(p)
 }
 
@@ -49,11 +70,11 @@ plotAttrDistImedi <- function(data,attr){
 ####################################
 # S1. disk statistc and choose disks to evaluate
 snEval <- subset(diskInfoF,count > 800 & countF == 1 & model == 'ST31000524NS' &
-                   failed_time > as.POSIXct('2014-07-15') & 
-                   failed_time < as.POSIXct('2014-10-25'))
+                   failed_time > as.POSIXct('2014-08-15') & 
+                   failed_time < as.POSIXct('2014-09-25'))
 
 # smart Eval for F
-smartEvalF <- subset(smartF,sn %in% snEval$sn[sample(1:nrow(snEval),5)])
+smartEvalF <- subset(smartF,sn %in% snEval$sn[sample(1:nrow(snEval),6)])
 smartEvalF <- factorX(smartEvalF)
 
 # smart Eval for N
@@ -62,12 +83,20 @@ smartEvalN <- subset(smartN,sn %in% snN[sample(1:length(snN),10)])
 names(smartEvalN)[5:19] <- paste('a',1:15,sep='')
 
 # S2. Plot for each attributes
-
+# pSetB <- list()
 # for (i in 1:length(attrNeed)){
 #   pSetB[[i]] <- plotAttrValue(smartEvalF,attrNeed[i])
 #   pSetA[[i]] <- plotAttrDistImedi(data = smartAttrDist,attr = attrNeed[i])
 # }
 
+smartEvalF$sn <- mapvalues(smartEvalF$sn,
+                                  from = levels(smartEvalF$sn), 
+                                  to = paste('disk',1:6,sep=''))
+# save(smartEvalF,file = file.path(dir_data,'smartEvalF.Rda'))
+load(file.path(dir_data,'smartEvalF.Rda'))
+smartEvalF <- subset(smartEvalF,restTime > 0)
+plotAttrValue(smartEvalF,attrNeed[3],'Reallocated Sector Count')
+plotAttrValue(smartEvalF,attrNeed[8],'Power On Hour Count')
 # S3. distribution of smart attr with immediately failing
 # smartDist <- subset(smart,1==1,c('sn','model','failed_time','time','restTime',attrNeed))
 # smartDist[,attrNeed] <- scale(smartDist[,attrNeed])
@@ -92,7 +121,7 @@ plotDiskAttr <- function(df){
          plot=p, width = 16, height = 12, dpi = 100)
 }
 
-by(smartF,smartF$sn,plotDiskAttr)
+# by(smartF,smartF$sn,plotDiskAttr)
 # sn <- levels(smartF$sn)
 # require(doParallel)
 # ck <- makeCluster(min(40,length(sn)), outfile = '')

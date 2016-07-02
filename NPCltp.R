@@ -11,6 +11,7 @@ source(file.path(dir_code,'NPCltpFunc.R'))
 require('caret')
 require('e1071')
 require('LiblineaR')
+library('plyr')
 
 #@@@ LOAD DATA @@@#
 load(file.path(dir_data,'SMARTprepF24hFtr.Rda'))
@@ -19,45 +20,157 @@ load(file.path(dir_data,'diskInfoForEach0.5kN.Rda'))
 
 ####################################
 ###@@@ MAIN @@@###
-# S1. diskGen
-smartL <- smartF[!duplicated(smartF[,c('sn','time')]),]
-attrNeed <- smartName[c(1:5,7,8,10:12,14,15,16)]
-smartL <- dataGen(attrNeed,T)
-diskInfoF$modelLtp <- modelLabel(diskInfoF$model)
+iwProc <- function(iwSet = c(3,7,10,15,20,30),flagP = F){
+  # S1. diskGen
+  smartL <- smartF[!duplicated(smartF[,c('sn','time')]),]
+  attrNeed <- smartName[c(1:5,7,8,10:12,14,15,16)]
+  smartL <- dataGen(attrNeed,data = smartL, T)
+  diskInfoF$modelLtp <- modelLabel(diskInfoF$model)
+  
+  # S2A. label for each iterate window (days)
+  # smartL <- subset(smartL,modelLtp == '750G2')
+  labName <- paste('lab',iwSet,sep='')
+  predName <- paste('pred',iwSet,sep='')
+  for (i in 1:length(iwSet)){
+    smartL[[labName[i]]] <- as.numeric(smartL$restTime <= iwSet[i]*24)
+    smartL[[labName[i]]][smartL[[labName[i]]] == 0] <- -1
+  }
+  
+  # S2B. perc set
+  percSets <- list(per25 = c(0,0.25,1.75,2),
+                   per50 = c(0,0.5,1.5,2),
+                   per75 = c(0,0.75,1.25,2),
+                   per100 = c(0,1,1,2),
+                   per200 = c(0,1,1,3),
+                   per300 = c(0,1,1,4),
+                   per400 = c(0,1,1,5))
+  
+  # S3. Model for each iterate window and testing
+  snLevel <- levels(smartL$sn)
+  inTrain <- sample(1:length(snLevel),0.7*length(snLevel))
+  # save(inTrain,file = file.path(dir_data,'inTrain.Rda'))
+  load(file.path(dir_data,'inTrain.Rda'))
+  training <- factorX(smartL[smartL$sn %in% snLevel[inTrain],])
+  testing <- factorX(smartL[!(smartL$sn %in% snLevel[inTrain]),])
+  
+  f <- 'iw'
+  iwD <- iwSet[1]
+  # Train and testing
+  testR <- leadTimePrep(at = attrNeed[c(1:12)],dataTr = training,dataTe = testing,
+                        flag = f,percSets = percSets,iwSet = iwSet)
+  # Parse results for single model
+  if (f == 'perc'){
+    testE <- sapply(names(percSets),evalTestSPerc,dataP = testR$t,dataT = testing,iw = iwD)
+    testE <- do.call(rbind,testE)
+  }else if (f == 'iw'){
+    testE <- sapply(iwSet,evalTestS,dataP = testR$t,dataT = testing)
+    testE <- do.call(rbind,testE)
+    testE$class <- paste(gsub('lab','',testE$class),'days',sep=' ')
+    testE$class <- factor(testE$class,levels = paste(iwSet,'days',sep=' '))
+  }
+  
+  # S4. Plot and Save for single model
+  ifelse(flagP,plotTestE(testE),NULL)
+  
+  # S5. Parse result for iterate models
+  testPred <- data.frame(t(do.call(rbind,testR$t)))
+  # for scale
+  # mins <- apply(testPred,2,min)
+  # maxs <- apply(testPred,2,max)
+  # center = apply(testPred,2,mean),scale = maxs - mins)
+  
+  
+  # generate the best and merge
+  iterPred <- cbind(testing[,c('sn','restTime',labName)],testPred)
+  iterPred <- subset(iterPred,restTime < 1*24*max(iwSet))
+  iterPred[,names(testPred)] <- scale(iterPred[,names(testPred)])
 
-# S2. label for each iterate window (days)
-# smartL <- subset(smartL,modelLtp == '750G2')
-
-# iwSet <- c(1,3,5,7,10,20,30)
-iwSet <- c(3,7,10,15,20,30)
-labName <- paste('lab',iwSet,sep='')
-for (i in 1:length(iwSet)){
-  smartL[[labName[i]]] <- as.numeric(smartL$restTime <= iwSet[i]*24)
-  smartL[[labName[i]]][smartL[[labName[i]]] == 0] <- -1
+  bestPred <- procIterR(iterPred[,names(testPred)],iwSet)
+  iterPred <- cbind(iterPred,bestPred)
+  
+  iterPred$restTime <- iterPred$restTime/24
+  iterPred$accu <- sapply(1:nrow(iterPred),function(i)iterAccu(iterPred$restTime[i],iterPred$bestPred[i],iwSet))
+  randPred <- sample(iwSet,length(iterPred$restTime),replace = T)
+  iterPred$accuRandom <- sapply(1:nrow(iterPred),function(i)iterAccu(iterPred$restTime[i],randPred[i],iwSet))
+  iterPred
 }
 
-# S3. Model for each iterate window and testing
-inTrain <- sample(1:nrow(smartL),0.7*nrow(smartL))
-training <- factorX(smartL[inTrain,])
-testing <- factorX(smartL[-inTrain,])
-# sapply(paste('lab',iwSet,sep=''),function(x)table(training[[x]]))
-# sapply(paste('lab',iwSet,sep=''),function(x)table(testing[[x]]))
-# load(file.path(dir_data,'GreatSet.Rda'))
-# load(file.path(dir_data,'BadSet.Rda'))
+iwSingle <- c(2,5,8,10,20)
+# predN <- paste('predSet',c(iwSingle,11),sep='')
+# iwSet <- c(iwSet,list(c(10,20,30,40)))
+predN <- paste('predSet',iwSingle,sep='')
+iwSet <- lapply(iwSingle,function(x)unique(c(seq(x,40,x),40)))
+iwProc(flagP = T)
 
-# testR <- leadTimePrep(attrNeed)
-testR <- leadTimePrep(at = attrNeed[c(1:5)],dataTr = training,dataTe = testing)
-testE <- sapply(iwSet,evalTestS,dataP = testR$t,dataT = testing)
-testE <- do.call(rbind,testE)
-testE$class <- factor(testE$class,levels = labName)
-p <- ggplot(testE,aes(x = FAR, y = FDR, color = class, shape = class )) + 
-  geom_line() + geom_point() +
-  theme(legend.key.width = unit(4,units = 'line'))
-print(p)
+r.iwProc <- lapply(iwSet,iwProc)
+accuSet <- data.frame(sapply(r.iwProc,'[[',c('accu')))
+accuRandomSet <- data.frame(sapply(r.iwProc,'[[',c('accuRandom')))
+bestPredSet <- data.frame(sapply(r.iwProc,'[[',c('bestPred')))
+names(accuSet) <- predN
+names(accuRandomSet) <- paste(predN,'R',sep='')
+names(bestPredSet) <- paste(predN,'P',sep='')
+
+r.merge <- data.frame(do.call(rbind,lapply(1:ncol(accuSet),
+                                     function(i)cbind(accuSet[,i],accuRandomSet[,i],bestPredSet[,i],names(accuSet)[i]))))
+names(r.merge) <- c('Accu','AccuR','leadTime','iterateWindow')
+li <- melt(table(r.merge[,names(r.merge)]))
+r.rate <- data.frame(do.call(rbind,lapply(1:(nrow(li)/2),function(i){
+  cur <- li[(2*i-1):(2*i),]
+  list(cur$leadTime[1],as.character(cur$iterateWindow[1]),
+       cur$value[cur$Accu == T]/(cur$value[cur$Accu == T] + cur$value[cur$Accu == F]),
+       cur$value[cur$Accu == T] + cur$value[cur$Accu == F])
+})))
+names(r.rate) <- c('leadTime','iterateWindow','Rate','count')
+r.rate <- subset(r.rate,!is.na(r.rate$Rate))
+r.rate$iterateWindow <- factor(r.rate$iterateWindow,levels = predN)
+r.rate$leadTime <- as.numeric(r.rate$leadTime)
+r.rate$Rate <- as.numeric(r.rate$Rate) * 100
+r.rate$count <- as.numeric(r.rate$count)
+r.rate <- r.rate[order(r.rate$iterateWindow,r.rate$leadTime),]
+
+
+r.rate$iterateWindow <- mapvalues(r.rate$iterateWindow,
+                                  from = levels(r.rate$iterateWindow), 
+                                  to = sapply(iwSet,length))
+plotrRate(r.rate)
+
+# Calculate for each iwSet
+r.rate$fail <- r.rate$count*r.rate$Rate*0.01
+by(r.rate,r.rate$iterateWindow,function(x){
+  sum(x$fail)/sum(x$count)
+})
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+# iterAccuracy <- data.frame(t(apply(accu,2,table)))
+# iterAccuracy$rate <- iterAccuracy$TRUE./(iterAccuracy$TRUE. + iterAccuracy$FALSE.) * 100
+# iterAccuracy$name <- row.names(iterAccuracy)
+# iterAccuracy$name <- factor(iterAccuracy$name,levels = predN)
+# ggplot(iterAccuracy,aes(x = name,y = rate)) + geom_bar(stat = 'identity')
+# inTrain <- sample(1:nrow(smartL),0.7*nrow(smartL))
+# training <- factorX(smartL[inTrain,])
+# testing <- factorX(smartL[-inTrain,])
+# iterPred <- data.frame(sn = testing$sn,
+#                 restTime = testing$restTime/24,
+#                 proRestTime =  procIterR(testPredScale))
+
+# numChange <- data.frame(sn = levels(testing$sn),
+#                         count = as.numeric(tapply(iterPred$sn,iterPred$sn,length)),
+#                         countC = as.numeric(tapply(iterPred$proRestTime,iterPred$sn,function(x)length(unique(x)))))
+# numChange <- subset(numChange,count > 20*6)
+# quantileX(numChange$countC)
 # a <- list()
 # for (i in 1:10){
 #   inTrain <- sample(1:nrow(smartL),0.7*nrow(smartL))

@@ -8,8 +8,8 @@ require('e1071')
 #@@@ LOAD DATA @@@#
 #consist of 300k normal disk(each 20 days) from york and 2100 bad disk from ykliu
 #load(file.path(dir_data,'SMARTMerge_int2h20d30k.Rda'))  
-load(file.path(dir_data,'SMARTprepF4hFtr1.Rda'))
-load(file.path(dir_data,'SMARTprepN0.5wFtr1.Rda'))
+load(file.path(dir_data,'SMARTprepF4hFtr.Rda'))
+load(file.path(dir_data,'SMARTprepN0.5wFtr.Rda'))
 load(file.path(dir_data,'smartName.Rda'))
 
 attrNeed <- smartName[c(1,2,3,4,10,12,15)]
