@@ -20,7 +20,7 @@ load(file.path(dir_data,'diskInfoForEach0.5kN.Rda'))
 
 ####################################
 ###@@@ MAIN @@@###
-iwProc <- function(iwSet = c(3,7,10,15,20,30),flagP = F){
+iwProc <- function(iwSet = c(5,8,10,15,20,40),flagP = F){
   # S1. diskGen
   smartL <- smartF[!duplicated(smartF[,c('sn','time')]),]
   attrNeed <- smartName[c(1:5,7,8,10:12,14,15,16)]
@@ -70,7 +70,7 @@ iwProc <- function(iwSet = c(3,7,10,15,20,30),flagP = F){
   }
   
   # S4. Plot and Save for single model
-  ifelse(flagP,plotTestE(testE),NULL)
+  # ifelse(flagP,plotTestE(testE),NULL)
   
   # S5. Parse result for iterate models
   testPred <- data.frame(t(do.call(rbind,testR$t)))
@@ -100,9 +100,9 @@ iwSingle <- c(2,5,8,10,20)
 # iwSet <- c(iwSet,list(c(10,20,30,40)))
 predN <- paste('predSet',iwSingle,sep='')
 iwSet <- lapply(iwSingle,function(x)unique(c(seq(x,40,x),40)))
-iwProc(flagP = T)
+# iwProc(flagP = T)
 
-r.iwProc <- lapply(iwSet,iwProc)
+r.iwProc <- lapply(iwSet,iwProc,F)
 accuSet <- data.frame(sapply(r.iwProc,'[[',c('accu')))
 accuRandomSet <- data.frame(sapply(r.iwProc,'[[',c('accuRandom')))
 bestPredSet <- data.frame(sapply(r.iwProc,'[[',c('bestPred')))

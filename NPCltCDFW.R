@@ -33,8 +33,8 @@ ltPlot$timeWindow <- factor(ltPlot$timeWindow)
 ltPlot4 <- subset(ltPlot,timeWindow == 48)
 ltPlot4$weight <- paste('w0:',ltPlot4$w0,'-w1:',ltPlot4$w1,sep='')
 p <- ggplot(ltPlot4,aes(x = leadTime/24,group = weight,color = weight)) + stat_ecdf(size = 1) +
-  xlab('Lead Time (days)') + ylab('Cumulative Distribution Function (%)') +
-  scale_x_continuous(breaks = seq(0,120,10)) +
+  xlab('Lead Time (days)') + ylab('CDF (%)') +
+  scale_x_continuous(breaks = seq(0,120,10),limits = c(-5,125)) +
   scale_y_continuous(breaks = seq(0,1,0.1)) +
   guides(shape = guide_legend(title='Weight'),color = guide_legend(title = 'Weight')) + 
   theme_bw() +
@@ -47,6 +47,7 @@ p <- ggplot(ltPlot4,aes(x = leadTime/24,group = weight,color = weight)) + stat_e
         axis.line = element_line(color = 'black'),
         axis.text = element_text(size = 22),
         axis.title = element_text(size = 26),
+        axis.text.x = element_text(angle = 40, margin = margin(10)),
         
         legend.title = element_text(size = 20),
         legend.key.width = unit(1.5,units = 'line'),
@@ -57,4 +58,4 @@ p <- ggplot(ltPlot4,aes(x = leadTime/24,group = weight,color = weight)) + stat_e
         legend.background = element_rect(fill = alpha('grey',0.5))
   )
 print(p)
-ggsave(file=file.path(dir_data,'npc16',paste('fig2Weight.eps',sep='')), plot=p, width = 8, height = 6, dpi = 100)
+ggsave(file=file.path(dir_data,'figure','npc16',paste('fig2Weight.eps',sep='')), plot=p, width = 8, height = 6, dpi = 100)

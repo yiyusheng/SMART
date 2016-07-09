@@ -169,7 +169,7 @@ plotTestE <- function(testE){
     xlim(c(0,20)) +
     scale_x_continuous(breaks = seq(0,20,2)) +
     scale_y_continuous(breaks = seq(0,60,10)) +
-    guides(shape = guide_legend(title='Iterate Window'),color = guide_legend(title = 'Iterate Window')) + 
+    guides(shape = guide_legend(title='Lead Time Window'),color = guide_legend(title = 'Lead Time Window')) + 
     theme_bw() +
     theme(panel.background = element_rect(color = 'black'),
           panel.grid.minor = element_line(size = 0.4),
@@ -182,7 +182,7 @@ plotTestE <- function(testE){
           axis.title = element_text(size = 26),
           
           legend.title = element_text(size = 20),
-          legend.key.width = unit(4,units = 'line'),
+          legend.key.width = unit(6,units = 'line'),
           legend.key.height = unit(1.5,units = 'line'),
           legend.text = element_text(size = 20),
           legend.position = c(0.95,0.05),
@@ -216,7 +216,7 @@ plotrRate <- function(r.rate){
     geom_bar(stat = 'identity',position = 'dodge') + 
     xlab('Number of Models') + ylab('Accuracy (%)') + 
     scale_y_continuous(breaks = seq(0,70,10)) +
-    guides(fill = guide_legend(title = 'Iterate Window (days)')) + 
+    guides(fill = guide_legend(title = 'Lead Time Window (days)')) + 
     theme_bw() +
     theme(panel.background = element_rect(color = 'black'),
           panel.grid.minor = element_line(size = 0.4),
@@ -229,7 +229,7 @@ plotrRate <- function(r.rate){
           axis.title = element_text(size = 26),
           
           legend.title = element_text(size = 20),
-          legend.key.width = unit(4.5,units = 'line'),
+          legend.key.width = unit(5,units = 'line'),
           legend.key.height = unit(1,units = 'line'),
           legend.text = element_text(size = 20),
           legend.position = c(0.03,0.97),
