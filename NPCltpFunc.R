@@ -165,7 +165,7 @@ dataGen <- function(attrNeed,scl= T,data = smartL){
 # F7. Plot 
 plotTestE <- function(testE){
   p <- ggplot(testE,aes(x = FAR, y = FDR, color = class, shape = class )) + 
-    geom_line(size = 1) + geom_point(size = 2) + xlab('False Alarm Rate (%)') + ylab('Failure Detection Rate (%)') + 
+    geom_line(size = 1) + geom_point(size = 2) + xlab('FPR (%)') + ylab('TPR (%)') + 
     xlim(c(0,20)) +
     scale_x_continuous(breaks = seq(0,20,2)) +
     scale_y_continuous(breaks = seq(0,60,10)) +

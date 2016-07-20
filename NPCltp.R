@@ -70,7 +70,7 @@ iwProc <- function(iwSet = c(5,8,10,15,20,40),flagP = F){
   }
   
   # S4. Plot and Save for single model
-  # ifelse(flagP,plotTestE(testE),NULL)
+  ifelse(flagP,plotTestE(testE),NULL)
   
   # S5. Parse result for iterate models
   testPred <- data.frame(t(do.call(rbind,testR$t)))
@@ -94,13 +94,13 @@ iwProc <- function(iwSet = c(5,8,10,15,20,40),flagP = F){
   iterPred$accuRandom <- sapply(1:nrow(iterPred),function(i)iterAccu(iterPred$restTime[i],randPred[i],iwSet))
   iterPred
 }
-
+iwProc(flagP = T)
 iwSingle <- c(2,5,8,10,20)
 # predN <- paste('predSet',c(iwSingle,11),sep='')
 # iwSet <- c(iwSet,list(c(10,20,30,40)))
 predN <- paste('predSet',iwSingle,sep='')
 iwSet <- lapply(iwSingle,function(x)unique(c(seq(x,40,x),40)))
-# iwProc(flagP = T)
+
 
 r.iwProc <- lapply(iwSet,iwProc,F)
 accuSet <- data.frame(sapply(r.iwProc,'[[',c('accu')))
