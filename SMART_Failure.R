@@ -51,7 +51,7 @@ CDF_plot <- function(at,ftr){
   # scale_x_continuous(breaks = seq(xl[1],xl[2],1),labels = round(2^(seq(xl[1],xl[2],1)-30),2)) +
 }
 ###################################################
-# S1.µ¼Èë²¢ÇåÏ´Êý¾Ý
+# S1.å¯¼å…¥å¹¶æ¸…æ´—æ•°æ®
 load(file.path(dir_data,'staDown.Rda'))
 SD <- subset(staDown,sn %in% diskInfoValid$sn)
 SD$onlineTime <- as.POSIXct(SD$onlineTime,origin='1970-01-01')
@@ -60,7 +60,7 @@ SD$firstDT <- as.POSIXct(SD$firstDT,origin='1970-01-01')
 SD$lastDT <- as.POSIXct(SD$lastDT,origin='1970-01-01')
 names(SD)[names(SD) == 'min.1'] <- 'minDV'
 
-# S2.Ìí¼Ó»úÐÍºÍ¹ÊÕÏ×´Ì¬
+# S2.æ·»åŠ æœºåž‹å’Œæ•…éšœçŠ¶æ€
 SD$dClass <- diskInfoValid$dClass[match(SD$sn,diskInfoValid$sn)]
 SD$class <- diskInfoValid$class[match(SD$sn,diskInfoValid$sn)]
 SD$dClass <- as.character(SD$dClass)
@@ -69,7 +69,7 @@ SD$group <- factor(paste(SD$class,SD$dClass,sep='_'))
 SD$attr <- factor(SD$attr)
 
 
-# S3.»­CDF
+# S3.ç”»CDF
 attr <- levels(SD$attr)
 ftr <- names(SD)[c(4,5,8:16)]
 dfPara <- expand.grid(attr,ftr)

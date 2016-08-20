@@ -1,6 +1,6 @@
 #Function set
 
-# F1. µ¥×Ö¶Î·ÖÇøÓò¹ÊÕÏÂÊ
+# F1. å•å­—æ®µåˆ†åŒºåŸŸæ•…éšœç‡
 sinAttrFR <- function(data,dataF,singlePartCount,title,units,disks){
   div <- as.numeric(quantile(data,seq(0,1,1/singlePartCount)))
   cut <- tableX(cut(data,div))
@@ -32,15 +32,15 @@ sinAttrFR <- function(data,dataF,singlePartCount,title,units,disks){
   return(cutM)
 }
 
-# F2. Ë«×Ö¶Î·ÖÇøÓò¹ÊÕÏÂÊ
+# F2. åŒå­—æ®µåˆ†åŒºåŸŸæ•…éšœç‡
 dblAttrFR <- function(mean_io,doublePartCount,title,xl,yl){
   
-  #F2.1 Êı¾İÉùÃ÷
+  #F2.1 æ•°æ®å£°æ˜
   partA <- data.frame(matrix(0,doublePartCount,doublePartCount))
   partF <- data.frame(matrix(0,doublePartCount,doublePartCount))
   partR <- data.frame(matrix(0,doublePartCount,doublePartCount))
   
-  #F2.2 »®·Ö
+  #F2.2 åˆ’åˆ†
   cn <- names(mean_io)
   names(mean_io) <- c('svrid','colA','colB','class')
   divA <- as.numeric(quantile(mean_io$colA,seq(0,1,1/doublePartCount)))
@@ -48,7 +48,7 @@ dblAttrFR <- function(mean_io,doublePartCount,title,xl,yl){
   divB <- as.numeric(quantile(mean_io$colB,seq(0,1,1/doublePartCount)))
   divB <- divB + mean(divB)*1e-20*seq(0,(length(divB)-1),1)
   
-  #F2.3 ÇóÊıÁ¿£¬±ÈÀı
+  #F2.3 æ±‚æ•°é‡ï¼Œæ¯”ä¾‹
   for (i in 1:(length(divA)-1)){
     for (j in 1:(length(divB)-1)){
       tmp <- mean_io[mean_io$colA > divA[i] & mean_io$colA <= divA[i+1] &
@@ -59,8 +59,8 @@ dblAttrFR <- function(mean_io,doublePartCount,title,xl,yl){
   }
   partR <- partF/partA
   
-  #F2.4 Ô¤´¦Àí¼°ÈÚ»¯
-  #¹ıÂËÊı¾İ²»×ãµÄÇø¼ä
+  #F2.4 é¢„å¤„ç†åŠèåŒ–
+  #è¿‡æ»¤æ•°æ®ä¸è¶³çš„åŒºé—´
   partR[is.na(partR) | partA <= nrow(mean_io_C)/doublePartCount/doublePartCount/4] <- -1
   partR <- round(partR*1e5)/1e5
   names(partR) <- divB[1:doublePartCount]
@@ -92,7 +92,7 @@ dblAttrFR <- function(mean_io,doublePartCount,title,xl,yl){
   return(list(partA,partF,partR))
 }
 
-# F3. µ¥×Ö¶ÎÀÛ»ı¹ÊÕÏÂÊ
+# F3. å•å­—æ®µç´¯ç§¯æ•…éšœç‡
 sinAttrCumFR <- function(data,attr,title){
   tmp_io <- data
   tmp_io <- tmp_io[order(tmp_io[[attr]]),]
@@ -103,7 +103,7 @@ sinAttrCumFR <- function(data,attr,title){
   write.csv(tmp_io,file = file.path(dir_data,title))
 }
 
-# F4. MCF¼ÆËã£¬Î´Íê³É£¬·ÅÆú¡£
+# F4. MCFè®¡ç®—ï¼Œæœªå®Œæˆï¼Œæ”¾å¼ƒã€‚
 mcf <- function(data,attr){
   data <- data[order(data[[attr]]),]
   mcf <- data.frame(x = sort(unique(data[[attr]])))
@@ -113,9 +113,9 @@ mcf <- function(data,attr){
   #   mcf$cumu
 }
 
-# F5. µ¥×Ö¶ÎÈË¹¤·ÖÇøÓò¹ÊÕÏÂÊ
-# Ïà±ÈÓÚF1,ÕâÀï²»ÔÙÊÇ°´»úÆ÷ÊıÀ´·ÖÇø¼ä£¬¶øÊÇ²ÉÓÃÈË¹¤»®·Ö
-# ÀıÈç¶ÔÊ±¼ä²ÉÈ¡[0,5,1],[5,20,5],[20,100,40]À´½øĞĞ»®·Ö
+# F5. å•å­—æ®µäººå·¥åˆ†åŒºåŸŸæ•…éšœç‡
+# ç›¸æ¯”äºF1,è¿™é‡Œä¸å†æ˜¯æŒ‰æœºå™¨æ•°æ¥åˆ†åŒºé—´ï¼Œè€Œæ˜¯é‡‡ç”¨äººå·¥åˆ’åˆ†
+# ä¾‹å¦‚å¯¹æ—¶é—´é‡‡å–[0,5,1],[5,20,5],[20,100,40]æ¥è¿›è¡Œåˆ’åˆ†
 sinAttrManualFR <- function(data,dataF,div,title,units,disks){
   cut <- tableX(cut(data,div))
   cutF <- tableX(cut(dataF,div))
@@ -146,7 +146,7 @@ sinAttrManualFR <- function(data,dataF,div,title,units,disks){
   return(cutM)
 }
 
-# F6. Îª¶àĞĞÄÚÈİ½øĞĞtable
+# F6. ä¸ºå¤šè¡Œå†…å®¹è¿›è¡Œtable
 colTableX <- function(data,col,decreasing = T,rm.na = F){
   colMerge <- data[[col[1]]]
   for (i in seq(2,length(col))){
@@ -155,7 +155,7 @@ colTableX <- function(data,col,decreasing = T,rm.na = F){
   return(tableX(colMerge,decreasing = decreasing))
 }
 
-# F7. ²ğ·ÖºÏ²¢Ö®ºóµÄcol£¬²¢Êä³ödata.frame
+# F7. æ‹†åˆ†åˆå¹¶ä¹‹åçš„colï¼Œå¹¶è¾“å‡ºdata.frame
 splitToDF <- function(data,split = '_',header = ''){
   r <- data.frame(matrix(unlist(strsplit(as.character(data),split)),byrow = T,nrow = length(data)))
   if (header[1] != ''){
@@ -164,7 +164,7 @@ splitToDF <- function(data,split = '_',header = ''){
   return(r)
 }
 
-# F8. Ôö³¤ÂÊ¼ÆËã
+# F8. å¢é•¿ç‡è®¡ç®—
 incCalc <- function(data){
   len <- length(data)
   inc <- (data[2:len] - data[1:(len-1)])/data[1:(len-1)]
@@ -172,7 +172,7 @@ incCalc <- function(data){
   return(inc)
 }
 
-# F9. ¶àÍ¼º¯Êı
+# F9. å¤šå›¾å‡½æ•°
 multiplot <- function(..., plotlist = NULL, file, cols = 1, layout = NULL) {
   require(grid)
   
@@ -201,7 +201,7 @@ multiplot <- function(..., plotlist = NULL, file, cols = 1, layout = NULL) {
   }
 }
 
-# F10.·µ»Ø¶à¸öÖµÊ±ÓÃlist[]·Ö±ğ½ÓÊÕ
+# F10.è¿”å›å¤šä¸ªå€¼æ—¶ç”¨list[]åˆ†åˆ«æ¥æ”¶
 # from https://raw.githubusercontent.com/ggrothendieck/gsubfn/master/R/list.R
 list <- structure(NA,class="result")
 "[<-.result" <- function(x,...,value) {
@@ -215,8 +215,8 @@ list <- structure(NA,class="result")
   x
 }
 
-## F11.ÎªÁË½øĞĞlog2´¦Àí£¬°ÑĞ¡ÓÚ1´óÓÚ0µÄÖµÉèÎª1,´óÓÚ-1Ğ¡ÓÚ0µÄÖµÉèÎª-1
-# ºóÒ»¸öº¯Êı½«(-Inf,Inf)µÄÖµÓÃlog2Ó³Éäµ½(-Inf,Inf),ÆäÖĞ[-1,1]Ó³ÉäÎª0.
+## F11.ä¸ºäº†è¿›è¡Œlog2å¤„ç†ï¼ŒæŠŠå°äº1å¤§äº0çš„å€¼è®¾ä¸º1,å¤§äº-1å°äº0çš„å€¼è®¾ä¸º-1
+# åä¸€ä¸ªå‡½æ•°å°†(-Inf,Inf)çš„å€¼ç”¨log2æ˜ å°„åˆ°(-Inf,Inf),å…¶ä¸­[-1,1]æ˜ å°„ä¸º0.
 mdf4log2 <- function(x){
   x[x < 1 & x >= 0] <- 1
   x[x > -1 & x < 0] <- -1
@@ -229,7 +229,7 @@ log4neg <- function(x){
   x
 }
 
-# F12.½«dfµÄitemÒÔÀ¨ºÅºóµÚÒ»¸öÊı×ÖµÄË³ĞòÅÅĞò,ÓÃÓÚ·½±ãµÄ»­Í¼
+# F12.å°†dfçš„itemä»¥æ‹¬å·åç¬¬ä¸€ä¸ªæ•°å­—çš„é¡ºåºæ’åº,ç”¨äºæ–¹ä¾¿çš„ç”»å›¾
 item_order <- function(df,attr = 'item'){
   od <- as.numeric(gsub('^\\[|^\\(|,.*$','',df[[attr]]))
   df[attr] <- factor(df[[attr]],levels = df[[attr]][order(od)])
@@ -238,7 +238,7 @@ item_order <- function(df,attr = 'item'){
   df
 }
 
-# F13.AFR¼ÆËã
+# F13.AFRè®¡ç®—
 AFR <- function(f,cm,lastYears,diskCount,dev = ''){
   if(dev != ''){
     f <- subset(f,grepl(dev,dClass))
@@ -261,7 +261,7 @@ AFR <- function(f,cm,lastYears,diskCount,dev = ''){
   return(cutMerge)
 }
 
-# F14.AFR»­Í¼
+# F14.AFRç”»å›¾
 AFR_plot <- function(cutMerge,title,yl){ 
   if (yl == -1){
     p1 <- ggplot(cutMerge,aes(x = item,y = AFR*100*6)) + geom_bar(stat = 'identity') +
@@ -307,15 +307,15 @@ AFR_plot <- function(cutMerge,title,yl){
   ggsave(file=file.path(dir_data,'ship_time',paste(title,'.png',sep='')), plot=p1, width = 16, height = 12, dpi = 100)
 }
 
-# F15. AFR¼ÆËãA
+# F15. AFRè®¡ç®—A
 AFR_value <- function(p3.f,p3.cmdb,p3.io,attr,levelCount,lastYears,diskCount){
-  # ÇóÇø¼ä
+  # æ±‚åŒºé—´
   div902 <- quantile(p3.io$mean_902/diskCount,seq(0,1,1/levelCount))
   div903 <- quantile(p3.io$mean_903/diskCount,seq(0,1,1/levelCount))
   div999 <- quantile(p3.io$mean_999,seq(0,1,1/levelCount))
   divAll <- c(0,(seq(1,(lastYears-1)) - 1/12),lastYears)
   divF <- seq(0,lastYears)
-  # ¸øÃ¿Ì¨»úÆ÷Ìí¼ÓÇø¼ä
+  # ç»™æ¯å°æœºå™¨æ·»åŠ åŒºé—´
   p3.io$lv902 <- cut(p3.io$mean_902/diskCount,div902)
   p3.io$lv903 <- cut(p3.io$mean_903/diskCount,div903)
   p3.io$lv999 <- cut(p3.io$mean_999,div999)
@@ -355,10 +355,10 @@ AFR_value <- function(p3.f,p3.cmdb,p3.io,attr,levelCount,lastYears,diskCount){
 
 
 
-# F16.AFR¼ÆËãB
-#¶ÔÈÎºÎÒ»¸ö×Ö¶Î£¬²»Í¬Ê±¼ä¶ÎµÄ¹ÊÕÏÂÊ
+# F16.AFRè®¡ç®—B
+#å¯¹ä»»ä½•ä¸€ä¸ªå­—æ®µï¼Œä¸åŒæ—¶é—´æ®µçš„æ•…éšœç‡
 AFR_attr <- function(f,cmdb,attr,lastYears,diskCount,dev = '',defValue = ' 0'){
-  # ÇóÇø¼ä
+  # æ±‚åŒºé—´
   f <- factorX(f)
   cmdb <- factorX(cmdb)
   if (dev != ''){
@@ -396,7 +396,7 @@ AFR_attr <- function(f,cmdb,attr,lastYears,diskCount,dev = '',defValue = ' 0'){
   return(cutMerge)
 }
 
-#·Ö×Ö¶Î´¦Àí£¬²»´¦ÀíÊ±¼ä
+#åˆ†å­—æ®µå¤„ç†ï¼Œä¸å¤„ç†æ—¶é—´
 AFR_attr_notime <- function(f,io,attr1,attr2,diskCount,dev = ""){
   if(dev != ""){
     f <- subset(f,grepl(dev,dClass))
@@ -429,7 +429,7 @@ AFR_attr_notime <- function(f,io,attr1,attr2,diskCount,dev = ""){
   tiof
 }
 
-# F17. AFR»­Í¼
+# F17. AFRç”»å›¾
 AFR_value_plot <- function(cutMerge,title,yl,
                            subdir = '',valueFilter = '',cylim = -1){
   plotCol <- c('value','shipTime','AFR')
@@ -474,7 +474,7 @@ AFR_value_plot <- function(cutMerge,title,yl,
   ggsave(file=file.path(dir_data,'ship_time',subdir,paste(title,'.png',sep='')), plot=p1, width = 16, height = 12, dpi = 100)
 }
 
-# F18.»­CDFÍ¼
+# F18.ç”»CDFå›¾
 CDF_plot <- function(data,tt,xl){
   data$shTime <- paste(data$shTime + 1,'years',sep=' ')
   data$shTime[data$shTime == '1 years'] <- '1 year'

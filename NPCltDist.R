@@ -25,9 +25,9 @@ ltValue <- sapply(idx, function(i){
 ltValue <- do.call(rbind,ltValue)
 names(ltValue) <- c('leadTime','posRate','timeWindow','w0','w1')
 ltValue <- subset(ltValue,leadTime > 0)
-ltValue$allPos <- 'Partial Positive'
-ltValue$allPos[ltValue$posRate == 1] <- 'Entire Positive'
-ltValueEntirePos <- subset(ltValue,allPos == 'Partial Positive')
+ltValue$allPos <- 'Partial Positive Disk'
+ltValue$allPos[ltValue$posRate == 1] <- 'Entire Positive Disk'
+# ltValueEntirePos <- subset(ltValue,allPos == 'Partial Positive Disk')
 
 # S3.plot 
 #48/0.1/10/10/5 94.99%/0.74%

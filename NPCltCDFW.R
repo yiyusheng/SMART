@@ -15,6 +15,7 @@ ltSet <- r[,9]
 
 # S2.Lead time distribution
 idx <- which(data$FDR > 90 & data$FAR < 1)
+# idx <- which(data$w1 == 1 | data$w0 == 1)
 # idx <- 1:length(ltSet)
 ltValue <- sapply(idx, function(i){
   x <- subset(ltSet[[i]], sn %in% resFSN$sn)
@@ -31,6 +32,8 @@ ltPlot <- subset(ltValue,leadTime >= 0)
 ltPlot$timeWindow <- factor(ltPlot$timeWindow)
 # For weight
 ltPlot4 <- subset(ltPlot,timeWindow == 48)
+ltPlot4$w0 <- ltPlot4$w0/10
+ltPlot4$w1 <- ltPlot4$w1/10
 ltPlot4$weight <- paste('w0:',ltPlot4$w0,'-w1:',ltPlot4$w1,sep='')
 p <- ggplot(ltPlot4,aes(x = leadTime/24,group = weight,color = weight)) + stat_ecdf(size = 1) +
   xlab('Lead Time (days)') + ylab('CDF (%)') +

@@ -1,4 +1,4 @@
-#CONFIGURE ÖÐÎÄ
+#CONFIGURE ä¸­æ–‡
 dir_code <- 'D:/Git/SMART'
 dir_data <- 'D:/Data/SMART'
 dir_dataA <- 'D:/Data/Disk Number'

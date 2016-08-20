@@ -14,7 +14,7 @@ data.f$fsTime <- floor(data.f$failShiptime)
 data.f$fsTimeN <- cut(data.f$failShiptime,c(0,1/2,1:7),include.lowest = T)
 data.f$fsTimeN <- gsub('^\\[|^\\(|,.*$','',data.f$fsTimeN)
 
-# ÉÏ¼ÜÊ±¼ä¼ÆËã
+# ä¸Šæž¶æ—¶é—´è®¡ç®—
 cmdb$shiptimeToLeft <- floor(as.POSIXct('2014-06-01') - cmdb$use_time)
 cmdb$shiptimeToRight <- floor(as.POSIXct('2014-08-01') - cmdb$use_time)
 units(cmdb$shiptimeToLeft) <- 'days'
@@ -25,7 +25,7 @@ cmdb$shTimeN <- cut(cmdb$shiptimeToLeft,c(0,1/2,1:7),include.lowest = T)
 cmdb$shTimeN <- gsub('^\\[|^\\(|,.*$','',cmdb$shTimeN)
 cmdb$dClass <- ''
 
-# ¸øÃ¿¸ö»úÆ÷×ö±ê¼Ç
+# ç»™æ¯ä¸ªæœºå™¨åšæ ‡è®°
 class_C <- 'C1'
 class_B <- c('B5','B6','B1')
 # class_TS <- c('TS3','TS4','TS5','TS6')
@@ -34,7 +34,7 @@ cmdb$dClass[cmdb$dev_class_id %in% class_C] <- 'C'
 cmdb$dClass[cmdb$dev_class_id %in% class_B] <- 'B'
 cmdb$dClass[cmdb$dev_class_id %in% class_TS] <- 'TS'
 
-#¼ÓÈëÈÝÁ¿Ñ¡Ïî£¬°ÑÃ»ÓÐÈÝÁ¿ÐÅÏ¢µÄÊý¾Ý¹ýÂË£¨C1 588Ì¨£¬TS3 7Ì¨£¬TS6 35Ì¨£¬°üº¬13¸ö¹ÊÕÏ»ú£©
+#åŠ å…¥å®¹é‡é€‰é¡¹ï¼ŒæŠŠæ²¡æœ‰å®¹é‡ä¿¡æ¯çš„æ•°æ®è¿‡æ»¤ï¼ˆC1 588å°ï¼ŒTS3 7å°ï¼ŒTS6 35å°ï¼ŒåŒ…å«13ä¸ªæ•…éšœæœºï¼‰
 cmdbio <- subset(cmdb,svrid %in% mean_io$svrid & dev_class_id %in% c(class_C,class_TS))
 cmdbio$total <- disk_ip$total[match(cmdbio$ip,disk_ip$ip)]
 cmdbio <- subset(cmdbio,!is.na(total) & (dClass != 'C' | total %in% c(500,250,1000)))
@@ -45,7 +45,7 @@ cmdbio$dClass[cmdbio$dClass == 'TS' & cmdbio$totalMerge == 12000] <- 'TS1T'
 cmdbio$dClass[cmdbio$dClass == 'TS' & cmdbio$totalMerge == 24000] <- 'TS2T'
 mean_io <- subset(mean_io,svrid %in% factor(cmdbio$svrid))
 
-# Êý¾Ý×¼±¸
+# æ•°æ®å‡†å¤‡
 tmp.cmdb <- cmdbio
 tmp.f <- subset(data.f,svrid %in% cmdbio$svrid)
 tmp.f$total <- tmp.cmdb$total[match(tmp.f$ip,tmp.cmdb$ip)]

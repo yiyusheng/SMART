@@ -1,0 +1,996 @@
+nohup: ignoring input
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+starting worker pid=38128 on localhost:11167 at 22:01:35.957
+starting worker pid=38137 on localhost:11167 at 22:01:36.293
+starting worker pid=38146 on localhost:11167 at 22:01:36.579
+starting worker pid=38155 on localhost:11167 at 22:01:36.870
+starting worker pid=38164 on localhost:11167 at 22:01:37.162
+starting worker pid=38173 on localhost:11167 at 22:01:37.448
+starting worker pid=38182 on localhost:11167 at 22:01:37.736
+starting worker pid=38191 on localhost:11167 at 22:01:38.023
+starting worker pid=38200 on localhost:11167 at 22:01:38.321
+starting worker pid=38209 on localhost:11167 at 22:01:38.627
+starting worker pid=38218 on localhost:11167 at 22:01:38.914
+starting worker pid=38227 on localhost:11167 at 22:01:39.207
+starting worker pid=38236 on localhost:11167 at 22:01:39.503
+starting worker pid=38245 on localhost:11167 at 22:01:39.810
+starting worker pid=38254 on localhost:11167 at 22:01:40.102
+starting worker pid=38263 on localhost:11167 at 22:01:40.393
+starting worker pid=38272 on localhost:11167 at 22:01:40.680
+starting worker pid=38281 on localhost:11167 at 22:01:40.974
+starting worker pid=38290 on localhost:11167 at 22:01:41.267
+starting worker pid=38299 on localhost:11167 at 22:01:41.557
+starting worker pid=38310 on localhost:11167 at 22:01:41.854
+starting worker pid=38319 on localhost:11167 at 22:01:42.143
+starting worker pid=38328 on localhost:11167 at 22:01:42.435
+starting worker pid=38337 on localhost:11167 at 22:01:42.734
+starting worker pid=38346 on localhost:11167 at 22:01:43.025
+starting worker pid=38355 on localhost:11167 at 22:01:43.315
+starting worker pid=38364 on localhost:11167 at 22:01:43.606
+starting worker pid=38374 on localhost:11167 at 22:01:43.904
+starting worker pid=38383 on localhost:11167 at 22:01:44.238
+starting worker pid=38392 on localhost:11167 at 22:01:44.564
+starting worker pid=38401 on localhost:11167 at 22:01:44.848
+starting worker pid=38410 on localhost:11167 at 22:01:45.158
+starting worker pid=38419 on localhost:11167 at 22:01:45.448
+starting worker pid=38428 on localhost:11167 at 22:01:45.739
+starting worker pid=38438 on localhost:11167 at 22:01:46.024
+starting worker pid=38447 on localhost:11167 at 22:01:46.321
+starting worker pid=38456 on localhost:11167 at 22:01:46.606
+starting worker pid=38465 on localhost:11167 at 22:01:46.892
+starting worker pid=38474 on localhost:11167 at 22:01:47.198
+starting worker pid=38491 on localhost:11167 at 22:01:47.524
+starting worker pid=38500 on localhost:11167 at 22:01:47.815
+starting worker pid=38510 on localhost:11167 at 22:01:48.101
+starting worker pid=38519 on localhost:11167 at 22:01:48.395
+starting worker pid=38528 on localhost:11167 at 22:01:48.693
+starting worker pid=38537 on localhost:11167 at 22:01:48.980
+Loading required package: caret
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: e1071
+Loading required package: scales
+Loading required package: reshape2
+Loading required package: grid
+automatically exporting the following variables from the local environment:
+  factorX, para, smartL, smartName, smartPred, snLabel 
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+Loading required package: lattice
+Loading required package: ggplot2
+numValues: 891, numResults: 0, stopped: TRUE
+tw:12 gamma:0.250 cost:1.000 FDR:95.904 FAR:1.173 time:947.888000s
+tw:12 gamma:0.500 cost:1.000 FDR:98.058 FAR:1.161 time:964.638000s
+tw:24 gamma:0.250 cost:1.000 FDR:96.172 FAR:1.174 time:1026.857000s
+tw:24 gamma:0.500 cost:1.000 FDR:97.122 FAR:1.137 time:1061.107000s
+tw:12 gamma:0.125 cost:1.000 FDR:97.108 FAR:1.111 time:1072.135000s
+tw:24 gamma:0.125 cost:1.000 FDR:97.826 FAR:1.227 time:1086.046000s
+tw:72 gamma:0.250 cost:1.000 FDR:97.837 FAR:1.241 time:1098.885000s
+tw:12 gamma:1.000 cost:1.000 FDR:97.596 FAR:1.081 time:1099.531000s
+tw:24 gamma:1.000 cost:1.000 FDR:97.375 FAR:1.173 time:1118.190000s
+tw:48 gamma:0.250 cost:1.000 FDR:97.619 FAR:1.236 time:1134.776000s
+tw:48 gamma:0.125 cost:1.000 FDR:96.905 FAR:1.199 time:1157.408000s
+tw:48 gamma:1.000 cost:1.000 FDR:97.842 FAR:1.179 time:1176.820000s
+tw:48 gamma:0.500 cost:1.000 FDR:97.136 FAR:1.160 time:1222.028000s
+tw:72 gamma:0.500 cost:1.000 FDR:97.867 FAR:1.303 time:1237.983000s
+tw:72 gamma:0.125 cost:1.000 FDR:97.613 FAR:1.278 time:1259.996000s
+tw:72 gamma:1.000 cost:1.000 FDR:97.156 FAR:1.256 time:1347.943000s
+tw:12 gamma:2.000 cost:1.000 FDR:95.215 FAR:0.970 time:1429.136000s
+tw:96 gamma:0.250 cost:1.000 FDR:96.919 FAR:1.366 time:1443.101000s
+tw:96 gamma:0.125 cost:1.000 FDR:98.341 FAR:1.301 time:1450.332000s
+tw:120 gamma:0.125 cost:1.000 FDR:96.912 FAR:1.394 time:1481.945000s
+tw:144 gamma:0.500 cost:1.000 FDR:97.867 FAR:1.424 time:1578.678000s
+tw:120 gamma:0.250 cost:1.000 FDR:96.437 FAR:1.379 time:1605.127000s
+tw:144 gamma:0.250 cost:1.000 FDR:98.104 FAR:1.332 time:1628.720000s
+tw:120 gamma:1.000 cost:1.000 FDR:98.104 FAR:1.279 time:1648.844000s
+tw:144 gamma:0.125 cost:1.000 FDR:96.682 FAR:1.339 time:1867.774000s
+tw:168 gamma:0.250 cost:1.000 FDR:96.445 FAR:1.502 time:1985.692000s
+tw:168 gamma:1.000 cost:1.000 FDR:98.104 FAR:1.539 time:1995.249000s
+tw:192 gamma:0.125 cost:1.000 FDR:97.156 FAR:1.452 time:2012.000000s
+tw:192 gamma:0.500 cost:1.000 FDR:98.578 FAR:1.548 time:2036.560000s
+tw:96 gamma:0.500 cost:1.000 FDR:98.815 FAR:1.270 time:2070.679000s
+tw:144 gamma:1.000 cost:1.000 FDR:98.578 FAR:1.374 time:2076.675000s
+tw:168 gamma:0.125 cost:1.000 FDR:96.919 FAR:1.385 time:2142.412000s
+tw:192 gamma:0.250 cost:1.000 FDR:97.630 FAR:1.487 time:2167.858000s
+tw:96 gamma:1.000 cost:1.000 FDR:95.476 FAR:1.182 time:2169.793000s
+tw:120 gamma:0.500 cost:1.000 FDR:97.867 FAR:1.263 time:2204.110000s
+tw:216 gamma:1.000 cost:1.000 FDR:97.393 FAR:1.495 time:2440.087000s
+tw:216 gamma:0.250 cost:1.000 FDR:96.209 FAR:1.500 time:2474.490000s
+tw:24 gamma:2.000 cost:1.000 FDR:96.163 FAR:1.057 time:1570.915000s
+tw:12 gamma:4.000 cost:1.000 FDR:89.398 FAR:1.038 time:1368.909000s
+tw:216 gamma:0.125 cost:1.000 FDR:97.630 FAR:1.512 time:2553.196000s
+tw:24 gamma:4.000 cost:1.000 FDR:95.652 FAR:1.200 time:1386.581000s
+tw:192 gamma:1.000 cost:1.000 FDR:98.104 FAR:1.474 time:2676.465000s
+tw:120 gamma:2.000 cost:1.000 FDR:96.445 FAR:1.339 time:1658.531000s
+tw:168 gamma:0.500 cost:1.000 FDR:97.867 FAR:1.384 time:2856.597000s
+tw:240 gamma:0.250 cost:1.000 FDR:96.919 FAR:1.586 time:2869.274000s
+tw:240 gamma:1.000 cost:1.000 FDR:98.578 FAR:1.586 time:2921.882000s
+tw:48 gamma:2.000 cost:1.000 FDR:97.136 FAR:1.191 time:1959.451000s
+tw:216 gamma:0.500 cost:1.000 FDR:99.526 FAR:1.647 time:3032.757000s
+tw:240 gamma:0.125 cost:1.000 FDR:97.393 FAR:1.477 time:3068.179000s
+tw:96 gamma:2.000 cost:1.000 FDR:97.143 FAR:1.331 time:2174.045000s
+tw:72 gamma:2.000 cost:1.000 FDR:97.613 FAR:1.138 time:2209.546000s
+tw:48 gamma:4.000 cost:1.000 FDR:98.317 FAR:1.163 time:2086.199000s
+tw:24 gamma:8.000 cost:1.000 FDR:90.865 FAR:1.080 time:1754.954000s
+tw:120 gamma:4.000 cost:1.000 FDR:96.200 FAR:1.540 time:2047.430000s
+tw:96 gamma:4.000 cost:1.000 FDR:97.630 FAR:1.362 time:2266.121000s
+tw:240 gamma:0.500 cost:1.000 FDR:96.682 FAR:1.701 time:3611.599000s
+tw:168 gamma:2.000 cost:1.000 FDR:97.156 FAR:1.414 time:2550.811000s
+tw:144 gamma:2.000 cost:1.000 FDR:95.972 FAR:1.486 time:2720.443000s
+tw:12 gamma:8.000 cost:1.000 FDR:86.473 FAR:1.369 time:2239.469000s
+tw:72 gamma:4.000 cost:1.000 FDR:97.136 FAR:1.177 time:2740.518000s
+tw:216 gamma:2.000 cost:1.000 FDR:97.156 FAR:1.706 time:2889.853000s
+tw:144 gamma:4.000 cost:1.000 FDR:97.393 FAR:1.422 time:2611.580000s
+tw:192 gamma:2.000 cost:1.000 FDR:97.630 FAR:1.484 time:2941.843000s
+tw:48 gamma:8.000 cost:1.000 FDR:95.227 FAR:1.461 time:2467.394000s
+tw:168 gamma:4.000 cost:1.000 FDR:97.156 FAR:1.563 time:2946.807000s
+tw:12 gamma:0.125 cost:2.000 FDR:96.394 FAR:1.130 time:936.353000s
+tw:192 gamma:4.000 cost:1.000 FDR:97.867 FAR:1.722 time:3033.224000s
+tw:24 gamma:0.125 cost:2.000 FDR:95.631 FAR:1.172 time:973.498000s
+tw:72 gamma:8.000 cost:1.000 FDR:97.143 FAR:1.291 time:2756.559000s
+tw:48 gamma:0.125 cost:2.000 FDR:96.643 FAR:1.191 time:1002.573000s
+tw:240 gamma:2.000 cost:1.000 FDR:97.393 FAR:1.508 time:3626.724000s
+tw:72 gamma:0.125 cost:2.000 FDR:96.667 FAR:1.307 time:1111.416000s
+tw:120 gamma:8.000 cost:1.000 FDR:96.437 FAR:1.498 time:3061.068000s
+tw:96 gamma:0.125 cost:2.000 FDR:97.156 FAR:1.317 time:1400.657000s
+tw:96 gamma:8.000 cost:1.000 FDR:95.724 FAR:1.357 time:3330.009000s
+tw:216 gamma:4.000 cost:1.000 FDR:97.393 FAR:2.053 time:3843.117000s
+tw:12 gamma:0.250 cost:2.000 FDR:96.341 FAR:1.166 time:926.126000s
+tw:24 gamma:0.250 cost:2.000 FDR:96.610 FAR:1.063 time:949.786000s
+tw:120 gamma:0.125 cost:2.000 FDR:97.393 FAR:1.357 time:1538.918000s
+tw:144 gamma:0.125 cost:2.000 FDR:97.867 FAR:1.334 time:1549.440000s
+tw:144 gamma:8.000 cost:1.000 FDR:97.630 FAR:1.533 time:3575.296000s
+tw:48 gamma:0.250 cost:2.000 FDR:97.602 FAR:1.220 time:1066.886000s
+tw:192 gamma:8.000 cost:1.000 FDR:97.156 FAR:2.000 time:3655.093000s
+tw:72 gamma:0.250 cost:2.000 FDR:96.659 FAR:1.198 time:1148.385000s
+tw:12 gamma:16.000 cost:1.000 FDR:76.087 FAR:1.179 time:3656.999000s
+tw:216 gamma:8.000 cost:1.000 FDR:98.341 FAR:1.994 time:3771.222000s
+tw:24 gamma:16.000 cost:1.000 FDR:79.903 FAR:1.310 time:3701.135000s
+tw:96 gamma:0.250 cost:2.000 FDR:96.445 FAR:1.166 time:1256.402000s
+tw:168 gamma:0.125 cost:2.000 FDR:98.578 FAR:1.366 time:1896.434000s
+tw:168 gamma:8.000 cost:1.000 FDR:97.393 FAR:1.628 time:3956.472000s
+tw:192 gamma:0.125 cost:2.000 FDR:98.578 FAR:1.386 time:2010.499000s
+tw:240 gamma:4.000 cost:1.000 FDR:98.104 FAR:1.978 time:4510.932000s
+tw:120 gamma:0.250 cost:2.000 FDR:96.682 FAR:1.323 time:1657.187000s
+tw:144 gamma:0.250 cost:2.000 FDR:97.156 FAR:1.411 time:1514.504000s
+tw:12 gamma:0.500 cost:2.000 FDR:94.915 FAR:1.008 time:1115.754000s
+tw:216 gamma:0.125 cost:2.000 FDR:96.682 FAR:1.504 time:2459.892000s
+tw:24 gamma:0.500 cost:2.000 FDR:96.394 FAR:1.099 time:1189.479000s
+tw:240 gamma:0.125 cost:2.000 FDR:97.393 FAR:1.544 time:2308.936000s
+tw:48 gamma:0.500 cost:2.000 FDR:95.249 FAR:1.181 time:1207.643000s
+tw:72 gamma:0.500 cost:2.000 FDR:96.675 FAR:1.154 time:1224.371000s
+tw:48 gamma:16.000 cost:1.000 FDR:84.928 FAR:1.357 time:4601.071000s
+tw:96 gamma:0.500 cost:2.000 FDR:96.912 FAR:1.242 time:1238.519000s
+tw:168 gamma:0.250 cost:2.000 FDR:97.867 FAR:1.376 time:1785.060000s
+tw:12 gamma:1.000 cost:2.000 FDR:96.852 FAR:1.026 time:1125.314000s
+tw:24 gamma:1.000 cost:2.000 FDR:93.237 FAR:1.040 time:1106.927000s
+tw:96 gamma:1.000 cost:2.000 FDR:97.630 FAR:1.273 time:1290.201000s
+tw:144 gamma:0.500 cost:2.000 FDR:96.919 FAR:1.388 time:1698.361000s
+tw:72 gamma:1.000 cost:2.000 FDR:96.905 FAR:1.188 time:1387.674000s
+tw:240 gamma:8.000 cost:1.000 FDR:97.156 FAR:1.999 time:5311.776000s
+tw:192 gamma:0.250 cost:2.000 FDR:97.630 FAR:1.517 time:2222.352000s
+tw:72 gamma:16.000 cost:1.000 FDR:84.928 FAR:1.503 time:5118.674000s
+tw:216 gamma:0.250 cost:2.000 FDR:97.867 FAR:1.487 time:2335.322000s
+tw:192 gamma:0.500 cost:2.000 FDR:98.104 FAR:1.438 time:1830.987000s
+tw:120 gamma:0.500 cost:2.000 FDR:97.156 FAR:1.334 time:2055.528000s
+tw:12 gamma:2.000 cost:2.000 FDR:93.705 FAR:1.080 time:1087.492000s
+tw:240 gamma:0.250 cost:2.000 FDR:97.393 FAR:1.563 time:2491.317000s
+tw:96 gamma:16.000 cost:1.000 FDR:97.619 FAR:1.857 time:5445.114000s
+tw:48 gamma:1.000 cost:2.000 FDR:97.362 FAR:1.119 time:1960.029000s
+tw:24 gamma:2.000 cost:2.000 FDR:97.073 FAR:1.094 time:1181.590000s
+tw:168 gamma:0.500 cost:2.000 FDR:96.919 FAR:1.411 time:2393.376000s
+tw:72 gamma:2.000 cost:2.000 FDR:96.411 FAR:1.316 time:1487.866000s
+tw:216 gamma:0.500 cost:2.000 FDR:98.104 FAR:1.558 time:2695.647000s
+tw:144 gamma:1.000 cost:2.000 FDR:97.867 FAR:1.434 time:2123.879000s
+tw:120 gamma:1.000 cost:2.000 FDR:98.104 FAR:1.339 time:2326.666000s
+tw:120 gamma:16.000 cost:1.000 FDR:97.867 FAR:1.906 time:6260.281000s
+tw:12 gamma:4.000 cost:2.000 FDR:96.088 FAR:1.148 time:1320.246000s
+tw:168 gamma:16.000 cost:1.000 FDR:97.630 FAR:1.946 time:6251.985000s
+tw:48 gamma:2.000 cost:2.000 FDR:94.964 FAR:1.179 time:2083.655000s
+tw:24 gamma:4.000 cost:2.000 FDR:94.033 FAR:1.063 time:1338.988000s
+tw:240 gamma:0.500 cost:2.000 FDR:98.578 FAR:1.670 time:3054.531000s
+tw:216 gamma:1.000 cost:2.000 FDR:99.052 FAR:1.493 time:2449.507000s
+tw:216 gamma:16.000 cost:1.000 FDR:97.156 FAR:1.932 time:6456.275000s
+tw:96 gamma:2.000 cost:2.000 FDR:98.100 FAR:1.211 time:2572.879000s
+tw:120 gamma:2.000 cost:2.000 FDR:99.050 FAR:1.166 time:2453.490000s
+tw:144 gamma:16.000 cost:1.000 FDR:96.919 FAR:2.155 time:6987.422000s
+tw:168 gamma:2.000 cost:2.000 FDR:96.919 FAR:1.569 time:2140.599000s
+tw:144 gamma:2.000 cost:2.000 FDR:97.630 FAR:1.411 time:2535.353000s
+tw:240 gamma:16.000 cost:1.000 FDR:97.393 FAR:2.211 time:6960.842000s
+tw:48 gamma:4.000 cost:2.000 FDR:94.458 FAR:1.104 time:2042.281000s
+tw:192 gamma:2.000 cost:2.000 FDR:97.630 FAR:1.522 time:2428.108000s
+tw:192 gamma:16.000 cost:1.000 FDR:98.578 FAR:1.961 time:7315.960000s
+tw:168 gamma:1.000 cost:2.000 FDR:98.104 FAR:1.568 time:3423.861000s
+tw:120 gamma:4.000 cost:2.000 FDR:96.919 FAR:1.457 time:2146.394000s
+tw:72 gamma:4.000 cost:2.000 FDR:96.420 FAR:1.241 time:2418.944000s
+tw:12 gamma:8.000 cost:2.000 FDR:83.816 FAR:1.238 time:1818.559000s
+tw:192 gamma:1.000 cost:2.000 FDR:98.104 FAR:1.509 time:3669.657000s
+tw:240 gamma:1.000 cost:2.000 FDR:99.052 FAR:1.678 time:3603.808000s
+tw:96 gamma:4.000 cost:2.000 FDR:97.625 FAR:1.546 time:2625.131000s
+tw:24 gamma:8.000 cost:2.000 FDR:84.337 FAR:1.323 time:1897.185000s
+tw:12 gamma:32.000 cost:1.000 FDR:61.836 FAR:1.001 time:7630.940000s
+tw:24 gamma:32.000 cost:1.000 FDR:60.714 FAR:0.891 time:7771.269000s
+tw:144 gamma:4.000 cost:2.000 FDR:98.104 FAR:1.375 time:2942.601000s
+tw:216 gamma:2.000 cost:2.000 FDR:97.630 FAR:1.541 time:3474.744000s
+tw:168 gamma:4.000 cost:2.000 FDR:98.578 FAR:1.508 time:3109.504000s
+tw:240 gamma:2.000 cost:2.000 FDR:98.815 FAR:1.868 time:3604.967000s
+tw:192 gamma:4.000 cost:2.000 FDR:97.393 FAR:1.582 time:3123.872000s
+tw:48 gamma:8.000 cost:2.000 FDR:87.530 FAR:1.192 time:2566.152000s
+tw:216 gamma:4.000 cost:2.000 FDR:98.578 FAR:1.883 time:3290.215000s
+tw:48 gamma:32.000 cost:1.000 FDR:67.303 FAR:1.040 time:8367.129000s
+tw:120 gamma:8.000 cost:2.000 FDR:95.735 FAR:1.381 time:2858.800000s
+tw:72 gamma:8.000 cost:2.000 FDR:96.659 FAR:1.443 time:3060.169000s
+tw:72 gamma:32.000 cost:1.000 FDR:68.974 FAR:1.150 time:8927.798000s
+tw:24 gamma:0.125 cost:4.000 FDR:97.596 FAR:1.115 time:966.734000s
+tw:12 gamma:0.125 cost:4.000 FDR:96.368 FAR:1.145 time:1081.196000s
+tw:96 gamma:32.000 cost:1.000 FDR:76.429 FAR:1.274 time:9100.534000s
+tw:72 gamma:0.125 cost:4.000 FDR:97.143 FAR:1.221 time:1012.629000s
+tw:144 gamma:8.000 cost:2.000 FDR:97.630 FAR:1.512 time:3394.291000s
+tw:120 gamma:32.000 cost:1.000 FDR:80.048 FAR:1.315 time:9190.208000s
+tw:168 gamma:8.000 cost:2.000 FDR:97.156 FAR:1.677 time:3404.122000s
+tw:48 gamma:0.125 cost:4.000 FDR:96.411 FAR:1.182 time:1229.996000s
+tw:240 gamma:4.000 cost:2.000 FDR:98.815 FAR:1.787 time:4149.209000s
+tw:96 gamma:8.000 cost:2.000 FDR:98.100 FAR:1.604 time:3585.570000s
+tw:96 gamma:0.125 cost:4.000 FDR:98.100 FAR:1.321 time:1279.518000s
+tw:120 gamma:0.125 cost:4.000 FDR:99.052 FAR:1.374 time:1568.774000s
+tw:12 gamma:0.250 cost:4.000 FDR:94.903 FAR:0.993 time:831.597000s
+tw:12 gamma:16.000 cost:2.000 FDR:75.669 FAR:1.013 time:3897.162000s
+tw:24 gamma:0.250 cost:4.000 FDR:97.122 FAR:1.116 time:986.075000s
+tw:216 gamma:32.000 cost:1.000 FDR:98.104 FAR:2.401 time:9843.805000s
+tw:168 gamma:32.000 cost:1.000 FDR:85.071 FAR:1.560 time:10008.619000s
+tw:192 gamma:8.000 cost:2.000 FDR:95.261 FAR:1.713 time:4369.679000s
+tw:192 gamma:32.000 cost:1.000 FDR:88.389 FAR:1.716 time:9993.912000s
+tw:48 gamma:0.250 cost:4.000 FDR:96.420 FAR:1.113 time:1117.690000s
+tw:24 gamma:16.000 cost:2.000 FDR:78.502 FAR:1.228 time:3945.603000s
+tw:144 gamma:32.000 cost:1.000 FDR:79.384 FAR:1.628 time:10191.069000s
+tw:72 gamma:0.250 cost:4.000 FDR:97.608 FAR:1.196 time:1214.236000s
+tw:144 gamma:0.125 cost:4.000 FDR:96.209 FAR:1.358 time:1830.477000s
+tw:216 gamma:8.000 cost:2.000 FDR:97.867 FAR:2.395 time:4718.058000s
+tw:168 gamma:0.125 cost:4.000 FDR:98.104 FAR:1.400 time:1868.058000s
+tw:192 gamma:0.125 cost:4.000 FDR:95.498 FAR:1.459 time:1912.062000s
+tw:96 gamma:0.250 cost:4.000 FDR:97.143 FAR:1.228 time:1496.620000s
+tw:144 gamma:0.250 cost:4.000 FDR:97.867 FAR:1.283 time:1628.120000s
+tw:240 gamma:32.000 cost:1.000 FDR:97.867 FAR:2.739 time:10563.996000s
+tw:120 gamma:0.250 cost:4.000 FDR:97.156 FAR:1.290 time:1682.567000s
+tw:72 gamma:16.000 cost:2.000 FDR:87.381 FAR:1.541 time:4514.979000s
+tw:240 gamma:8.000 cost:2.000 FDR:98.104 FAR:2.767 time:4974.824000s
+tw:48 gamma:16.000 cost:2.000 FDR:81.473 FAR:1.239 time:4562.777000s
+tw:12 gamma:0.500 cost:4.000 FDR:97.080 FAR:1.015 time:1064.355000s
+tw:216 gamma:0.125 cost:4.000 FDR:98.578 FAR:1.533 time:2070.167000s
+tw:24 gamma:0.500 cost:4.000 FDR:95.204 FAR:1.090 time:1086.537000s
+tw:168 gamma:0.250 cost:4.000 FDR:98.578 FAR:1.375 time:1870.200000s
+tw:72 gamma:0.500 cost:4.000 FDR:95.962 FAR:1.056 time:1253.288000s
+tw:48 gamma:0.500 cost:4.000 FDR:96.890 FAR:1.071 time:1316.492000s
+tw:96 gamma:16.000 cost:2.000 FDR:87.441 FAR:1.567 time:5111.716000s
+tw:192 gamma:0.250 cost:4.000 FDR:97.630 FAR:1.422 time:2132.269000s
+tw:12 gamma:1.000 cost:4.000 FDR:95.673 FAR:1.004 time:1186.864000s
+tw:96 gamma:0.500 cost:4.000 FDR:97.857 FAR:1.172 time:1614.496000s
+tw:216 gamma:0.250 cost:4.000 FDR:98.104 FAR:1.524 time:2047.778000s
+tw:48 gamma:1.000 cost:4.000 FDR:94.774 FAR:0.993 time:1287.385000s
+tw:24 gamma:1.000 cost:4.000 FDR:96.394 FAR:0.945 time:1405.236000s
+tw:12 gamma:2.000 cost:4.000 FDR:91.847 FAR:0.863 time:1050.780000s
+tw:240 gamma:0.125 cost:4.000 FDR:97.867 FAR:1.542 time:3193.122000s
+tw:144 gamma:16.000 cost:2.000 FDR:99.052 FAR:2.050 time:5787.212000s
+tw:48 gamma:2.000 cost:4.000 FDR:97.115 FAR:1.089 time:1469.682000s
+tw:72 gamma:1.000 cost:4.000 FDR:96.429 FAR:1.136 time:1931.216000s
+tw:192 gamma:0.500 cost:4.000 FDR:97.630 FAR:1.445 time:2297.167000s
+tw:120 gamma:16.000 cost:2.000 FDR:97.630 FAR:1.931 time:6185.540000s
+tw:120 gamma:0.500 cost:4.000 FDR:97.393 FAR:1.203 time:2533.551000s
+tw:144 gamma:0.500 cost:4.000 FDR:97.630 FAR:1.205 time:2547.843000s
+tw:24 gamma:2.000 cost:4.000 FDR:93.301 FAR:1.231 time:1656.791000s
+tw:168 gamma:0.500 cost:4.000 FDR:97.393 FAR:1.325 time:2511.478000s
+tw:96 gamma:1.000 cost:4.000 FDR:98.095 FAR:1.207 time:2187.233000s
+tw:144 gamma:1.000 cost:4.000 FDR:98.815 FAR:1.207 time:2171.186000s
+tw:240 gamma:0.500 cost:4.000 FDR:97.867 FAR:1.609 time:2867.107000s
+tw:240 gamma:0.250 cost:4.000 FDR:98.578 FAR:1.544 time:3393.481000s
+tw:168 gamma:1.000 cost:4.000 FDR:98.578 FAR:1.548 time:2390.419000s
+tw:120 gamma:1.000 cost:4.000 FDR:96.209 FAR:1.203 time:2471.626000s
+tw:12 gamma:4.000 cost:4.000 FDR:91.325 FAR:1.072 time:1471.535000s
+tw:168 gamma:16.000 cost:2.000 FDR:98.104 FAR:2.135 time:6904.776000s
+tw:72 gamma:2.000 cost:4.000 FDR:96.420 FAR:1.135 time:2145.897000s
+tw:24 gamma:4.000 cost:4.000 FDR:87.530 FAR:1.364 time:1533.913000s
+tw:216 gamma:0.500 cost:4.000 FDR:97.867 FAR:1.541 time:3310.654000s
+tw:240 gamma:16.000 cost:2.000 FDR:97.393 FAR:2.460 time:6922.268000s
+tw:144 gamma:2.000 cost:4.000 FDR:97.867 FAR:1.388 time:2199.491000s
+tw:192 gamma:1.000 cost:4.000 FDR:97.867 FAR:1.425 time:2906.067000s
+tw:192 gamma:16.000 cost:2.000 FDR:97.393 FAR:2.130 time:7168.995000s
+tw:48 gamma:32.000 cost:2.000 FDR:64.916 FAR:1.104 time:6898.382000s
+tw:216 gamma:16.000 cost:2.000 FDR:97.630 FAR:2.240 time:7156.684000s
+tw:120 gamma:2.000 cost:4.000 FDR:97.867 FAR:1.334 time:2488.585000s
+tw:72 gamma:4.000 cost:4.000 FDR:97.387 FAR:1.301 time:1724.343000s
+tw:168 gamma:2.000 cost:4.000 FDR:98.341 FAR:1.553 time:2463.598000s
+tw:216 gamma:2.000 cost:4.000 FDR:98.341 FAR:1.696 time:2458.488000s
+tw:24 gamma:32.000 cost:2.000 FDR:64.819 FAR:0.892 time:7353.989000s
+tw:96 gamma:4.000 cost:4.000 FDR:97.150 FAR:1.616 time:1893.730000s
+tw:12 gamma:8.000 cost:4.000 FDR:80.583 FAR:1.262 time:1767.792000s
+tw:216 gamma:1.000 cost:4.000 FDR:98.104 FAR:1.602 time:3594.090000s
+tw:96 gamma:2.000 cost:4.000 FDR:97.381 FAR:1.170 time:3170.242000s
+tw:48 gamma:4.000 cost:4.000 FDR:95.943 FAR:1.061 time:2519.549000s
+tw:240 gamma:1.000 cost:4.000 FDR:97.630 FAR:1.792 time:3757.437000s
+tw:72 gamma:32.000 cost:2.000 FDR:72.275 FAR:1.234 time:7627.636000s
+tw:24 gamma:8.000 cost:4.000 FDR:85.888 FAR:1.202 time:1775.557000s
+tw:192 gamma:2.000 cost:4.000 FDR:96.919 FAR:1.522 time:3033.767000s
+tw:48 gamma:8.000 cost:4.000 FDR:88.783 FAR:1.308 time:1927.382000s
+tw:120 gamma:4.000 cost:4.000 FDR:97.393 FAR:1.525 time:2537.323000s
+tw:12 gamma:32.000 cost:2.000 FDR:59.036 FAR:0.893 time:8311.639000s
+tw:168 gamma:4.000 cost:4.000 FDR:97.630 FAR:1.615 time:2725.733000s
+tw:240 gamma:2.000 cost:4.000 FDR:98.578 FAR:1.971 time:3553.833000s
+tw:144 gamma:4.000 cost:4.000 FDR:97.156 FAR:1.434 time:3266.116000s
+tw:240 gamma:4.000 cost:4.000 FDR:98.104 FAR:2.024 time:3153.050000s
+tw:216 gamma:4.000 cost:4.000 FDR:98.104 FAR:1.893 time:3156.374000s
+tw:120 gamma:8.000 cost:4.000 FDR:97.156 FAR:1.758 time:2679.332000s
+tw:192 gamma:4.000 cost:4.000 FDR:98.578 FAR:2.028 time:3280.167000s
+tw:12 gamma:0.125 cost:8.000 FDR:96.359 FAR:1.154 time:877.554000s
+tw:120 gamma:32.000 cost:2.000 FDR:79.384 FAR:1.466 time:8891.500000s
+tw:96 gamma:8.000 cost:4.000 FDR:96.200 FAR:1.655 time:2899.859000s
+tw:24 gamma:0.125 cost:8.000 FDR:96.610 FAR:1.133 time:1004.551000s
+tw:96 gamma:32.000 cost:2.000 FDR:77.197 FAR:1.216 time:9101.523000s
+tw:216 gamma:32.000 cost:2.000 FDR:96.682 FAR:2.468 time:8663.285000s
+tw:72 gamma:8.000 cost:4.000 FDR:96.209 FAR:1.214 time:3102.048000s
+tw:48 gamma:0.125 cost:8.000 FDR:96.618 FAR:1.149 time:1129.730000s
+tw:168 gamma:32.000 cost:2.000 FDR:83.649 FAR:1.737 time:9150.479000s
+tw:144 gamma:8.000 cost:4.000 FDR:96.445 FAR:1.973 time:3294.271000s
+tw:72 gamma:0.125 cost:8.000 FDR:95.933 FAR:1.231 time:1179.520000s
+tw:144 gamma:32.000 cost:2.000 FDR:79.621 FAR:1.455 time:9632.666000s
+tw:12 gamma:0.250 cost:8.000 FDR:94.033 FAR:0.969 time:917.318000s
+tw:192 gamma:8.000 cost:4.000 FDR:97.393 FAR:2.121 time:3649.239000s
+tw:120 gamma:0.125 cost:8.000 FDR:97.867 FAR:1.289 time:1270.825000s
+tw:192 gamma:32.000 cost:2.000 FDR:81.754 FAR:1.824 time:9651.118000s
+tw:24 gamma:0.250 cost:8.000 FDR:94.660 FAR:1.098 time:1018.616000s
+tw:96 gamma:0.125 cost:8.000 FDR:98.095 FAR:1.301 time:1337.597000s
+tw:24 gamma:16.000 cost:4.000 FDR:78.313 FAR:1.213 time:3482.522000s
+tw:48 gamma:0.250 cost:8.000 FDR:96.659 FAR:1.170 time:1070.220000s
+tw:48 gamma:16.000 cost:4.000 FDR:83.933 FAR:1.231 time:3622.131000s
+tw:12 gamma:16.000 cost:4.000 FDR:76.029 FAR:1.118 time:3815.482000s
+tw:144 gamma:0.125 cost:8.000 FDR:98.341 FAR:1.334 time:1667.511000s
+tw:72 gamma:0.250 cost:8.000 FDR:97.596 FAR:1.123 time:1339.841000s
+tw:96 gamma:0.250 cost:8.000 FDR:95.724 FAR:1.209 time:1433.323000s
+tw:168 gamma:0.125 cost:8.000 FDR:97.630 FAR:1.417 time:1817.248000s
+tw:72 gamma:16.000 cost:4.000 FDR:84.487 FAR:1.036 time:4025.636000s
+tw:240 gamma:8.000 cost:4.000 FDR:99.289 FAR:2.239 time:4434.481000s
+tw:216 gamma:0.125 cost:8.000 FDR:97.393 FAR:1.475 time:2021.960000s
+tw:192 gamma:0.125 cost:8.000 FDR:97.867 FAR:1.390 time:2102.627000s
+tw:12 gamma:0.500 cost:8.000 FDR:93.961 FAR:1.012 time:1047.007000s
+tw:216 gamma:8.000 cost:4.000 FDR:97.867 FAR:2.088 time:4689.252000s
+tw:120 gamma:0.250 cost:8.000 FDR:97.156 FAR:1.251 time:1734.836000s
+tw:168 gamma:0.250 cost:8.000 FDR:98.104 FAR:1.331 time:1650.210000s
+tw:24 gamma:0.500 cost:8.000 FDR:95.904 FAR:1.052 time:1126.452000s
+tw:144 gamma:0.250 cost:8.000 FDR:98.815 FAR:1.281 time:1851.157000s
+tw:168 gamma:8.000 cost:4.000 FDR:98.341 FAR:1.969 time:4950.815000s
+tw:48 gamma:0.500 cost:8.000 FDR:96.394 FAR:1.006 time:1286.519000s
+tw:12 gamma:1.000 cost:8.000 FDR:94.431 FAR:0.952 time:1084.876000s
+tw:240 gamma:0.125 cost:8.000 FDR:98.341 FAR:1.577 time:2744.601000s
+tw:24 gamma:1.000 cost:8.000 FDR:94.245 FAR:0.868 time:1094.231000s
+tw:120 gamma:0.500 cost:8.000 FDR:96.682 FAR:1.180 time:1743.754000s
+tw:240 gamma:32.000 cost:2.000 FDR:97.867 FAR:2.754 time:11229.416000s
+tw:216 gamma:0.250 cost:8.000 FDR:98.104 FAR:1.447 time:2091.183000s
+tw:72 gamma:0.500 cost:8.000 FDR:96.905 FAR:1.166 time:2045.355000s
+tw:144 gamma:0.500 cost:8.000 FDR:98.104 FAR:1.368 time:1959.331000s
+tw:96 gamma:0.500 cost:8.000 FDR:96.912 FAR:1.165 time:2149.414000s
+tw:192 gamma:0.250 cost:8.000 FDR:98.578 FAR:1.544 time:2697.564000s
+tw:72 gamma:1.000 cost:8.000 FDR:95.694 FAR:1.157 time:1462.781000s
+tw:48 gamma:1.000 cost:8.000 FDR:95.673 FAR:1.141 time:1622.928000s
+tw:12 gamma:2.000 cost:8.000 FDR:90.534 FAR:1.004 time:1232.453000s
+tw:96 gamma:16.000 cost:4.000 FDR:86.905 FAR:1.624 time:5710.844000s
+tw:24 gamma:2.000 cost:8.000 FDR:93.705 FAR:1.192 time:1335.810000s
+tw:120 gamma:16.000 cost:4.000 FDR:98.104 FAR:1.830 time:5916.273000s
+tw:216 gamma:0.500 cost:8.000 FDR:98.104 FAR:1.524 time:2346.517000s
+tw:168 gamma:0.500 cost:8.000 FDR:98.104 FAR:1.356 time:2754.518000s
+tw:144 gamma:1.000 cost:8.000 FDR:99.289 FAR:1.400 time:2071.855000s
+tw:96 gamma:1.000 cost:8.000 FDR:95.498 FAR:1.220 time:2276.279000s
+tw:144 gamma:16.000 cost:4.000 FDR:97.630 FAR:1.994 time:6473.901000s
+tw:240 gamma:0.500 cost:8.000 FDR:97.630 FAR:1.575 time:2882.733000s
+tw:12 gamma:4.000 cost:8.000 FDR:90.821 FAR:1.300 time:1177.788000s
+tw:48 gamma:2.000 cost:8.000 FDR:93.525 FAR:1.203 time:2088.652000s
+tw:192 gamma:16.000 cost:4.000 FDR:97.630 FAR:2.225 time:6511.434000s
+tw:192 gamma:0.500 cost:8.000 FDR:98.578 FAR:1.448 time:3218.045000s
+tw:120 gamma:1.000 cost:8.000 FDR:96.682 FAR:1.332 time:2613.683000s
+tw:24 gamma:4.000 cost:8.000 FDR:90.799 FAR:1.072 time:1505.345000s
+tw:168 gamma:1.000 cost:8.000 FDR:96.919 FAR:1.386 time:2669.240000s
+tw:240 gamma:0.250 cost:8.000 FDR:99.052 FAR:1.516 time:3854.209000s
+tw:24 gamma:32.000 cost:4.000 FDR:62.379 FAR:1.099 time:6537.257000s
+tw:144 gamma:2.000 cost:8.000 FDR:97.867 FAR:1.369 time:2088.471000s
+tw:120 gamma:2.000 cost:8.000 FDR:96.209 FAR:1.386 time:2213.656000s
+tw:48 gamma:4.000 cost:8.000 FDR:96.181 FAR:1.503 time:1659.261000s
+tw:240 gamma:1.000 cost:8.000 FDR:97.156 FAR:1.540 time:3019.033000s
+tw:72 gamma:2.000 cost:8.000 FDR:95.227 FAR:1.144 time:2472.413000s
+tw:168 gamma:16.000 cost:4.000 FDR:96.919 FAR:2.186 time:7335.713000s
+tw:192 gamma:1.000 cost:8.000 FDR:98.104 FAR:1.537 time:3127.873000s
+tw:216 gamma:16.000 cost:4.000 FDR:98.104 FAR:2.632 time:7319.118000s
+tw:216 gamma:1.000 cost:8.000 FDR:98.341 FAR:1.568 time:3266.471000s
+tw:72 gamma:4.000 cost:8.000 FDR:96.659 FAR:1.194 time:2092.555000s
+tw:240 gamma:16.000 cost:4.000 FDR:99.052 FAR:2.385 time:7378.903000s
+tw:96 gamma:2.000 cost:8.000 FDR:98.815 FAR:1.209 time:2843.809000s
+tw:168 gamma:2.000 cost:8.000 FDR:97.393 FAR:1.309 time:2712.109000s
+tw:96 gamma:4.000 cost:8.000 FDR:96.667 FAR:1.421 time:2164.921000s
+tw:120 gamma:4.000 cost:8.000 FDR:94.550 FAR:1.288 time:2223.403000s
+tw:192 gamma:2.000 cost:8.000 FDR:96.682 FAR:1.464 time:2913.734000s
+tw:144 gamma:4.000 cost:8.000 FDR:96.682 FAR:1.511 time:2271.340000s
+tw:12 gamma:8.000 cost:8.000 FDR:85.024 FAR:1.259 time:1678.064000s
+tw:240 gamma:2.000 cost:8.000 FDR:97.867 FAR:1.722 time:2702.742000s
+tw:24 gamma:8.000 cost:8.000 FDR:86.683 FAR:1.381 time:1670.040000s
+tw:72 gamma:32.000 cost:4.000 FDR:77.566 FAR:1.166 time:7574.721000s
+tw:216 gamma:2.000 cost:8.000 FDR:98.104 FAR:1.700 time:2887.981000s
+tw:12 gamma:32.000 cost:4.000 FDR:63.768 FAR:0.893 time:7879.965000s
+tw:48 gamma:8.000 cost:8.000 FDR:89.021 FAR:1.563 time:1906.326000s
+tw:48 gamma:32.000 cost:4.000 FDR:66.983 FAR:1.032 time:8181.408000s
+tw:192 gamma:4.000 cost:8.000 FDR:96.209 FAR:1.641 time:2846.664000s
+tw:168 gamma:4.000 cost:8.000 FDR:96.919 FAR:1.535 time:3055.431000s
+tw:12 gamma:0.125 cost:16.000 FDR:96.386 FAR:1.027 time:856.636000s
+tw:96 gamma:8.000 cost:8.000 FDR:97.143 FAR:1.771 time:2521.447000s
+tw:120 gamma:8.000 cost:8.000 FDR:97.625 FAR:1.853 time:2493.778000s
+tw:96 gamma:32.000 cost:4.000 FDR:79.236 FAR:1.356 time:8643.072000s
+tw:120 gamma:32.000 cost:4.000 FDR:77.251 FAR:1.691 time:8590.121000s
+tw:24 gamma:0.125 cost:16.000 FDR:96.394 FAR:1.034 time:1134.344000s
+tw:72 gamma:8.000 cost:8.000 FDR:89.737 FAR:1.433 time:2935.133000s
+tw:48 gamma:0.125 cost:16.000 FDR:95.943 FAR:1.085 time:1126.495000s
+tw:168 gamma:8.000 cost:8.000 FDR:98.341 FAR:2.048 time:2925.286000s
+tw:216 gamma:4.000 cost:8.000 FDR:98.341 FAR:1.772 time:3567.833000s
+tw:144 gamma:8.000 cost:8.000 FDR:98.104 FAR:1.731 time:3014.157000s
+tw:72 gamma:0.125 cost:16.000 FDR:96.659 FAR:1.291 time:1181.378000s
+tw:240 gamma:4.000 cost:8.000 FDR:97.393 FAR:2.237 time:3716.179000s
+tw:168 gamma:32.000 cost:4.000 FDR:83.886 FAR:2.035 time:9232.310000s
+tw:144 gamma:32.000 cost:4.000 FDR:81.280 FAR:1.754 time:9277.522000s
+tw:216 gamma:8.000 cost:8.000 FDR:96.919 FAR:1.945 time:3229.515000s
+tw:192 gamma:32.000 cost:4.000 FDR:85.308 FAR:2.134 time:9356.552000s
+tw:96 gamma:0.125 cost:16.000 FDR:97.625 FAR:1.268 time:1431.266000s
+tw:12 gamma:16.000 cost:8.000 FDR:74.638 FAR:1.072 time:3310.420000s
+tw:12 gamma:0.250 cost:16.000 FDR:95.652 FAR:1.060 time:1080.274000s
+tw:120 gamma:0.125 cost:16.000 FDR:97.393 FAR:1.251 time:1560.271000s
+tw:192 gamma:8.000 cost:8.000 FDR:97.393 FAR:1.864 time:3724.031000s
+tw:24 gamma:16.000 cost:8.000 FDR:78.208 FAR:1.234 time:3566.336000s
+tw:144 gamma:0.125 cost:16.000 FDR:96.919 FAR:1.357 time:1695.955000s
+tw:216 gamma:32.000 cost:4.000 FDR:86.967 FAR:2.245 time:9901.831000s
+tw:48 gamma:16.000 cost:8.000 FDR:80.576 FAR:1.399 time:3643.175000s
+tw:24 gamma:0.250 cost:16.000 FDR:97.602 FAR:0.908 time:1283.373000s
+tw:48 gamma:0.250 cost:16.000 FDR:97.590 FAR:1.068 time:1201.266000s
+tw:192 gamma:0.125 cost:16.000 FDR:99.526 FAR:1.483 time:1728.629000s
+tw:72 gamma:0.250 cost:16.000 FDR:97.143 FAR:1.081 time:1295.370000s
+tw:72 gamma:16.000 cost:8.000 FDR:89.762 FAR:1.385 time:3981.590000s
+tw:12 gamma:0.500 cost:16.000 FDR:95.444 FAR:1.036 time:998.161000s
+tw:168 gamma:0.125 cost:16.000 FDR:96.919 FAR:1.375 time:2187.839000s
+tw:240 gamma:8.000 cost:8.000 FDR:97.867 FAR:2.327 time:4354.682000s
+tw:24 gamma:0.500 cost:16.000 FDR:96.394 FAR:1.000 time:1206.626000s
+tw:96 gamma:0.250 cost:16.000 FDR:98.341 FAR:1.149 time:1808.839000s
+tw:120 gamma:0.250 cost:16.000 FDR:97.630 FAR:1.192 time:1810.383000s
+tw:96 gamma:16.000 cost:8.000 FDR:86.190 FAR:1.551 time:4246.875000s
+tw:48 gamma:0.500 cost:16.000 FDR:95.455 FAR:1.017 time:1374.200000s
+tw:12 gamma:1.000 cost:16.000 FDR:90.120 FAR:1.002 time:1118.630000s
+tw:240 gamma:0.125 cost:16.000 FDR:96.682 FAR:1.506 time:2634.592000s
+tw:72 gamma:0.500 cost:16.000 FDR:97.129 FAR:1.156 time:1527.206000s
+tw:24 gamma:1.000 cost:16.000 FDR:96.377 FAR:0.984 time:1202.002000s
+tw:216 gamma:0.125 cost:16.000 FDR:99.052 FAR:1.394 time:2794.997000s
+tw:168 gamma:0.250 cost:16.000 FDR:97.867 FAR:1.411 time:2152.260000s
+tw:192 gamma:0.250 cost:16.000 FDR:98.578 FAR:1.435 time:2252.729000s
+tw:96 gamma:0.500 cost:16.000 FDR:96.675 FAR:1.189 time:1840.380000s
+tw:240 gamma:32.000 cost:4.000 FDR:87.204 FAR:2.311 time:11388.346000s
+tw:240 gamma:0.250 cost:16.000 FDR:98.578 FAR:1.506 time:2310.907000s
+tw:144 gamma:0.250 cost:16.000 FDR:97.393 FAR:1.346 time:2702.241000s
+tw:168 gamma:0.500 cost:16.000 FDR:97.630 FAR:1.291 time:2080.565000s
+tw:216 gamma:0.250 cost:16.000 FDR:98.341 FAR:1.511 time:2947.696000s
+tw:12 gamma:2.000 cost:16.000 FDR:89.538 FAR:1.109 time:1291.325000s
+tw:72 gamma:1.000 cost:16.000 FDR:97.613 FAR:1.147 time:1996.426000s
+tw:120 gamma:0.500 cost:16.000 FDR:97.630 FAR:1.280 time:2566.567000s
+tw:48 gamma:1.000 cost:16.000 FDR:94.498 FAR:0.875 time:2227.584000s
+tw:216 gamma:0.500 cost:16.000 FDR:97.393 FAR:1.552 time:2426.847000s
+tw:24 gamma:2.000 cost:16.000 FDR:92.944 FAR:1.011 time:1323.014000s
+tw:96 gamma:1.000 cost:16.000 FDR:94.048 FAR:1.253 time:2094.487000s
+tw:144 gamma:16.000 cost:8.000 FDR:97.156 FAR:2.167 time:5954.428000s
+tw:48 gamma:2.000 cost:16.000 FDR:93.062 FAR:1.148 time:1563.984000s
+tw:120 gamma:16.000 cost:8.000 FDR:91.706 FAR:1.802 time:6214.355000s
+tw:144 gamma:0.500 cost:16.000 FDR:95.735 FAR:1.198 time:2988.842000s
+tw:48 gamma:32.000 cost:8.000 FDR:69.065 FAR:1.138 time:5974.359000s
+tw:192 gamma:0.500 cost:16.000 FDR:97.630 FAR:1.426 time:3105.355000s
+tw:12 gamma:4.000 cost:16.000 FDR:88.889 FAR:1.282 time:1346.963000s
+tw:144 gamma:1.000 cost:16.000 FDR:97.867 FAR:1.304 time:2686.448000s
+tw:72 gamma:2.000 cost:16.000 FDR:94.019 FAR:1.022 time:2023.803000s
+tw:216 gamma:1.000 cost:16.000 FDR:98.104 FAR:1.464 time:2449.310000s
+tw:96 gamma:2.000 cost:16.000 FDR:95.962 FAR:1.256 time:2068.841000s
+tw:24 gamma:4.000 cost:16.000 FDR:89.538 FAR:1.419 time:1369.446000s
+tw:168 gamma:16.000 cost:8.000 FDR:96.682 FAR:2.136 time:6848.332000s
+tw:144 gamma:2.000 cost:16.000 FDR:96.919 FAR:1.422 time:2142.311000s
+tw:240 gamma:16.000 cost:8.000 FDR:97.156 FAR:2.717 time:6728.255000s
+tw:240 gamma:0.500 cost:16.000 FDR:96.682 FAR:1.603 time:3561.392000s
+tw:168 gamma:1.000 cost:16.000 FDR:96.919 FAR:1.309 time:3048.565000s
+tw:120 gamma:1.000 cost:16.000 FDR:96.200 FAR:1.180 time:3208.433000s
+tw:120 gamma:2.000 cost:16.000 FDR:98.578 FAR:1.337 time:2503.361000s
+tw:216 gamma:16.000 cost:8.000 FDR:98.578 FAR:2.350 time:7038.938000s
+tw:192 gamma:16.000 cost:8.000 FDR:99.289 FAR:2.496 time:7118.249000s
+tw:72 gamma:4.000 cost:16.000 FDR:97.150 FAR:1.215 time:1734.031000s
+tw:192 gamma:2.000 cost:16.000 FDR:96.209 FAR:1.397 time:2586.824000s
+tw:48 gamma:4.000 cost:16.000 FDR:94.774 FAR:1.435 time:1953.971000s
+tw:240 gamma:1.000 cost:16.000 FDR:96.445 FAR:1.389 time:3354.342000s
+tw:192 gamma:1.000 cost:16.000 FDR:97.630 FAR:1.363 time:3480.657000s
+tw:168 gamma:2.000 cost:16.000 FDR:95.261 FAR:1.352 time:2794.667000s
+tw:216 gamma:2.000 cost:16.000 FDR:98.104 FAR:1.737 time:2705.511000s
+tw:96 gamma:4.000 cost:16.000 FDR:97.381 FAR:1.705 time:1973.010000s
+tw:240 gamma:2.000 cost:16.000 FDR:98.104 FAR:1.824 time:2710.749000s
+tw:12 gamma:32.000 cost:8.000 FDR:58.252 FAR:0.816 time:7526.216000s
+tw:12 gamma:8.000 cost:16.000 FDR:84.058 FAR:1.224 time:1674.919000s
+tw:24 gamma:8.000 cost:16.000 FDR:82.857 FAR:1.374 time:1785.205000s
+tw:96 gamma:32.000 cost:8.000 FDR:76.303 FAR:1.371 time:7494.320000s
+tw:48 gamma:8.000 cost:16.000 FDR:92.143 FAR:1.165 time:1889.042000s
+tw:120 gamma:4.000 cost:16.000 FDR:97.630 FAR:1.751 time:2426.141000s
+tw:144 gamma:4.000 cost:16.000 FDR:95.735 FAR:1.719 time:2478.097000s
+tw:24 gamma:32.000 cost:8.000 FDR:62.892 FAR:1.080 time:8005.950000s
+tw:192 gamma:32.000 cost:8.000 FDR:82.938 FAR:2.253 time:7768.296000s
+tw:168 gamma:4.000 cost:16.000 FDR:97.630 FAR:1.617 time:2654.307000s
+tw:120 gamma:32.000 cost:8.000 FDR:77.962 FAR:1.610 time:7926.542000s
+tw:72 gamma:8.000 cost:16.000 FDR:89.311 FAR:1.510 time:2300.379000s
+tw:144 gamma:32.000 cost:8.000 FDR:80.806 FAR:1.701 time:8109.400000s
+tw:216 gamma:4.000 cost:16.000 FDR:97.393 FAR:1.843 time:2920.498000s
+tw:192 gamma:4.000 cost:16.000 FDR:96.919 FAR:1.704 time:3020.348000s
+tw:72 gamma:32.000 cost:8.000 FDR:77.566 FAR:1.122 time:8543.167000s
+tw:12 gamma:0.125 cost:32.000 FDR:96.860 FAR:0.991 time:948.340000s
+tw:120 gamma:8.000 cost:16.000 FDR:98.341 FAR:1.615 time:2544.832000s
+tw:240 gamma:4.000 cost:16.000 FDR:98.104 FAR:2.247 time:3218.021000s
+tw:144 gamma:8.000 cost:16.000 FDR:98.578 FAR:2.034 time:2664.682000s
+tw:24 gamma:0.125 cost:32.000 FDR:97.356 FAR:1.120 time:1157.707000s
+tw:96 gamma:8.000 cost:16.000 FDR:92.891 FAR:1.574 time:3021.876000s
+tw:48 gamma:0.125 cost:32.000 FDR:97.837 FAR:1.110 time:1321.533000s
+tw:168 gamma:8.000 cost:16.000 FDR:97.867 FAR:2.009 time:3017.073000s
+tw:72 gamma:0.125 cost:32.000 FDR:97.150 FAR:1.249 time:1351.951000s
+tw:192 gamma:8.000 cost:16.000 FDR:97.630 FAR:2.097 time:3088.242000s
+tw:168 gamma:32.000 cost:8.000 FDR:84.123 FAR:2.029 time:9203.327000s
+tw:240 gamma:32.000 cost:8.000 FDR:97.156 FAR:2.714 time:9335.378000s
+tw:120 gamma:0.125 cost:32.000 FDR:98.341 FAR:1.121 time:1618.880000s
+tw:24 gamma:16.000 cost:16.000 FDR:76.683 FAR:1.137 time:3231.730000s
+tw:216 gamma:8.000 cost:16.000 FDR:96.682 FAR:2.326 time:3474.263000s
+tw:12 gamma:0.250 cost:32.000 FDR:95.642 FAR:1.018 time:1304.648000s
+tw:216 gamma:32.000 cost:8.000 FDR:98.104 FAR:2.958 time:9636.922000s
+tw:144 gamma:0.125 cost:32.000 FDR:96.919 FAR:1.310 time:1824.144000s
+tw:24 gamma:0.250 cost:32.000 FDR:96.126 FAR:0.945 time:1297.170000s
+tw:96 gamma:0.125 cost:32.000 FDR:97.143 FAR:1.248 time:1959.158000s
+tw:12 gamma:16.000 cost:16.000 FDR:73.494 FAR:0.994 time:3535.596000s
+tw:48 gamma:16.000 cost:16.000 FDR:84.689 FAR:1.251 time:3525.645000s
+tw:48 gamma:0.250 cost:32.000 FDR:98.325 FAR:1.040 time:1548.385000s
+tw:192 gamma:0.125 cost:32.000 FDR:98.104 FAR:1.251 time:2011.471000s
+tw:72 gamma:0.250 cost:32.000 FDR:97.625 FAR:1.135 time:1716.669000s
+tw:72 gamma:16.000 cost:16.000 FDR:84.487 FAR:1.383 time:3975.179000s
+tw:168 gamma:0.125 cost:32.000 FDR:98.104 FAR:1.240 time:2330.967000s
+tw:216 gamma:0.125 cost:32.000 FDR:98.341 FAR:1.405 time:2187.571000s
+tw:96 gamma:16.000 cost:16.000 FDR:89.573 FAR:1.674 time:3981.403000s
+tw:12 gamma:0.500 cost:32.000 FDR:92.176 FAR:0.939 time:1289.821000s
+tw:240 gamma:8.000 cost:16.000 FDR:99.289 FAR:2.525 time:4550.507000s
+tw:24 gamma:0.500 cost:32.000 FDR:95.894 FAR:1.068 time:1276.397000s
+tw:120 gamma:0.250 cost:32.000 FDR:98.341 FAR:1.180 time:2059.455000s
+tw:12 gamma:1.000 cost:32.000 FDR:91.525 FAR:0.977 time:1051.673000s
+tw:48 gamma:0.500 cost:32.000 FDR:96.377 FAR:0.962 time:1500.515000s
+tw:240 gamma:0.125 cost:32.000 FDR:97.867 FAR:1.585 time:2804.353000s
+tw:96 gamma:0.250 cost:32.000 FDR:97.625 FAR:1.166 time:2623.973000s
+tw:96 gamma:0.500 cost:32.000 FDR:96.912 FAR:1.090 time:1693.314000s
+tw:120 gamma:16.000 cost:16.000 FDR:90.995 FAR:1.802 time:4849.139000s
+tw:144 gamma:0.250 cost:32.000 FDR:97.156 FAR:1.248 time:2536.624000s
+tw:24 gamma:1.000 cost:32.000 FDR:95.642 FAR:1.105 time:1593.261000s
+tw:168 gamma:16.000 cost:16.000 FDR:98.815 FAR:2.176 time:5207.275000s
+tw:168 gamma:0.250 cost:32.000 FDR:98.815 FAR:1.456 time:2851.571000s
+tw:144 gamma:16.000 cost:16.000 FDR:96.919 FAR:1.981 time:5394.785000s
+tw:72 gamma:0.500 cost:32.000 FDR:95.024 FAR:1.141 time:2468.682000s
+tw:120 gamma:0.500 cost:32.000 FDR:96.675 FAR:1.172 time:2377.532000s
+tw:216 gamma:0.250 cost:32.000 FDR:98.341 FAR:1.536 time:2941.683000s
+tw:12 gamma:2.000 cost:32.000 FDR:91.505 FAR:1.334 time:1210.991000s
+tw:72 gamma:1.000 cost:32.000 FDR:96.181 FAR:0.987 time:1918.481000s
+tw:96 gamma:1.000 cost:32.000 FDR:95.498 FAR:1.109 time:1863.338000s
+tw:192 gamma:0.250 cost:32.000 FDR:97.867 FAR:1.520 time:3208.153000s
+tw:240 gamma:0.250 cost:32.000 FDR:97.393 FAR:1.478 time:3184.897000s
+tw:24 gamma:2.000 cost:32.000 FDR:94.737 FAR:1.626 time:1370.946000s
+tw:48 gamma:1.000 cost:32.000 FDR:96.905 FAR:0.986 time:2282.774000s
+tw:144 gamma:0.500 cost:32.000 FDR:97.156 FAR:1.207 time:2908.587000s
+tw:48 gamma:2.000 cost:32.000 FDR:93.333 FAR:1.464 time:1707.273000s
+tw:192 gamma:0.500 cost:32.000 FDR:97.867 FAR:1.306 time:2962.092000s
+tw:72 gamma:2.000 cost:32.000 FDR:95.249 FAR:1.587 time:1764.116000s
+tw:216 gamma:0.500 cost:32.000 FDR:97.393 FAR:1.423 time:3129.045000s
+tw:192 gamma:1.000 cost:32.000 FDR:97.630 FAR:1.457 time:2433.694000s
+tw:120 gamma:1.000 cost:32.000 FDR:96.200 FAR:1.165 time:2701.430000s
+tw:192 gamma:16.000 cost:16.000 FDR:99.289 FAR:2.671 time:6500.900000s
+tw:216 gamma:16.000 cost:16.000 FDR:97.867 FAR:2.680 time:6426.375000s
+tw:12 gamma:4.000 cost:32.000 FDR:89.880 FAR:1.305 time:1243.255000s
+tw:96 gamma:2.000 cost:32.000 FDR:95.487 FAR:1.503 time:1978.054000s
+tw:216 gamma:1.000 cost:32.000 FDR:98.578 FAR:1.424 time:2664.317000s
+tw:168 gamma:0.500 cost:32.000 FDR:97.867 FAR:1.308 time:3645.582000s
+tw:240 gamma:0.500 cost:32.000 FDR:97.393 FAR:1.563 time:3615.306000s
+tw:120 gamma:2.000 cost:32.000 FDR:96.682 FAR:1.177 time:2130.424000s
+tw:24 gamma:4.000 cost:32.000 FDR:93.012 FAR:1.516 time:1503.468000s
+tw:24 gamma:32.000 cost:16.000 FDR:68.039 FAR:0.989 time:6750.490000s
+tw:144 gamma:1.000 cost:32.000 FDR:98.578 FAR:1.253 time:3363.610000s
+tw:48 gamma:4.000 cost:32.000 FDR:92.124 FAR:1.268 time:1877.828000s
+tw:72 gamma:4.000 cost:32.000 FDR:94.286 FAR:1.666 time:1956.611000s
+tw:168 gamma:1.000 cost:32.000 FDR:97.393 FAR:1.215 time:3540.376000s
+tw:144 gamma:2.000 cost:32.000 FDR:95.972 FAR:1.441 time:2688.851000s
+tw:24 gamma:8.000 cost:32.000 FDR:81.731 FAR:1.282 time:1373.721000s
+tw:168 gamma:2.000 cost:32.000 FDR:98.815 FAR:1.386 time:2704.363000s
+tw:12 gamma:8.000 cost:32.000 FDR:81.752 FAR:1.224 time:1478.067000s
+tw:48 gamma:32.000 cost:16.000 FDR:72.381 FAR:1.293 time:7209.567000s
+tw:240 gamma:1.000 cost:32.000 FDR:97.156 FAR:1.358 time:3500.753000s
+tw:96 gamma:4.000 cost:32.000 FDR:96.445 FAR:1.607 time:2263.238000s
+tw:48 gamma:8.000 cost:32.000 FDR:90.431 FAR:1.439 time:1806.463000s
+tw:12 gamma:32.000 cost:16.000 FDR:62.347 FAR:0.819 time:7606.881000s
+tw:192 gamma:2.000 cost:32.000 FDR:94.550 FAR:1.451 time:2896.268000s
+tw:144 gamma:4.000 cost:32.000 FDR:95.972 FAR:1.568 time:2471.407000s
+tw:120 gamma:4.000 cost:32.000 FDR:95.024 FAR:1.628 time:2484.881000s
+tw:240 gamma:16.000 cost:16.000 FDR:99.052 FAR:2.771 time:7782.291000s
+tw:72 gamma:32.000 cost:16.000 FDR:72.381 FAR:1.314 time:7637.541000s
+tw:72 gamma:8.000 cost:32.000 FDR:89.786 FAR:1.558 time:1919.980000s
+tw:192 gamma:4.000 cost:32.000 FDR:98.578 FAR:1.839 time:2597.292000s
+tw:216 gamma:2.000 cost:32.000 FDR:98.341 FAR:1.426 time:3111.376000s
+tw:168 gamma:4.000 cost:32.000 FDR:98.578 FAR:1.893 time:2699.608000s
+tw:240 gamma:2.000 cost:32.000 FDR:98.815 FAR:1.860 time:3121.338000s
+tw:216 gamma:4.000 cost:32.000 FDR:97.867 FAR:1.959 time:2682.361000s
+tw:96 gamma:8.000 cost:32.000 FDR:90.714 FAR:1.517 time:2159.949000s
+tw:120 gamma:32.000 cost:16.000 FDR:82.227 FAR:1.710 time:8158.321000s
+tw:96 gamma:32.000 cost:16.000 FDR:77.014 FAR:1.543 time:8221.473000s
+tw:240 gamma:4.000 cost:32.000 FDR:98.104 FAR:2.243 time:3065.430000s
+tw:120 gamma:8.000 cost:32.000 FDR:97.393 FAR:1.767 time:2719.404000s
+tw:12 gamma:0.125 cost:64.000 FDR:95.884 FAR:0.927 time:1121.037000s
+tw:144 gamma:32.000 cost:16.000 FDR:83.175 FAR:2.180 time:8742.010000s
+tw:144 gamma:8.000 cost:32.000 FDR:97.156 FAR:1.869 time:2846.617000s
+tw:48 gamma:0.125 cost:64.000 FDR:97.375 FAR:1.128 time:1195.611000s
+tw:168 gamma:32.000 cost:16.000 FDR:82.938 FAR:2.270 time:8834.573000s
+tw:24 gamma:0.125 cost:64.000 FDR:96.875 FAR:1.035 time:1325.266000s
+tw:12 gamma:16.000 cost:32.000 FDR:74.402 FAR:1.079 time:2704.858000s
+tw:192 gamma:8.000 cost:32.000 FDR:96.209 FAR:1.828 time:3016.901000s
+tw:216 gamma:8.000 cost:32.000 FDR:98.578 FAR:2.352 time:3051.691000s
+tw:72 gamma:0.125 cost:64.000 FDR:98.333 FAR:1.121 time:1445.717000s
+tw:216 gamma:32.000 cost:16.000 FDR:87.678 FAR:2.490 time:8974.999000s
+tw:168 gamma:8.000 cost:32.000 FDR:97.867 FAR:2.112 time:3306.233000s
+tw:96 gamma:0.125 cost:64.000 FDR:98.100 FAR:1.166 time:1586.591000s
+tw:24 gamma:16.000 cost:32.000 FDR:80.336 FAR:1.126 time:3181.378000s
+tw:12 gamma:0.250 cost:64.000 FDR:97.324 FAR:1.014 time:1451.949000s
+tw:48 gamma:16.000 cost:32.000 FDR:85.612 FAR:1.430 time:3726.475000s
+tw:168 gamma:0.125 cost:64.000 FDR:97.630 FAR:1.362 time:2266.162000s
+tw:144 gamma:0.125 cost:64.000 FDR:97.867 FAR:1.265 time:2279.369000s
+tw:192 gamma:0.125 cost:64.000 FDR:99.289 FAR:1.320 time:2203.606000s
+tw:72 gamma:16.000 cost:32.000 FDR:84.487 FAR:1.554 time:3851.338000s
+tw:24 gamma:0.250 cost:64.000 FDR:96.618 FAR:1.020 time:1608.295000s
+tw:192 gamma:32.000 cost:16.000 FDR:81.754 FAR:2.842 time:10158.157000s
+tw:120 gamma:0.125 cost:64.000 FDR:98.341 FAR:1.239 time:2490.478000s
+tw:240 gamma:32.000 cost:16.000 FDR:88.626 FAR:2.908 time:10149.361000s
+tw:48 gamma:0.250 cost:64.000 FDR:96.912 FAR:1.040 time:1724.283000s
+tw:12 gamma:0.500 cost:64.000 FDR:94.915 FAR:0.946 time:1244.771000s
+tw:240 gamma:8.000 cost:32.000 FDR:98.815 FAR:2.630 time:4348.245000s
+tw:216 gamma:0.125 cost:64.000 FDR:98.341 FAR:1.373 time:2418.942000s
+tw:24 gamma:0.500 cost:64.000 FDR:94.915 FAR:0.922 time:1404.915000s
+tw:96 gamma:16.000 cost:32.000 FDR:87.648 FAR:1.866 time:4426.888000s
+tw:120 gamma:16.000 cost:32.000 FDR:89.573 FAR:1.997 time:4393.831000s
+tw:96 gamma:0.250 cost:64.000 FDR:97.862 FAR:1.141 time:2228.522000s
+tw:240 gamma:0.125 cost:64.000 FDR:97.867 FAR:1.561 time:2910.776000s
+tw:120 gamma:0.250 cost:64.000 FDR:97.156 FAR:1.155 time:2418.658000s
+tw:12 gamma:1.000 cost:64.000 FDR:93.961 FAR:0.918 time:1156.357000s
+tw:48 gamma:0.500 cost:64.000 FDR:96.643 FAR:1.057 time:1996.625000s
+tw:144 gamma:16.000 cost:32.000 FDR:92.180 FAR:2.043 time:4734.714000s
+tw:72 gamma:0.500 cost:64.000 FDR:96.403 FAR:1.085 time:2011.568000s
+tw:96 gamma:0.500 cost:64.000 FDR:97.156 FAR:0.992 time:2028.871000s
+tw:48 gamma:1.000 cost:64.000 FDR:95.724 FAR:0.918 time:1288.185000s
+tw:216 gamma:16.000 cost:32.000 FDR:98.578 FAR:2.443 time:4697.078000s
+tw:24 gamma:1.000 cost:64.000 FDR:93.046 FAR:1.542 time:1385.935000s
+tw:192 gamma:0.250 cost:64.000 FDR:97.393 FAR:1.406 time:2877.857000s
+tw:72 gamma:0.250 cost:64.000 FDR:96.200 FAR:1.177 time:3130.589000s
+tw:240 gamma:0.250 cost:64.000 FDR:97.867 FAR:1.408 time:2846.396000s
+tw:168 gamma:16.000 cost:32.000 FDR:96.682 FAR:2.291 time:5207.851000s
+tw:144 gamma:0.250 cost:64.000 FDR:97.156 FAR:1.147 time:3375.565000s
+tw:120 gamma:0.500 cost:64.000 FDR:97.156 FAR:1.219 time:2547.401000s
+tw:168 gamma:0.250 cost:64.000 FDR:97.867 FAR:1.280 time:3513.504000s
+tw:72 gamma:1.000 cost:64.000 FDR:96.905 FAR:1.137 time:2093.257000s
+tw:12 gamma:2.000 cost:64.000 FDR:91.063 FAR:1.138 time:1485.127000s
+tw:216 gamma:0.250 cost:64.000 FDR:98.815 FAR:1.375 time:3497.735000s
+tw:24 gamma:32.000 cost:32.000 FDR:65.133 FAR:0.939 time:5722.714000s
+tw:216 gamma:0.500 cost:64.000 FDR:97.867 FAR:1.321 time:2572.213000s
+tw:24 gamma:2.000 cost:64.000 FDR:89.157 FAR:1.200 time:1629.291000s
+tw:120 gamma:1.000 cost:64.000 FDR:96.919 FAR:1.177 time:2316.954000s
+tw:48 gamma:2.000 cost:64.000 FDR:93.735 FAR:1.130 time:1555.463000s
+tw:144 gamma:1.000 cost:64.000 FDR:96.919 FAR:1.215 time:2639.980000s
+tw:144 gamma:0.500 cost:64.000 FDR:97.630 FAR:1.265 time:3132.030000s
+tw:192 gamma:0.500 cost:64.000 FDR:96.209 FAR:1.351 time:3047.995000s
+tw:192 gamma:16.000 cost:32.000 FDR:96.919 FAR:2.287 time:6366.492000s
+tw:12 gamma:4.000 cost:64.000 FDR:88.620 FAR:1.286 time:1413.265000s
+tw:96 gamma:1.000 cost:64.000 FDR:96.682 FAR:1.084 time:2828.050000s
+tw:24 gamma:4.000 cost:64.000 FDR:88.193 FAR:1.182 time:1358.659000s
+tw:120 gamma:2.000 cost:64.000 FDR:96.919 FAR:1.582 time:2003.547000s
+tw:96 gamma:2.000 cost:64.000 FDR:95.261 FAR:1.267 time:2054.616000s
+tw:168 gamma:1.000 cost:64.000 FDR:97.867 FAR:1.259 time:2890.755000s
+tw:168 gamma:0.500 cost:64.000 FDR:98.815 FAR:1.207 time:3386.574000s
+tw:192 gamma:1.000 cost:64.000 FDR:96.209 FAR:1.389 time:2904.668000s
+tw:48 gamma:4.000 cost:64.000 FDR:93.253 FAR:1.228 time:1546.715000s
+tw:240 gamma:16.000 cost:32.000 FDR:97.393 FAR:2.711 time:6721.660000s
+tw:72 gamma:2.000 cost:64.000 FDR:94.774 FAR:1.042 time:2412.500000s
+tw:144 gamma:32.000 cost:32.000 FDR:79.621 FAR:2.304 time:6411.819000s
+tw:216 gamma:1.000 cost:64.000 FDR:98.815 FAR:1.388 time:3122.288000s
+tw:240 gamma:0.500 cost:64.000 FDR:99.052 FAR:1.474 time:3906.652000s
+tw:12 gamma:8.000 cost:64.000 FDR:81.068 FAR:1.296 time:1479.857000s
+tw:168 gamma:2.000 cost:64.000 FDR:94.787 FAR:1.187 time:2778.597000s
+tw:48 gamma:32.000 cost:32.000 FDR:67.943 FAR:1.267 time:7281.334000s
+tw:96 gamma:4.000 cost:64.000 FDR:94.062 FAR:1.531 time:2007.149000s
+tw:12 gamma:32.000 cost:32.000 FDR:62.592 FAR:0.821 time:7380.761000s
+tw:24 gamma:8.000 cost:64.000 FDR:85.922 FAR:1.325 time:1645.296000s
+tw:144 gamma:2.000 cost:64.000 FDR:95.972 FAR:1.380 time:3032.840000s
+tw:120 gamma:4.000 cost:64.000 FDR:95.249 FAR:1.708 time:2057.088000s
+tw:96 gamma:32.000 cost:32.000 FDR:75.592 FAR:1.753 time:7428.760000s
+tw:72 gamma:4.000 cost:64.000 FDR:92.619 FAR:1.692 time:2704.887000s
+tw:48 gamma:8.000 cost:64.000 FDR:88.756 FAR:1.451 time:2007.167000s
+tw:192 gamma:2.000 cost:64.000 FDR:98.104 FAR:1.709 time:3234.954000s
+tw:72 gamma:8.000 cost:64.000 FDR:88.361 FAR:1.374 time:2014.026000s
+tw:72 gamma:32.000 cost:32.000 FDR:76.485 FAR:1.225 time:7829.665000s
+tw:144 gamma:4.000 cost:64.000 FDR:97.630 FAR:1.844 time:2590.720000s
+tw:120 gamma:32.000 cost:32.000 FDR:76.722 FAR:1.790 time:8018.405000s
+tw:168 gamma:4.000 cost:64.000 FDR:96.919 FAR:1.706 time:2765.358000s
+tw:216 gamma:2.000 cost:64.000 FDR:97.630 FAR:1.739 time:3824.330000s
+tw:168 gamma:32.000 cost:32.000 FDR:83.412 FAR:2.468 time:8100.574000s
+tw:216 gamma:4.000 cost:64.000 FDR:95.498 FAR:2.050 time:3030.514000s
+tw:96 gamma:8.000 cost:64.000 FDR:91.706 FAR:1.504 time:2510.004000s
+tw:120 gamma:8.000 cost:64.000 FDR:92.417 FAR:1.795 time:2712.307000s
+tw:192 gamma:4.000 cost:64.000 FDR:98.104 FAR:2.092 time:3497.673000s
+tw:12 gamma:0.125 cost:128.000 FDR:95.894 FAR:1.028 time:1334.482000s
+tw:168 gamma:8.000 cost:64.000 FDR:98.341 FAR:2.054 time:2944.497000s
+tw:144 gamma:8.000 cost:64.000 FDR:94.313 FAR:2.104 time:3032.653000s
+tw:240 gamma:1.000 cost:64.000 FDR:99.289 FAR:1.640 time:5234.606000s
+tw:216 gamma:8.000 cost:64.000 FDR:97.867 FAR:2.362 time:3176.715000s
+tw:24 gamma:0.125 cost:128.000 FDR:97.602 FAR:1.052 time:1678.035000s
+tw:216 gamma:32.000 cost:32.000 FDR:86.256 FAR:2.778 time:8960.757000s
+tw:240 gamma:2.000 cost:64.000 FDR:95.735 FAR:1.717 time:4941.139000s
+tw:12 gamma:16.000 cost:64.000 FDR:76.386 FAR:1.039 time:3240.759000s
+tw:48 gamma:16.000 cost:64.000 FDR:78.846 FAR:1.301 time:3168.000000s
+tw:240 gamma:4.000 cost:64.000 FDR:94.550 FAR:2.127 time:3966.569000s
+tw:192 gamma:32.000 cost:32.000 FDR:84.834 FAR:2.616 time:9268.417000s
+tw:192 gamma:8.000 cost:64.000 FDR:96.445 FAR:2.112 time:3482.070000s
+tw:24 gamma:16.000 cost:64.000 FDR:79.187 FAR:1.172 time:3407.893000s
+tw:240 gamma:8.000 cost:64.000 FDR:96.919 FAR:2.361 time:3592.450000s
+tw:72 gamma:16.000 cost:64.000 FDR:86.190 FAR:1.775 time:3379.183000s
+tw:48 gamma:0.125 cost:128.000 FDR:97.115 FAR:1.027 time:2036.733000s
+tw:72 gamma:0.125 cost:128.000 FDR:96.875 FAR:1.036 time:2022.921000s
+tw:96 gamma:0.125 cost:128.000 FDR:97.150 FAR:1.051 time:2147.046000s
+tw:120 gamma:0.125 cost:128.000 FDR:97.630 FAR:1.215 time:2153.839000s
+tw:96 gamma:16.000 cost:64.000 FDR:87.381 FAR:1.865 time:4005.041000s
+tw:48 gamma:0.250 cost:128.000 FDR:96.897 FAR:1.122 time:1431.136000s
+tw:12 gamma:0.250 cost:128.000 FDR:96.627 FAR:0.842 time:1654.402000s
+tw:24 gamma:0.250 cost:128.000 FDR:95.663 FAR:0.919 time:1531.517000s
+tw:144 gamma:0.125 cost:128.000 FDR:98.578 FAR:1.224 time:2595.706000s
+tw:240 gamma:32.000 cost:32.000 FDR:87.678 FAR:3.380 time:10483.995000s
+tw:120 gamma:16.000 cost:64.000 FDR:88.124 FAR:1.863 time:4533.359000s
+tw:192 gamma:0.125 cost:128.000 FDR:96.919 FAR:1.305 time:2625.106000s
+tw:12 gamma:0.500 cost:128.000 FDR:95.631 FAR:0.800 time:1594.366000s
+tw:216 gamma:0.125 cost:128.000 FDR:97.867 FAR:1.455 time:2712.713000s
+tw:168 gamma:0.125 cost:128.000 FDR:99.289 FAR:1.316 time:3018.513000s
+tw:72 gamma:0.250 cost:128.000 FDR:97.857 FAR:0.985 time:2349.838000s
+tw:24 gamma:0.500 cost:128.000 FDR:97.343 FAR:0.958 time:1873.751000s
+tw:96 gamma:0.250 cost:128.000 FDR:97.387 FAR:0.981 time:2539.560000s
+tw:48 gamma:0.500 cost:128.000 FDR:96.411 FAR:0.865 time:2050.392000s
+tw:144 gamma:0.250 cost:128.000 FDR:96.919 FAR:1.329 time:2312.160000s
+tw:240 gamma:0.125 cost:128.000 FDR:98.815 FAR:1.549 time:3128.580000s
+tw:12 gamma:1.000 cost:128.000 FDR:92.105 FAR:1.265 time:1445.207000s
+tw:144 gamma:16.000 cost:64.000 FDR:90.521 FAR:2.205 time:5423.452000s
+tw:96 gamma:0.500 cost:128.000 FDR:97.387 FAR:1.045 time:2342.249000s
+tw:24 gamma:1.000 cost:128.000 FDR:94.915 FAR:1.103 time:1686.659000s
+tw:48 gamma:1.000 cost:128.000 FDR:95.933 FAR:1.197 time:1685.841000s
+tw:120 gamma:0.500 cost:128.000 FDR:97.862 FAR:1.204 time:2528.426000s
+tw:120 gamma:0.250 cost:128.000 FDR:97.393 FAR:1.061 time:3046.542000s
+tw:72 gamma:0.500 cost:128.000 FDR:96.912 FAR:1.032 time:2797.269000s
+tw:168 gamma:0.250 cost:128.000 FDR:97.867 FAR:1.271 time:3253.547000s
+tw:216 gamma:0.250 cost:128.000 FDR:98.578 FAR:1.415 time:3147.832000s
+tw:12 gamma:2.000 cost:128.000 FDR:89.976 FAR:1.251 time:1227.913000s
+tw:72 gamma:1.000 cost:128.000 FDR:95.962 FAR:1.114 time:1815.935000s
+tw:240 gamma:0.250 cost:128.000 FDR:98.341 FAR:1.424 time:3205.181000s
+tw:12 gamma:32.000 cost:64.000 FDR:60.577 FAR:0.845 time:5722.215000s
+tw:192 gamma:0.250 cost:128.000 FDR:97.630 FAR:1.346 time:3405.580000s
+tw:168 gamma:16.000 cost:64.000 FDR:93.365 FAR:2.161 time:6287.087000s
+tw:240 gamma:16.000 cost:64.000 FDR:97.867 FAR:3.252 time:5986.891000s
+tw:96 gamma:1.000 cost:128.000 FDR:95.962 FAR:1.181 time:2175.152000s
+tw:192 gamma:16.000 cost:64.000 FDR:87.915 FAR:2.374 time:6414.448000s
+tw:216 gamma:16.000 cost:64.000 FDR:95.972 FAR:2.909 time:6341.412000s
+tw:24 gamma:2.000 cost:128.000 FDR:91.346 FAR:1.307 time:1576.073000s
+tw:48 gamma:2.000 cost:128.000 FDR:93.556 FAR:1.392 time:1590.015000s
+tw:96 gamma:32.000 cost:64.000 FDR:80.523 FAR:1.831 time:6126.668000s
+tw:120 gamma:1.000 cost:128.000 FDR:96.675 FAR:1.078 time:2457.751000s
+tw:24 gamma:32.000 cost:64.000 FDR:63.158 FAR:0.882 time:6311.277000s
+tw:12 gamma:4.000 cost:128.000 FDR:86.506 FAR:1.185 time:1316.132000s
+tw:72 gamma:2.000 cost:128.000 FDR:94.258 FAR:1.148 time:1997.817000s
+tw:24 gamma:4.000 cost:128.000 FDR:87.711 FAR:1.318 time:1431.271000s
+tw:168 gamma:0.500 cost:128.000 FDR:96.919 FAR:1.171 time:4035.153000s
+tw:96 gamma:2.000 cost:128.000 FDR:95.024 FAR:1.795 time:2133.613000s
+tw:48 gamma:32.000 cost:64.000 FDR:71.053 FAR:1.162 time:6984.569000s
+tw:48 gamma:4.000 cost:128.000 FDR:91.866 FAR:1.452 time:1810.116000s
+tw:144 gamma:0.500 cost:128.000 FDR:97.156 FAR:1.212 time:4595.755000s
+tw:120 gamma:2.000 cost:128.000 FDR:94.774 FAR:1.323 time:2553.450000s
+tw:12 gamma:8.000 cost:128.000 FDR:81.731 FAR:1.206 time:1478.224000s
+tw:24 gamma:8.000 cost:128.000 FDR:82.578 FAR:1.258 time:1565.971000s
+tw:72 gamma:4.000 cost:128.000 FDR:92.857 FAR:1.452 time:2182.905000s
+tw:120 gamma:4.000 cost:128.000 FDR:96.675 FAR:1.624 time:2181.228000s
+tw:168 gamma:1.000 cost:128.000 FDR:95.972 FAR:1.423 time:3751.440000s
+tw:144 gamma:1.000 cost:128.000 FDR:97.393 FAR:1.304 time:3786.430000s
+tw:192 gamma:0.500 cost:128.000 FDR:96.682 FAR:1.287 time:4744.574000s
+tw:72 gamma:32.000 cost:64.000 FDR:72.447 FAR:1.495 time:7830.077000s
+tw:48 gamma:8.000 cost:128.000 FDR:86.331 FAR:1.492 time:1863.125000s
+tw:168 gamma:2.000 cost:128.000 FDR:96.682 FAR:1.551 time:3000.781000s
+tw:120 gamma:32.000 cost:64.000 FDR:77.962 FAR:1.787 time:7847.660000s
+tw:144 gamma:2.000 cost:128.000 FDR:95.735 FAR:1.254 time:3180.264000s
+tw:96 gamma:4.000 cost:128.000 FDR:93.571 FAR:1.512 time:2544.299000s
+tw:72 gamma:8.000 cost:128.000 FDR:92.143 FAR:1.630 time:2087.620000s
+tw:192 gamma:1.000 cost:128.000 FDR:97.630 FAR:1.342 time:4104.786000s
+tw:240 gamma:0.500 cost:128.000 FDR:97.156 FAR:1.460 time:5057.831000s
+tw:216 gamma:0.500 cost:128.000 FDR:98.104 FAR:1.415 time:5188.618000s
+tw:96 gamma:8.000 cost:128.000 FDR:90.974 FAR:1.763 time:2302.013000s
+tw:168 gamma:32.000 cost:64.000 FDR:81.280 FAR:3.031 time:8281.432000s
+tw:144 gamma:4.000 cost:128.000 FDR:91.232 FAR:1.629 time:2917.708000s
+tw:144 gamma:32.000 cost:64.000 FDR:81.754 FAR:2.408 time:8498.370000s
+tw:168 gamma:4.000 cost:128.000 FDR:94.076 FAR:1.963 time:3053.935000s
+tw:216 gamma:2.000 cost:128.000 FDR:96.682 FAR:1.845 time:3681.286000s
+tw:144 gamma:8.000 cost:128.000 FDR:91.232 FAR:2.064 time:2544.748000s
+tw:120 gamma:8.000 cost:128.000 FDR:92.637 FAR:1.873 time:2692.290000s
+tw:216 gamma:1.000 cost:128.000 FDR:96.682 FAR:1.486 time:4607.189000s
+tw:192 gamma:4.000 cost:128.000 FDR:95.024 FAR:2.132 time:3183.867000s
+tw:192 gamma:2.000 cost:128.000 FDR:97.630 FAR:1.448 time:3898.256000s
+tw:240 gamma:32.000 cost:64.000 FDR:86.256 FAR:3.394 time:8697.043000s
+tw:168 gamma:8.000 cost:128.000 FDR:93.365 FAR:1.862 time:2905.849000s
+tw:216 gamma:4.000 cost:128.000 FDR:97.393 FAR:1.714 time:3662.125000s
+tw:240 gamma:2.000 cost:128.000 FDR:96.919 FAR:1.787 time:4322.884000s
+tw:12 gamma:16.000 cost:128.000 FDR:78.208 FAR:1.069 time:2763.387000s
+tw:240 gamma:4.000 cost:128.000 FDR:95.498 FAR:2.067 time:3943.431000s
+tw:192 gamma:32.000 cost:64.000 FDR:84.123 FAR:3.243 time:9508.162000s
+tw:192 gamma:8.000 cost:128.000 FDR:98.104 FAR:2.014 time:3584.623000s
+tw:24 gamma:0.125 cost:256.000 FDR:96.117 FAR:1.009 time:1723.220000s
+tw:216 gamma:8.000 cost:128.000 FDR:91.706 FAR:2.148 time:3855.531000s
+tw:240 gamma:1.000 cost:128.000 FDR:96.445 FAR:1.709 time:6109.573000s
+tw:216 gamma:32.000 cost:64.000 FDR:84.834 FAR:3.016 time:10005.142000s
+tw:12 gamma:0.125 cost:256.000 FDR:94.686 FAR:0.902 time:2180.495000s
+tw:24 gamma:16.000 cost:128.000 FDR:77.644 FAR:1.137 time:3667.044000s
+tw:48 gamma:16.000 cost:128.000 FDR:80.191 FAR:1.374 time:3650.767000s
+tw:72 gamma:0.125 cost:256.000 FDR:98.091 FAR:1.080 time:2410.464000s
+tw:12 gamma:0.250 cost:256.000 FDR:95.894 FAR:0.859 time:1999.458000s
+tw:48 gamma:0.125 cost:256.000 FDR:97.368 FAR:0.942 time:2531.907000s
+tw:240 gamma:8.000 cost:128.000 FDR:98.104 FAR:2.538 time:4288.018000s
+tw:96 gamma:0.125 cost:256.000 FDR:96.919 FAR:1.101 time:2392.736000s
+tw:144 gamma:0.125 cost:256.000 FDR:97.867 FAR:1.250 time:2311.678000s
+tw:72 gamma:16.000 cost:128.000 FDR:82.734 FAR:1.730 time:3830.766000s
+tw:24 gamma:0.250 cost:256.000 FDR:95.620 FAR:0.908 time:1973.570000s
+tw:120 gamma:0.125 cost:256.000 FDR:97.867 FAR:1.084 time:2615.595000s
+tw:168 gamma:0.125 cost:256.000 FDR:99.052 FAR:1.271 time:2738.178000s
+tw:96 gamma:16.000 cost:128.000 FDR:85.545 FAR:1.785 time:4327.316000s
+tw:192 gamma:0.125 cost:256.000 FDR:98.815 FAR:1.291 time:2799.782000s
+tw:48 gamma:0.250 cost:256.000 FDR:96.429 FAR:1.020 time:2507.947000s
+tw:120 gamma:16.000 cost:128.000 FDR:86.493 FAR:2.375 time:4548.557000s
+tw:12 gamma:0.500 cost:256.000 FDR:92.233 FAR:0.866 time:1511.516000s
+tw:144 gamma:16.000 cost:128.000 FDR:86.967 FAR:2.279 time:4555.588000s
+tw:24 gamma:0.500 cost:256.000 FDR:95.444 FAR:0.811 time:1736.428000s
+tw:216 gamma:16.000 cost:128.000 FDR:88.389 FAR:2.808 time:4812.108000s
+tw:240 gamma:0.125 cost:256.000 FDR:98.104 FAR:1.511 time:3773.685000s
+tw:216 gamma:0.125 cost:256.000 FDR:97.156 FAR:1.426 time:3796.049000s
+tw:12 gamma:1.000 cost:256.000 FDR:91.727 FAR:1.031 time:1680.110000s
+tw:120 gamma:0.250 cost:256.000 FDR:98.104 FAR:1.183 time:3366.761000s
+tw:72 gamma:0.250 cost:256.000 FDR:97.143 FAR:1.018 time:3633.107000s
+tw:24 gamma:1.000 cost:256.000 FDR:92.701 FAR:1.045 time:1877.258000s
+tw:48 gamma:0.500 cost:256.000 FDR:96.377 FAR:0.925 time:2686.230000s
+tw:72 gamma:0.500 cost:256.000 FDR:96.200 FAR:1.073 time:2825.522000s
+tw:96 gamma:0.250 cost:256.000 FDR:96.912 FAR:1.047 time:3908.223000s
+tw:96 gamma:0.500 cost:256.000 FDR:97.630 FAR:1.076 time:2733.429000s
+tw:168 gamma:16.000 cost:128.000 FDR:91.706 FAR:2.527 time:5923.985000s
+tw:48 gamma:1.000 cost:256.000 FDR:95.683 FAR:1.029 time:2156.142000s
+tw:144 gamma:0.250 cost:256.000 FDR:97.867 FAR:1.241 time:3882.329000s
+tw:12 gamma:2.000 cost:256.000 FDR:89.372 FAR:1.107 time:1174.761000s
+tw:12 gamma:32.000 cost:128.000 FDR:59.223 FAR:0.821 time:6187.452000s
+tw:72 gamma:1.000 cost:256.000 FDR:96.897 FAR:0.988 time:2488.911000s
+tw:192 gamma:16.000 cost:128.000 FDR:90.758 FAR:2.739 time:6403.753000s
+tw:24 gamma:2.000 cost:256.000 FDR:91.768 FAR:1.379 time:1467.088000s
+tw:24 gamma:32.000 cost:128.000 FDR:67.943 FAR:1.051 time:6602.067000s
+tw:120 gamma:1.000 cost:256.000 FDR:95.487 FAR:1.138 time:2772.997000s
+tw:48 gamma:2.000 cost:256.000 FDR:93.349 FAR:1.494 time:1777.763000s
+tw:240 gamma:16.000 cost:128.000 FDR:93.365 FAR:3.413 time:6808.871000s
+tw:96 gamma:32.000 cost:128.000 FDR:72.512 FAR:2.275 time:6701.640000s
+tw:168 gamma:0.250 cost:256.000 FDR:98.341 FAR:1.278 time:4890.566000s
+tw:192 gamma:0.250 cost:256.000 FDR:98.578 FAR:1.393 time:4677.881000s
+tw:96 gamma:1.000 cost:256.000 FDR:96.200 FAR:1.512 time:3217.294000s
+tw:72 gamma:2.000 cost:256.000 FDR:94.976 FAR:1.240 time:2044.633000s
+tw:24 gamma:4.000 cost:256.000 FDR:84.819 FAR:1.224 time:1386.896000s
+tw:120 gamma:0.500 cost:256.000 FDR:96.445 FAR:1.054 time:3986.322000s
+tw:168 gamma:0.500 cost:256.000 FDR:96.919 FAR:1.220 time:3946.518000s
+tw:12 gamma:4.000 cost:256.000 FDR:83.614 FAR:1.238 time:1491.978000s
+tw:48 gamma:4.000 cost:256.000 FDR:91.169 FAR:1.434 time:1622.417000s
+tw:48 gamma:32.000 cost:128.000 FDR:67.619 FAR:1.241 time:7453.090000s
+tw:72 gamma:32.000 cost:128.000 FDR:71.021 FAR:1.838 time:7582.125000s
+tw:72 gamma:4.000 cost:256.000 FDR:91.408 FAR:1.458 time:1850.821000s
+tw:120 gamma:2.000 cost:256.000 FDR:94.550 FAR:1.923 time:2597.688000s
+tw:216 gamma:0.250 cost:256.000 FDR:96.682 FAR:1.354 time:5699.135000s
+tw:144 gamma:1.000 cost:256.000 FDR:96.445 FAR:1.173 time:4102.854000s
+tw:96 gamma:2.000 cost:256.000 FDR:93.587 FAR:1.177 time:3083.708000s
+tw:192 gamma:32.000 cost:128.000 FDR:82.227 FAR:3.162 time:8003.172000s
+tw:12 gamma:8.000 cost:256.000 FDR:80.535 FAR:1.101 time:1658.970000s
+tw:96 gamma:4.000 cost:256.000 FDR:95.000 FAR:1.635 time:2304.405000s
+tw:24 gamma:8.000 cost:256.000 FDR:82.212 FAR:1.330 time:1683.071000s
+tw:120 gamma:4.000 cost:256.000 FDR:95.735 FAR:1.748 time:2451.873000s
+tw:168 gamma:32.000 cost:128.000 FDR:80.095 FAR:3.056 time:8549.133000s
+tw:48 gamma:8.000 cost:256.000 FDR:85.372 FAR:1.528 time:2026.456000s
+tw:192 gamma:2.000 cost:256.000 FDR:97.630 FAR:1.646 time:3462.159000s
+tw:240 gamma:0.500 cost:256.000 FDR:97.867 FAR:1.273 time:5728.180000s
+tw:240 gamma:0.250 cost:256.000 FDR:98.815 FAR:1.340 time:6434.479000s
+tw:216 gamma:1.000 cost:256.000 FDR:95.735 FAR:1.518 time:4852.274000s
+tw:72 gamma:8.000 cost:256.000 FDR:90.024 FAR:1.519 time:2107.795000s
+tw:168 gamma:1.000 cost:256.000 FDR:96.445 FAR:1.312 time:4999.855000s
+tw:144 gamma:0.500 cost:256.000 FDR:97.630 FAR:1.196 time:5924.503000s
+tw:240 gamma:32.000 cost:128.000 FDR:83.886 FAR:3.764 time:8608.306000s

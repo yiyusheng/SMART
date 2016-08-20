@@ -4,21 +4,23 @@ rm(list = ls())
 source('head.R')
 
 #@@@ LOAD DATA @@@#
-dataA <- read.table(file.path(dir_code,'log','NPCdfp05'),skip = 135,nrows = 216)
-dataB <- read.table(file.path(dir_code,'log','NPCdfp06'),skip = 135,nrows = 120)
-dataC <- read.table(file.path(dir_code,'log','NPCdfp07'),skip = 135,nrows = 120)
+dataA <- read.table(file.path(dir_code,'log','npc1A.txt'),skip = 150,nrows = 880)
+# dataB <- read.table(file.path(dir_code,'log','NPCdfp06'),skip = 135,nrows = 120)
+# dataC <- read.table(file.path(dir_code,'log','NPCdfp07'),skip = 135,nrows = 120)
 ####################################
 # S1.Clean
 dataClean <- function(data){
-  data$V10 <- NULL
+  # data$V10 <- NULL
+  data$V6 <- NULL
   data <- data.frame(sapply(1:ncol(data),function(i){
     as.numeric(gsub('.*:','',data[,i]))
   }))
-  names(data) <- c('timeWindow','gamma','cost','w0','w1','countTr','countNeg','FDR','FAR')
+  # names(data) <- c('timeWindow','gamma','cost','w0','w1','countTr','countNeg','FDR','FAR')
+  names(data) <- c('timeWindow','gamma','cost','FDR','FAR')
   data <- data[order(data[,1],data[,2],
                      data[,3],data[,4],
-                     data[,5],data[,6],
-                     data[,7]),]
+                     data[,5]),]
+                     # data[,6]),data[,7]),]
   row.names(data) <- NULL
   data
 }
@@ -34,7 +36,7 @@ dataC <- dataClean(dataC)
 # dataComp$diffFAR <- dataComp$FARB - dataComp$FARA
 
 # S2.Plot
-data <- dataC
+data <- dataA
 data <- data[order(data$timeWindow,data$cost,data$gamma),]
 uniTw <- unique(data$timeWindow)
 dataPlot <- data
@@ -42,7 +44,7 @@ dataPlot <- data
 dataPlot$timeWindow <- factor(dataPlot$timeWindow)
 levels(dataPlot$timeWindow) <- paste(levels(dataPlot$timeWindow),'hours',sep = ' ')
 p <- ggplot(dataPlot,aes(x = FAR,y = FDR,color = timeWindow,shape = timeWindow)) + 
-  geom_point(size = 3) + xlab('False Alarm Rate (%)') + ylab('Failure Detection Rate (%)') + 
+  geom_point(size = 3) + xlab('FPR (%)') + ylab('TPR (%)') + 
   xlim(c(0,2)) + ylim(c(50,100)) +
   # scale_x_continuous(breaks = seq(0,2,0.2)) +
   # scale_y_continuous(breaks = seq(50,100,10)) +
