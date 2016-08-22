@@ -17,13 +17,13 @@ load(file.path(dir_data,'smartBaidu.Rda'))
 smartB1 <- smartBaidu
 smartName <- names(smartBaidu[,3:14])
 ####################################
-# S1.Í³¼ÆÃ¿¸öÅÌµÄÊý¾ÝÁ¿
+# S1.ç»Ÿè®¡æ¯ä¸ªç›˜çš„æ•°æ®é‡
 # snCount <- melt(table(smartBaidu[,c('sn','label')]))
 # snCount <- subset(snCount,value != 0)
 # ggplot(subset(snCount,label == -1),aes(x = value,fill = factor(label))) + 
 #   geom_histogram(position = 'dodge',binwidth = 10)
 
-# S2.Í³¼ÆÃ¿¸ö×Ö¶ÎÏÂ½µºÍÉÏÉýµÄ´ÎÊý£¬ÒÔ¼°ÉÏÉýÏÂ½µµÄÆ½¾ùÖµ
+# S2.ç»Ÿè®¡æ¯ä¸ªå­—æ®µä¸‹é™å’Œä¸Šå‡çš„æ¬¡æ•°ï¼Œä»¥åŠä¸Šå‡ä¸‹é™çš„å¹³å‡å€¼
 # staVar <- function(array){
 #   len <- length(array)
 #   diff <- array[2:len] - array[1:(len-1)]
@@ -62,7 +62,7 @@ smartName <- names(smartBaidu[,3:14])
 #          width = 16,height = 12,dpi=100)
 # }
 
-# S3.¹ÊÕÏÔ¤²â
+# S3.æ•…éšœé¢„æµ‹
 library(caret)
 library(e1071)
 # Add time column
