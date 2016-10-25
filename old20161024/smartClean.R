@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # Filename: smartClean.R
 #
-# Description: Clean SMART data (AllSMART.Rda -> smartClean.Rda)
+# Description: 
 #
 # Copyright (c) 2016, Yusheng Yi <yiyusheng.hust@gmail.com>
 #
@@ -17,11 +17,10 @@
 
 rm(list = ls())
 source('head.R')
-load(file.path(dir_data,dir_old,'AllSMART.Rda'))
-# load(file.path(dir_data,'load_ftr_attrid.Rda'))
+load(file.path(dir_data,'AllSMART.Rda'))
+load(file.path(dir_data,'load_ftr_attrid.Rda'))
 Sys.setlocale('LC_ALL','C') 
 
-####################################
 grepExChar <- function(x){
     x[grepl("\\\\0",x)] <- ''
     x <- factor(x)
@@ -32,8 +31,6 @@ replaceExChar <- function(smart,colNeed){
     }
     smart
 }
-
-####################################
 colNeed <- c('sn','time','ftime','ip',                                 
             'device','model','Raw_Read_Error_Rate_Value')
 smart$model <- factor(gsub(' .*$','',smart$modelNum))
@@ -47,23 +44,6 @@ len.device <- length(levels(smart$device))
 len.model <- length(levels(smart$model))
 len.rr <- length(levels(smart$Raw_Read_Error_Rate_Value))
 
-lev.sn <- levels(smart$sn)
-lev.time <- levels(smart$time)
-lev.ftime <- levels(smart$ftime)
-lev.ip <- levels(smart$ip)
-lev.device <- levels(smart$device)
-lev.model <- levels(smart$model)
-lev.rr <- levels(smart$Raw_Read_Error_Rate_Value)
-
-nc.sn <- nchar(levels(smart$sn))
-nc.time <- nchar(levels(smart$time))
-nc.ftime <- nchar(levels(smart$ftime))
-nc.ip <- nchar(levels(smart$ip))
-nc.device <- nchar(levels(smart$device))
-nc.model <- nchar(levels(smart$model))
-nc.rr <- nchar(levels(smart$Raw_Read_Error_Rate_Value))
-
-# filter error data
 smartClean <- subset(smart, sn %in% levels(smart$sn)[4:len.sn] &
                      time %in% levels(smart$time)[3:len.time] &
                      ftime %in% levels(smart$ftime)[3:len.ftime] &

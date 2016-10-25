@@ -4,7 +4,7 @@ rm(list = ls())
 source('head.R')
 
 #@@@ LOAD DATA @@@#
-dataA <- read.table(file.path(dir_code,'log','npc1A.txt'),skip = 150,nrows = 880)
+dataA <- read.table(file.path(dir_code,'Old','SMARTOld','log','npc1A.txt'),skip = 150,nrows = 880)
 # dataB <- read.table(file.path(dir_code,'log','NPCdfp06'),skip = 135,nrows = 120)
 # dataC <- read.table(file.path(dir_code,'log','NPCdfp07'),skip = 135,nrows = 120)
 ####################################

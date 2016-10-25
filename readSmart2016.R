@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # Filename: readSmart2016.R
 #
-# Description: 
+# Description: Read original smart data which is extracted from MySQL database.
 #
 # Copyright (c) 2016, Yusheng Yi <yiyusheng.hust@gmail.com>
 #
@@ -15,10 +15,10 @@
 #
 #
 rm(list = ls())
-source('/home/yiyusheng/Code/R/SMART/head.R')
-smart <- read.table(file.path(dir_data,'smart_all_2016'),
-                    header = F,fill = T,sep='\t')
-names(smart) <- c('id','sn','time','svr_ip','device','modelNum',
+source('head.R')
+
+
+names_smart <- c('id','sn','time','svr_ip','device','modelNum',
                   'Raw_Read_Error_Rate_Value','Spin_Up_Time_Value',
                   'Reallocated_Sector_Ct_Value','Reallocated_Sector_Ct_Raw',
                   'Seek_Error_Rate_Value','Spin_Retry_Count_Value',
@@ -28,4 +28,6 @@ names(smart) <- c('id','sn','time','svr_ip','device','modelNum',
                   'Udma_CRC_Error_Count_Value','Current_Pending_Sector_Value',
                   'Current_Pending_Sector_Raw')
 
+smart <- read.table(file.path(dir_data,'allSMART_20161025'),
+                    header = F,fill = T,sep=',',col.names = names_smart)
 save(smart,file = file.path(dir_data,'smart_all_2016.Rda'))
