@@ -10,7 +10,7 @@
 #
 # Initial created: 2016-05-27 15:36:07
 #
-# Last   modified: 2016-07-26 10:37:17
+# Last   modified: 2016-10-25 12:47:35
 #
 #
 #
@@ -32,7 +32,7 @@ if (osFlag){
 
 # require('caret')
 # require('e1071')
-require('ggplot2')
-require('scales')
-require('reshape2')
-require('grid')
+#require('ggplot2')
+#require('scales')
+#require('reshape2')
+#require('grid')

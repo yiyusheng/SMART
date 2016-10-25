@@ -10,7 +10,7 @@
 #
 # Initial created: 2016-04-19 16:47:49
 #
-# Last   modified: 2016-04-19 17:28:53
+# Last   modified: 2016-10-25 12:56:25
 #
 #
 #
@@ -18,7 +18,7 @@ rm(list = ls())
 source('head.R')
 
 
-names_smart <- c('id','sn','time','svr_ip','device','modelNum',
+names_smart <- c('id','sn','time','f_time','svr_ip','device','modelNum',
                   'Raw_Read_Error_Rate_Value','Spin_Up_Time_Value',
                   'Reallocated_Sector_Ct_Value','Reallocated_Sector_Ct_Raw',
                   'Seek_Error_Rate_Value','Spin_Retry_Count_Value',
@@ -28,6 +28,10 @@ names_smart <- c('id','sn','time','svr_ip','device','modelNum',
                   'Udma_CRC_Error_Count_Value','Current_Pending_Sector_Value',
                   'Current_Pending_Sector_Raw')
 
-smart <- read.table(file.path(dir_data,'allSMART_20161025'),
-                    header = F,fill = T,sep=',',col.names = names_smart)
+names_type <- c('integer',rep('factor',6),rep('integer',15))
+
+#smart <- read.table(file.path('/tmp','test'),
+smart <- read.table(file.path('/tmp','AllSMART_20161025'),
+                    header = F,fill = T,
+                    sep=',',col.names = names_smart)
 save(smart,file = file.path(dir_data,'smart_all_2016.Rda'))
