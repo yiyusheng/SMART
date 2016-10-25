@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # Filename: smartPartition.R
 #
-# Description: 
+# Description: split smartClean into 31 files inlcuding 5000 disks/files
 #
 # Copyright (c) 2016, Yusheng Yi <yiyusheng.hust@gmail.com>
 #
@@ -10,7 +10,7 @@
 #
 # Initial created: 2016-04-14 08:52:56
 #
-# Last   modified: 2016-04-19 11:16:24
+# Last   modified: 2016-10-25 14:56:55
 #
 #
 #
@@ -36,11 +36,12 @@ smart_merge <- smart
 
 for(i in 1:len_chunk){
     smart <- factorX(subset(smart_merge,svrid %in% chunk[[i]]))
-    smart <- subset(smart,,c('svrid','ip','sn','time','model','device',
-                             names(smart)[c(8:10,12:22,11)]))
+    smart <- subset(smart,,c('svrid','ip','sn','time','model','device',names(smart)))
+
     smart$Raw_Read_Error_Rate_Value <- as.integer(smart$Raw_Read_Error_Rate_Value,na.rm = T)
     smart$Current_Pending_Sector_Raw <- as.integer(smart$Current_Pending_Sector_Raw,na.rm = T)
     smart$time <- as.POSIXct(smart$time)
+
     smart <- smart[order(smart$svrid,smart$sn,smart$time),]
     save(smart,file = file.path(dir_data,'smart5ka',paste('smart_',i,'.Rda',sep='')))
 }

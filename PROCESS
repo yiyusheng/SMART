@@ -1,2 +1,2 @@
 1.SMART Data process:
-smartClean.R(smartClean.Rda) -> smartPartition.R(smart5k/smart_*.Rda)
+readSmart2016.R(AllSMART_20161025.Rda) -> smartClean.R(smartClean.Rda) -> smartPartition.R(smart5k/smart_*.Rda)
