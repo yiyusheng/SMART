@@ -17,8 +17,7 @@
 rm(list = ls())
 source('head.R')
 
-
-names_smart <- c('id','sn','time','f_time','svr_ip','device','modelNum',
+names_smart <- c('id','sn','time','ftime','ip','device','modelNum',
                   'Raw_Read_Error_Rate_Value','Spin_Up_Time_Value',
                   'Reallocated_Sector_Ct_Value','Reallocated_Sector_Ct_Raw',
                   'Seek_Error_Rate_Value','Spin_Retry_Count_Value',
@@ -28,10 +27,23 @@ names_smart <- c('id','sn','time','f_time','svr_ip','device','modelNum',
                   'Udma_CRC_Error_Count_Value','Current_Pending_Sector_Value',
                   'Current_Pending_Sector_Raw')
 
-names_type <- c('integer',rep('factor',6),rep('integer',15))
+fname <- list.files(file.path(dir_data,'split'))
+# fname <- fname[1:2]
 
-#smart <- read.table(file.path('/tmp','test'),
-smart <- read.table(file.path('/tmp','AllSMART_20161025'),
-                    header = F,fill = T,
-                    sep=',',col.names = names_smart)
-save(smart,file = file.path(dir_data,'smart_all_2016.Rda'))
+read_smart <- function(i){
+  smart <- read.table(file.path(dir_data,'split',fname[i]),header = F,fill = T,
+                      sep=',',col.names = names_smart,stringsAsFactors = F,fileEncoding = 'ASCII')
+  
+  save(smart,file = file.path(dir_data,'splitRda',paste(fname[i],'.Rda',sep='')))
+  return(1)
+}
+
+para <- 1:length(fname)
+require(doParallel)
+ck <- makeCluster(min(40,length(para)), outfile = '')
+registerDoParallel(ck)
+r <- foreach(i = para,
+             .combine = rbind,.export = c('fct2ori','fct2oriX'),
+             .verbose = T) %dopar% read_smart(i)
+stopCluster(ck)
+

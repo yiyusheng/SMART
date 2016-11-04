@@ -34,5 +34,5 @@ if (osFlag){
 # require('e1071')
 #require('ggplot2')
 #require('scales')
-#require('reshape2')
+require('reshape2')
 #require('grid')

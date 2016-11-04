@@ -1,2 +1,16 @@
 1.SMART Data process:
 readSmart2016.R(AllSMART_20161025.Rda) -> smartClean.R(smartClean.Rda) -> smartPartition.R(smart5k/smart_*.Rda)
+
+I generate AllSMART_20161025 from MySQL(datasource.smart_Tencent), then split it into files containing 10000000 lines. 
+Then read it by readSmart2016.R. 
+Before that, I delete 6444987-6988079 lines from AllSMART_20161025_splitap which are wrong data.
+
+2.Generate diskInfo for SMART of york:
+diskInfo.R
+
+3.SMART Data from ykLiu expanding:
+expand_smart_ykliu.R
+
+4.extract normal data from york's smart:
+extract_normal_smart.R
+

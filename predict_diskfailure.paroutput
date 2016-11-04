@@ -1,0 +1,25 @@
+starting worker pid=1395 on localhost:11243 at 17:22:41.645
+starting worker pid=1396 on localhost:11243 at 17:22:41.694
+starting worker pid=1397 on localhost:11243 at 17:22:41.738
+starting worker pid=1398 on localhost:11243 at 17:22:41.779
+starting worker pid=1399 on localhost:11243 at 17:22:41.819
+starting worker pid=1400 on localhost:11243 at 17:22:41.860
+starting worker pid=1401 on localhost:11243 at 17:22:41.900
+starting worker pid=1402 on localhost:11243 at 17:22:41.940
+starting worker pid=1403 on localhost:11243 at 17:22:41.978
+starting worker pid=1404 on localhost:11243 at 17:22:42.018
+starting worker pid=1405 on localhost:11243 at 17:22:42.058
+starting worker pid=1406 on localhost:11243 at 17:22:42.098
+starting worker pid=1407 on localhost:11243 at 17:22:42.136
+starting worker pid=1408 on localhost:11243 at 17:22:42.176
+starting worker pid=1409 on localhost:11243 at 17:22:42.215
+[2016-11-03 17:30:11]	Group1_logic.regression Done	elapsed:6.06 mins
+[2016-11-03 17:44:45]	Group4_naive.bayes Done	elapsed:20.63 mins
+[2016-11-03 17:45:00]	Group5_naive.bayes Done	elapsed:20.89 mins
+[2016-11-03 17:45:18]	Group3_naive.bayes Done	elapsed:21.19 mins
+[2016-11-03 17:45:32]	Group2_naive.bayes Done	elapsed:21.42 mins
+[2016-11-03 17:45:33]	Group1_naive.bayes Done	elapsed:21.43 mins
+[2016-11-03 19:08:18]	Group4_logic.regression Done	elapsed:104.18 mins
+[2016-11-03 19:09:22]	Group3_logic.regression Done	elapsed:105.24 mins
+[2016-11-03 19:09:55]	Group5_logic.regression Done	elapsed:105.80 mins
+[2016-11-03 19:12:34]	Group2_logic.regression Done	elapsed:108.44 mins
