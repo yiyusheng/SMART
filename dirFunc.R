@@ -18,3 +18,7 @@
 sort_col <- function(df,n = col.smart){
   df <- df[,c(setdiff(names(df),n),n)]
 }
+
+remove_smart <- function(df,n = col.smart){
+  df <- df[,-which(names(df) %in% col.smart)]
+}

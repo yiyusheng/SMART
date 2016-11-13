@@ -97,25 +97,25 @@ gen_label_group <- function(smart.pos,smart.neg,
 }
 
 extract_train_test <- function(smart.pos,smart.neg,
-                               id.pos,id.neg,
-                               groupid){
-  train <- rbind(subset(smart.pos,sn %in% id.pos$sn[id.pos$group != groupid]),
-                   subset(smart.neg,sn %in% id.neg$sn[id.neg$group != groupid]))
+                               id.pos,id.neg, group){
+  train <- rbind(subset(smart.pos,sn %in% id.pos$sn[id.pos$group != group]),
+                   subset(smart.neg,sn %in% id.neg$sn[id.neg$group != group]))
   
-  test <- rbind(subset(smart.pos,sn %in% id.pos$sn[id.pos$group == groupid]),
-                   subset(smart.neg,sn %in% id.neg$sn[id.neg$group == groupid]))
+  test <- rbind(subset(smart.pos,sn %in% id.pos$sn[id.pos$group == group]),
+                   subset(smart.neg,sn %in% id.neg$sn[id.neg$group == group]))
   
   list(factorX(train),factorX(test))
 }
 
 # add label for failure in next week prediction
-gen_weekly_pred <- function(smart.pos,smart.neg,nw = 7,use.neg = 0,use.af = 0){
-  smart.pos$weeklabel <- 0
+gen_weekly_pred <- function(smart.pos,smart.neg,nw1 = 3,nw2 = 7,use.neg = 0,use.af = 0,use.res = 0){
   smart.neg$weeklabel <- 0
-  smart.neg$weeklabel[smart.neg$dist.fail <= nw] <- 1
+  smart.pos$weeklabel <- 0
+  smart.pos$weeklabel[smart.pos$dist.fail <= (nw1 + nw2)] <- 1
   
-  if(use.neg == 0)smart.neg = NULL
+  if(use.neg == 0)smart.neg <- subset(smart.neg,bilabel == -99)
   if(use.af == 0)smart.pos <- subset(smart.pos,dist.fail > 0)
+  if(use.res == 0)smart.pos <- subset(smart.pos,dist.fail > nw1)
   
   list(smart.pos,smart.neg)
 }

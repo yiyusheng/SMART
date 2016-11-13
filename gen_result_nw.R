@@ -1,127 +1,99 @@
 # Generate result for test
 
-# F1. evaluate of prediction performance
-gen_result_thre_perf <- function(df,need.result = 0){
-  result.pred <- melt(tapply(df$pred,df$sn,function(x)as.numeric(any(x == 1))))
-  names(result.pred) <- c('sn','overThre')
-  result.pred$bilabel <- 0
-  result.pred$bilabel[result.pred$sn %in% id.pos$sn] <- 1
+
+
+# F1.result evaluation
+gen_result <- function(df.result,nw1,nw2){
+  df.result <- factorX(remove_smart(subset(df.result,dist.fail > nw1)))
+  df.result <- factorX(subset(df.result,dist.fail < (nw1 + nw2*2) | sn %in% id.neg$sn))
   
-  TP <- sum((result.pred$bilabel == 1 & result.pred$overThre == 1))
-  TN <- sum((result.pred$bilabel == 0 & result.pred$overThre == 0))
-  FP <- sum((result.pred$bilabel == 0 & result.pred$overThre == 1))
-  FN <- sum((result.pred$bilabel == 1 & result.pred$overThre == 0))
-  FDR = TP/(TP + FN)
-  FAR = FP/(TN + FP)
+  threSet <- as.numeric(quantile(df.result$result,seq(0,1,0.01)))
+  split.df <- split(df.result,df.result$sn)
+  r <- lapply(threSet,function(x)gen_result_disk(split.df,x))
   
-  ifelse(need.result == 0,return(list(TP,TN,FP,FN,FDR,FAR)),return(list(TP,TN,FP,FN,FDR,FAR,result.pred)))
+  perf.all <- data.frame(t(sapply(r,'[[','result')))
+  names(perf.all) <- c('neg.acc','pos.acc','pos.FDR','pos.FAR','thre')
+  perf.disk <- do.call(rbind,lapply(r,'[[','df'))
+  p <- plot_result_nw(perf.all)
+  
+  list(pa = perf.all,pd = perf.disk,p = p)
 }
 
-# F2. generate lead time.
-gen_result_thre_leadTime <- function(df,lt.order = 1){
-  tmp2 <- by(df,df$sn,function(x){
-    tmp <- subset(x,pred == 1)
-    if(nrow(tmp) == 0)
-      return(rep(-1,(length(lt.order) + 5)))
-    else{
-      tmp1 <- sort(tmp$dist.fail,decreasing = T)
-      lt.order[lt.order > length(tmp1)] <- length(tmp1)
-      return(c(tmp1[lt.order],nrow(x),nrow(tmp),
-               max(tmp$result),mean(tmp$result),min(tmp$result)))
-    }
+# F2.extract a roc curve and other information related to prediction performance from roc object
+smp_roc <- function(df){
+  roc <- roc(df$weeklabel,df$result,algorithm = 2)
+  
+  tbl.response <- melt(table(roc$response))
+  num.pos <- tbl.response$value[tbl.response$Var1 == '1']
+  num.neg <- tbl.response$value[tbl.response$Var1 == '0']
+  
+  roc.new <- data.frame(FDR = round(roc$sensitivities,digits = 3),
+                        FAR = round(1 - roc$specificities,digits = 3),
+                        thre = roc$thresholds,
+                        TP = num.pos*roc$sensitivities,
+                        FN = num.pos*(1 - roc$sensitivities),
+                        TN = num.neg*roc$specificities,
+                        FP = num.neg*(1 - roc$specificities))
+  roc.new$F <- (roc.new$FN*num.neg + roc.new$FP*num.pos)/(num.neg + num.pos)
+  roc.new <- roc.new[!duplicated(roc.new$FDR),]
+  roc.new
+}
+
+
+gen_result_disk <- function(split.df,thre){
+  # evaluate for each disk
+  r <- lapply(split.df,function(x){
+    x$pred <- as.numeric(x$result > thre)
+    x.base <- base_eval(x$weeklabel,x$pred)
   })
-  do.call(rbind,tmp2)
+  perf.disk <- list2df(r,n = c('TP','FN','TN','FP','P','N','FDR','FAR','acc','sn'))
+  perf.disk$class <- 1
+  perf.disk$class[perf.disk$sn %in% id.neg$sn] <- 0
+  perf.disk$thre <- thre
+  
+  # generate result for each disk
+  perf.disk.pos <- factorX(subset(perf.disk,class == 1))
+  perf.disk.neg <- factorX(subset(perf.disk,class == 0))
+  perf.disk.neg$FAR[is.na(perf.disk.neg$FAR)] <- 0
+  perf.disk.neg$FDR[is.na(perf.disk.neg$FDR)] <- 1
+  perf.disk.pos$FAR[is.na(perf.disk.pos$FAR)] <- 0
+  perf.disk.pos$FDR[is.na(perf.disk.pos$FDR)] <- 1
+  perf.disk.pos$acc <- perf.disk.pos$FDR + perf.disk.pos$FAR
+  
+  # generate result for all
+  neg.acc <- sum(perf.disk.neg$acc == 1)/nrow(perf.disk.neg)
+  pos.acc <- sum(perf.disk.pos$acc != 0,na.rm = T)/nrow(perf.disk.pos)
+  pos.FDR <- sum(perf.disk.pos$FDR != 0,na.rm = T)/nrow(perf.disk.pos)
+  pos.FAR <- sum(perf.disk.pos$FAR != 0,na.rm = T)/nrow(perf.disk.pos)
+  
+  list(result = round(c(neg.acc,pos.acc,pos.FDR,pos.FAR,thre),digits = 4),
+       df = perf.disk)
 }
 
-# F3. evaluate chaos region
-gen_result_thre_chaos <- function(df){
-  by(df[,c('sn','pred','dist.fail')],df$sn,function(x){
-    max.pos <- max(x$dist.fail[x$pred == 1],-1)
-    min.neg <- min(x$dist.fail[x$pred == 0],1e10)
-    
-    tmp <- data.frame(exist.chaos = 0,len.chaos = 0,
-                      num.chaos.pos = 0,num.chaos.neg = 0,
-                      rate.chaos.pos = 0)
-    if(max.pos == -1){
-      return(tmp)
-    }else if(abs(min.neg) == 1e10){
-      tmp$rate.chaos.pos <- 1
-    }else if(max.pos < min.neg){
-      tmp$rate.chaos.pos <- -1
-    }else {
-      tmp1 <- subset(x,dist.fail >= min.neg & dist.fail <= max.pos)
-      tmp$exist.chaos <- 1
-      tmp$len.chaos <- max.pos - min.neg
-      tmp$num.chaos.neg <- nrow(tmp1[tmp1$pred == 0,])
-      tmp$num.chaos.pos <- nrow(tmp1[tmp1$pred == 1,])
-      tmp$rate.chaos.pos <- sum(tmp1$pred)/nrow(tmp1)
-    }
-    tmp
-  })
+plot_result_nw <- function(perf.all){
+  melt.all <- melt(perf.all,id.vars = 'thre')
+  names(melt.all) <- c('thre','metrics','value')
+  p <- ggplot(melt.all,aes(x = thre,y = value,
+                           group = metrics,color = metrics,linetype = metrics)) + geom_line()
+  print(p)
+  p
 }
 
-# Generate the threSet for performance test
-gen_threSet_onresult <- function(df,num = 1000){
-  tmp <- sort(unique(df$result))
-  idx <- seq(1,length(tmp),length.out = min(length(tmp),num))
-  thre.predict <- tmp[idx]
-}
 
-# F4. threshold evaluation
-gen_result_thre <- function(df,rate.pos = NULL,thre.predict = NULL,thre.lt = NULL){
-  
-  # generate thre.predict by roc of smart prediction
-  if(is.null(thre.predict)){
-    thre.predict <- gen_threSet_onresult(df,1000)
-  }
-  
-  # For all
-  perf.all <- lapply(thre.predict,function(x){
-    df$pred <- as.numeric(df$result > x)
-    gen_result_thre_perf(df,0)
-  })
-  perf.all <- data.frame(matrix(unlist(perf.all),byrow = T,nrow = length(perf.all)))
-  names(perf.all) <- c('TP','TN','FP','FN','FDR','FAR')
-  if(is.null(rate.pos)){
-    perf.all$F <- perf.all$FP + perf.all$FN
-  }else{
-    perf.all$F <- perf.all$FP + perf.all$FN*(1-rate.pos)/rate.pos
-  }
-  
-  perf.all$thre <- thre.predict
-  
-  # choose best thre.lt via accuracy
-  if(is.null(thre.lt)){
-    thre.lt <- perf.all$thre[which(perf.all$F == min(perf.all$F))[1]]
-  }
-
-  # Lead time for disk
-  df$pred <- as.numeric(df$result > thre.lt)
-  list[x,x,x,x,x,x,result.pred] <- gen_result_thre_perf(df,1)
-  lt.order <- seq(1)
-  tmp.lt <- data.frame(gen_result_thre_leadTime(df,lt.order))
-  names(tmp.lt) <- c('leadTime','num.After.pos','num.pos','max.pred','mean.pred','min.pred')
-  result.pred <- cbind(result.pred,tmp.lt)
-  
-  # Chaos For disk
-  chaos <- gen_result_thre_chaos(df)
-  chaos <- do.call(rbind,chaos)
-  perf.disk <- cbind(result.pred,chaos)
-  
-  # Generate return
-  perf.disk$thre <- thre.lt
-  df$thre <- thre.lt
-  
-  list(perf.all = perf.all,
-       perf.disk = perf.disk,
-       perf.smart = df,
-       thre = thre.lt)
-}
-
-# F5.result evaluation
-gen_result <- function(df,rate.pos = NULL,thre.predict = NULL,thre = NULL){
-  df <- df[,-which(names(df) %in% col.smart)]
-  df.ahead_of_fail <- factorX(subset(df,dist.fail > 0))
-  tmp <- gen_result_thre(df.ahead_of_fail,rate.pos,thre.predict,thre)
-}
-
+# F3.Analize result
+# sta_result <- function(df){
+#   df <- df[df$dist.fail > 0,-which(names(df) %in% col.smart)]
+#   df.pos <- factorX(subset(df,sn %in% id.pos$sn))
+#   df.neg <- factorX(subset(df,sn %in% id.neg$sn))
+#   df.roc <- roc(df$weeklabel,df$result,algorithm = 2)
+#   df.roc.simple <- smp_roc(df.roc)
+#   
+#   min.thre.pos <- list2df(by(df.pos,df.pos$sn,function(x){min(x$result[x$weeklabel == 1])}),n = c('thre','sn'))
+#   min.thre.neg <- list2df(by(df.neg,df.neg$sn,function(x){min(x$result[x$weeklabel == 1])}),n = c('thre','sn'))
+#   
+#   min.thre.pos$modelNum <- id.pos$modelNum[match(min.thre.pos$sn,id.pos$sn)]
+#   min.thre.pos$svrid <- id.pos$svrid[match(min.thre.pos$sn,id.pos$sn)]
+#   min.thre.pos$prefix <- substr(min.thre.pos$svrid,5,6)
+#   
+#   ggplot(min.thre.pos,aes(x = thre,fill = prefix)) + geom_histogram(bins = 50)
+# }
