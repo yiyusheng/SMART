@@ -1,77 +1,96 @@
-# Build model and test model
-
-# F1. a framework to fit different model and generate predicted result
-group.model <- function(smart.pos,smart.neg,id.pos,id.neg,group,tw,func,rate.pos){
+# group.model for disk failure prediction for baidu's dataset
+group.model <- function(smart.pos,smart.neg,id.pos,id.neg,func,
+                        collect.time = 5,group = 1,
+                        pos.tw = 3,neg.count = 20,
+                        units.perday = 24,dir_plot = 'pdf_lt_baidu'){
   t1 <- Sys.time()
   f <- get(func)
-
-  # Data sample and set time window
+  fn <- paste(func,group,collect.time,pos.tw,neg.count,sep='_')
+  
+  # Filter data to simulate collect time
+  smart.pos <- subset(smart.pos,dist.fail <= collect.time*units.perday)
+  smart.neg <- subset(smart.neg,dist.fail <= collect.time*units.perday)
+  
+  # Generate train and test based on group
   list[train,test] <- extract_train_test(smart.pos,smart.neg,id.pos,id.neg,group)
-  list[train.frame,test.frame] <- change_label_tw(train,test,id.pos,id.neg,tw)
   
-  # Build Model and generate result
-  testF <- f(train.frame,test.frame)
+  # limit number of smart for training(time window,neg.count) and testing(neg.count)
+  train <- limit_smart(train,pos.tw*units.perday,neg.count)
+  test <- limit_smart(test,1e5,neg.count)
   
-  # Generate result of perforamance and lead time
-  list[perf.all,perf.disk,perf.smart,thre] <- gen_result(testF,rate.pos)
+  # Model building and prediction
+  list[trainF,testF] <- f(train,test,'bilabel')
   
-  # Evaluate performance and lead time and visualize them
-  # eval_result(list(perf.all,perf.disk,perf.smart),group,func)
+  # Generate result for testF
+  list[pa.test,pd.test] <- gen_result(testF)
   
-  # Save data
-  fn <- paste('Group',group,'_',func,sep='')
-  save(perf.all,perf.disk,perf.smart,thre,file = file.path(dir_data,paste(fn,'.Rda',sep='')))
+  # plot of pdf of lead time and save
+  pl.test <- plot.pdf_leadTime(pd.test,units.perday)
+  ggsave(file=file.path(dir_data,'figure',dir_plot,paste(fn,'_test.jpg',sep='')),
+         plot=pl.test, width = 8, height = 6, dpi = 100)
   
-  # return data
+  # select the best performance and give a overview
+  pd.test.TP <- subset(pd.test,overThre == 1& bilabel == 1)
+  pa.test.best <- pa.test[which.max(pa.test$F1),]
+  pa.test.best <- list(pa.test.best$FDR,pa.test.best$FAR,pa.test.best$F1,pa.test.best$thre,
+                   nrow(pd.test.TP[pd.test.TP$pos.rate == 1,])/nrow(pd.test.TP),
+                   func,collect.time,group,pos.tw,neg.count)
+  
+
+  # timing and return data
   t2 <- Sys.time()
   elap <- difftime(t2,t1,units = 'mins')
   cat(sprintf('[%s]\t%s Done\telapsed:%0.2f mins\n',Sys.time(),fn,elap))
-  list(perf.all,perf.disk,perf.smart)
+  list(pat = pa.test,patb = pa.test.best,
+       pdt = pd.test,plt = pl.test)
 }
 
-# trainF <- train.frame;testF <- test.frame
 
 # F2.Model logic regression
-logic.regression <- function(trainF,testF){
+logic.regression <- function(trainF,testF,attr_label){
+  # locate label
+  trainF <- change_name(trainF,attr_label,'label')
+  testF <- change_name(testF,attr_label,'label')
+  
   # Train 
   trainF <- filter_sn(trainF,1)
-  model <- glm(bilabel ~ .,data = trainF[,c('bilabel',col.smart)],family = 'binomial')
-  # Predict
-  pred <- predict(model,testF[,col.smart],type = 'response')
-  testF$result <- pred
-  testF
+  model <- glm(label ~ .,data = trainF[,c('label',col.smart)],family = 'binomial')
+  
+  # Predict train
+  pred.train <- predict(model,trainF[,col.smart],type = 'response')
+  trainF$result <- pred.train
+  
+  # Predict test
+  pred.test <- predict(model,testF[,col.smart],type = 'response')
+  testF$result <- pred.test
+  
+  # recovery label
+  trainF <- change_name(trainF,'label',attr_label)
+  testF <- change_name(testF,'label',attr_label)
+  
+  list(trainF,testF)
 }
 
 # F3.Model Support Vector Machine
-support.vector.machine <- function(trainF,testF,group){
+support.vector.machine <- function(trainF,testF){
+  # locate label
+  trainF <- change_name(trainF,attr_label,'label')
+  testF <- change_name(testF,attr_label,'label')
+  
   # Train 
-  trainF <- filter_sn(trainF,0.5)
-  model <- svm(bilabel ~ .,data = trainF[,c('bilabel',col.smart)])
-  # Predict
-  pred <- predict(model,testF[,col.smart],type = 'response')
-  testF$result <- pred
-  testF
-}
-
-# F4.Model: naive.bayes
-naive.bayes <- function(trainF,testF,group){
-  # Train 
-  trainF <- filter_sn(trainF,1)
-  trainF$bilabel <- factor(trainF$bilabel)
-  model <- naiveBayes(bilabel ~ .,data = trainF[,c('bilabel',col.smart)])
-  # Predict
-  pred <- predict(model,testF[,col.smart])
-  testF$result <- as.numeric(fct2ori(pred))
-  testF
-}
-
-# F4.Model: hidden.markov
-hidden.markov <- function(trainF,testF,group){
-  # Train 
-  trainF <- filter_sn(trainF,1)
-  model <- naiveBayes(bilabel ~ .,data = trainF[,c('bilabel',col.smart)])
-  # Predict
-  pred <- predict(model,testF[,col.smart])
-  testF$result <- pred
-  testF
+  trainF <- filter_sn(trainF,0.3)
+  model <- svm(label ~ .,data = trainF[,c('label',col.smart)])
+  
+  # Predict train
+  pred.train <- predict(model,trainF[,col.smart],type = 'response')
+  trainF$result <- pred.train
+  
+  # Predict test
+  pred.test <- predict(model,testF[,col.smart],type = 'response')
+  testF$result <- pred.test
+  
+  # recovery label
+  trainF <- change_name(trainF,'label',attr_label)
+  testF <- change_name(testF,'label',attr_label)
+  list(trainF,testF)
 }

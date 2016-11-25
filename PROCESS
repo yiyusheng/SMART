@@ -3,7 +3,7 @@ readSmart2016.R(AllSMART_20161025.Rda) -> smartClean.R(smartClean.Rda) -> smartP
 
 I generate AllSMART_20161025 from MySQL(datasource.smart_Tencent), then split it into files containing 10000000 lines. 
 Then read it by readSmart2016.R. 
-Before that, I delete 6444987-6988079 lines from AllSMART_20161025_splitap which are wrong data.
+Before that, I delete lines 6444987-6988079 from AllSMART_20161025_splitap which are wrong data.
 
 2.Generate diskInfo for SMART of york:
 diskInfo.R
@@ -14,3 +14,11 @@ expand_smart_ykliu.R
 4.extract normal data from york's smart:
 extract_normal_smart.R
 
+5.predict with different model and observe their lead time
+predict_leadtime.R
+
+6.predict with framework type2
+  gen_smart.R
+  model_nw.R
+  predict_nw.R
+  gen_result_nw.R
