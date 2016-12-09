@@ -1,0 +1,80 @@
+starting worker pid=36081 on localhost:11606 at 09:51:22.453
+starting worker pid=36082 on localhost:11606 at 09:51:22.497
+starting worker pid=36083 on localhost:11606 at 09:51:22.537
+starting worker pid=36084 on localhost:11606 at 09:51:22.577
+starting worker pid=36085 on localhost:11606 at 09:51:22.618
+starting worker pid=36086 on localhost:11606 at 09:51:22.657
+starting worker pid=36087 on localhost:11606 at 09:51:22.694
+starting worker pid=36088 on localhost:11606 at 09:51:22.735
+starting worker pid=36089 on localhost:11606 at 09:51:22.775
+starting worker pid=36090 on localhost:11606 at 09:51:22.815
+starting worker pid=36091 on localhost:11606 at 09:51:22.855
+starting worker pid=36092 on localhost:11606 at 09:51:22.894
+starting worker pid=36093 on localhost:11606 at 09:51:22.931
+starting worker pid=36094 on localhost:11606 at 09:51:22.971
+starting worker pid=36095 on localhost:11606 at 09:51:23.010
+starting worker pid=36096 on localhost:11606 at 09:51:23.047
+starting worker pid=36097 on localhost:11606 at 09:51:23.087
+starting worker pid=36098 on localhost:11606 at 09:51:23.125
+starting worker pid=36099 on localhost:11606 at 09:51:23.161
+starting worker pid=36100 on localhost:11606 at 09:51:23.200
+[2016-11-16 09:58:39]Group_2_logic.regression_0_3_1	elapsed:5.18 mins
+[2016-11-16 09:59:27]Group_3_logic.regression_1_3_1	elapsed:5.98 mins
+[2016-11-16 10:00:17]Group_1_logic.regression_1_3_1	elapsed:6.81 mins
+[2016-11-16 10:00:48]Group_5_logic.regression_0_3_1	elapsed:7.33 mins
+[2016-11-16 10:00:51]Group_4_logic.regression_1_3_1	elapsed:7.38 mins
+[2016-11-16 10:01:04]Group_4_logic.regression_0_3_1	elapsed:7.59 mins
+[2016-11-16 10:01:16]Group_1_logic.regression_0_3_1	elapsed:7.79 mins
+[2016-11-16 10:01:16]Group_2_logic.regression_1_3_1	elapsed:7.80 mins
+[2016-11-16 10:01:18]Group_3_logic.regression_0_3_1	elapsed:7.83 mins
+[2016-11-16 10:01:20]Group_5_logic.regression_1_3_1	elapsed:7.85 mins
+[2016-11-16 10:05:48]Group_1_logic.regression_0_10_1	elapsed:7.14 mins
+[2016-11-16 10:06:04]Group_2_logic.regression_0_10_1	elapsed:6.62 mins
+[2016-11-16 10:06:52]Group_5_logic.regression_0_10_1	elapsed:6.02 mins
+[2016-11-16 10:07:01]Group_4_logic.regression_0_10_1	elapsed:6.21 mins
+[2016-11-16 10:07:13]Group_3_logic.regression_0_10_1	elapsed:6.92 mins
+[2016-11-16 10:13:19]Group_2_logic.regression_1_10_1	elapsed:7.24 mins
+[2016-11-16 10:13:21]Group_4_logic.regression_1_10_1	elapsed:6.32 mins
+[2016-11-16 10:13:29]Group_3_logic.regression_1_10_1	elapsed:6.62 mins
+[2016-11-16 10:15:02]Group_1_logic.regression_1_10_1	elapsed:9.23 mins
+[2016-11-16 10:15:36]Group_5_logic.regression_1_10_1	elapsed:8.38 mins
+[2016-11-16 10:23:44]Group_5_support.vector.machine_0_3_1	elapsed:30.25 mins
+[2016-11-16 10:26:33]Group_4_support.vector.machine_1_3_1	elapsed:33.07 mins
+[2016-11-16 10:29:03]Group_4_support.vector.machine_0_3_1	elapsed:35.58 mins
+[2016-11-16 10:31:57]Group_1_logic.regression_0_15_1	elapsed:8.22 mins
+[2016-11-16 10:35:53]Group_2_logic.regression_0_15_1	elapsed:9.33 mins
+[2016-11-16 10:37:34]Group_5_logic.regression_0_15_1	elapsed:1.69 mins
+[2016-11-16 10:38:40]Group_3_logic.regression_0_15_1	elapsed:9.62 mins
+[2016-11-16 10:40:53]Group_4_logic.regression_0_15_1	elapsed:8.94 mins
+[2016-11-16 10:46:56]Group_5_support.vector.machine_1_3_1	elapsed:53.45 mins
+[2016-11-16 10:48:49]Group_2_support.vector.machine_0_3_1	elapsed:55.34 mins
+[2016-11-16 10:49:00]Group_2_support.vector.machine_1_3_1	elapsed:55.53 mins
+[2016-11-16 10:49:20]Group_1_support.vector.machine_0_3_1	elapsed:55.86 mins
+[2016-11-16 10:49:29]Group_1_support.vector.machine_1_3_1	elapsed:56.01 mins
+[2016-11-16 10:54:26]Group_3_support.vector.machine_1_3_1	elapsed:60.95 mins
+[2016-11-16 10:55:45]Group_3_support.vector.machine_0_3_1	elapsed:62.28 mins
+[2016-11-16 10:56:42]Group_2_logic.regression_1_15_1	elapsed:7.36 mins
+[2016-11-16 10:56:45]Group_3_logic.regression_1_15_1	elapsed:7.26 mins
+[2016-11-16 10:56:51]Group_1_logic.regression_1_15_1	elapsed:7.84 mins
+[2016-11-16 10:57:24]Group_5_logic.regression_1_15_1	elapsed:1.64 mins
+[2016-11-16 11:01:36]Group_4_logic.regression_1_15_1	elapsed:7.17 mins
+[2016-11-16 11:07:13]Group_1_support.vector.machine_1_10_1	elapsed:53.91 mins
+[2016-11-16 11:13:31]Group_5_support.vector.machine_0_10_1	elapsed:72.19 mins
+[2016-11-16 11:26:15]Group_3_support.vector.machine_0_10_1	elapsed:84.97 mins
+[2016-11-16 11:33:13]Group_2_support.vector.machine_0_10_1	elapsed:91.96 mins
+[2016-11-16 11:39:40]Group_1_support.vector.machine_0_10_1	elapsed:98.60 mins
+[2016-11-16 11:39:59]Group_5_support.vector.machine_1_10_1	elapsed:84.39 mins
+[2016-11-16 11:43:26]Group_1_support.vector.machine_0_15_1	elapsed:65.86 mins
+[2016-11-16 11:43:53]Group_3_support.vector.machine_1_10_1	elapsed:90.39 mins
+[2016-11-16 11:49:03]Group_4_support.vector.machine_0_15_1	elapsed:62.11 mins
+[2016-11-16 11:50:03]Group_5_support.vector.machine_0_15_1	elapsed:61.24 mins
+[2016-11-16 11:52:01]Group_2_support.vector.machine_0_15_1	elapsed:73.35 mins
+[2016-11-16 11:54:07]Group_2_support.vector.machine_1_15_1	elapsed:57.38 mins
+[2016-11-16 11:54:18]Group_2_support.vector.machine_1_10_1	elapsed:100.96 mins
+[2016-11-16 11:58:27]Group_4_support.vector.machine_1_15_1	elapsed:61.06 mins
+[2016-11-16 12:04:14]Group_4_support.vector.machine_0_10_1	elapsed:122.94 mins
+[2016-11-16 12:05:12]Group_3_support.vector.machine_0_15_1	elapsed:84.31 mins
+[2016-11-16 12:05:31]Group_4_support.vector.machine_1_10_1	elapsed:110.49 mins
+[2016-11-16 12:12:52]Group_3_support.vector.machine_1_15_1	elapsed:76.02 mins
+[2016-11-16 12:16:40]Group_5_support.vector.machine_1_15_1	elapsed:75.06 mins
+[2016-11-16 12:18:22]Group_1_support.vector.machine_1_15_1	elapsed:81.67 mins

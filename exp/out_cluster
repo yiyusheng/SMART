@@ -1,0 +1,331 @@
+starting worker pid=27190 on localhost:11145 at 20:05:35.706
+starting worker pid=27191 on localhost:11145 at 20:05:35.769
+starting worker pid=27192 on localhost:11145 at 20:05:35.828
+starting worker pid=27193 on localhost:11145 at 20:05:35.895
+starting worker pid=27194 on localhost:11145 at 20:05:35.950
+starting worker pid=27195 on localhost:11145 at 20:05:36.012
+starting worker pid=27196 on localhost:11145 at 20:05:36.071
+starting worker pid=27197 on localhost:11145 at 20:05:36.129
+starting worker pid=27198 on localhost:11145 at 20:05:36.180
+starting worker pid=27199 on localhost:11145 at 20:05:38.353
+starting worker pid=27200 on localhost:11145 at 20:05:40.424
+starting worker pid=27201 on localhost:11145 at 20:05:42.321
+starting worker pid=27202 on localhost:11145 at 20:05:44.420
+starting worker pid=27203 on localhost:11145 at 20:05:46.532
+starting worker pid=27204 on localhost:11145 at 20:05:48.711
+starting worker pid=27205 on localhost:11145 at 20:05:50.760
+starting worker pid=27206 on localhost:11145 at 20:05:52.873
+starting worker pid=27207 on localhost:11145 at 20:05:55.121
+starting worker pid=27208 on localhost:11145 at 20:05:57.202
+starting worker pid=27217 on localhost:11145 at 20:05:59.383
+starting worker pid=27218 on localhost:11145 at 20:06:01.683
+starting worker pid=27220 on localhost:11145 at 20:06:04.502
+starting worker pid=27221 on localhost:11145 at 20:06:07.337
+starting worker pid=27222 on localhost:11145 at 20:06:09.708
+starting worker pid=27224 on localhost:11145 at 20:06:13.125
+starting worker pid=27225 on localhost:11145 at 20:06:15.373
+starting worker pid=27226 on localhost:11145 at 20:06:18.046
+starting worker pid=27227 on localhost:11145 at 20:06:20.947
+starting worker pid=27228 on localhost:11145 at 20:06:23.249
+starting worker pid=27229 on localhost:11145 at 20:06:25.493
+starting worker pid=27230 on localhost:11145 at 20:06:27.834
+starting worker pid=27231 on localhost:11145 at 20:06:29.922
+starting worker pid=27232 on localhost:11145 at 20:06:32.348
+starting worker pid=27233 on localhost:11145 at 20:06:35.280
+[2016-11-11 20:38:13][10]model finished
+[2016-11-11 20:38:42][7]model finished
+[2016-11-11 20:38:47][4]model finished
+[2016-11-11 20:40:07][13]model finished
+[2016-11-11 20:42:08][19]model finished
+[2016-11-11 20:44:35][25]model finished
+[2016-11-11 20:44:56][16]model finished
+[2016-11-11 20:45:45][28]model finished
+[2016-11-11 20:46:37][22]model finished
+[2016-11-11 20:47:09][31]model finished
+[2016-11-11 20:48:02][49]model finished
+[2016-11-11 20:48:11][37]model finished
+[2016-11-11 20:48:20][40]model finished
+[2016-11-11 20:50:06][46]model finished
+[2016-11-11 20:50:30][43]model finished
+[2016-11-11 20:50:33][34]model finished
+[2016-11-11 20:50:50][61]model finished
+[2016-11-11 20:51:30][52]model finished
+[2016-11-11 20:51:48][55]model finished
+[2016-11-11 20:54:15][64]model finished
+[2016-11-11 20:54:20][58]model finished
+[2016-11-11 20:54:25][76]model finished
+[2016-11-11 20:54:46][79]model finished
+[2016-11-11 20:55:25][67]model finished
+[2016-11-11 20:56:39][88]model finished
+[2016-11-11 20:57:45][73]model finished
+[2016-11-11 20:58:14][70]model finished
+[2016-11-11 20:58:59][82]model finished
+[2016-11-11 21:00:05][97]model finished
+[2016-11-11 21:00:56][91]model finished
+[2016-11-11 21:01:47][85]model finished
+[2016-11-11 21:02:45][100]model finished
+[2016-11-11 21:04:55][94]model finished
+starting worker pid=65651 on localhost:11145 at 10:46:50.459
+starting worker pid=65652 on localhost:11145 at 10:46:50.528
+starting worker pid=65653 on localhost:11145 at 10:46:50.596
+starting worker pid=65654 on localhost:11145 at 10:46:50.667
+[2016-11-14 10:47:07][4]model finished
+[2016-11-14 10:47:07][10]model finished
+[2016-11-14 10:47:08][7]model finished
+[2016-11-14 10:48:03][10]model finished
+[2016-11-14 10:48:04][7]model finished
+[2016-11-14 10:48:05][4]model finished
+[2016-11-14 10:49:16][4]model finished
+[2016-11-14 10:49:17][10]model finished
+[2016-11-14 10:49:20][7]model finished
+starting worker pid=66340 on localhost:11145 at 10:59:56.149
+starting worker pid=66341 on localhost:11145 at 10:59:56.228
+starting worker pid=66342 on localhost:11145 at 10:59:56.310
+[2016-11-14 11:00:13][2]model finished
+[2016-11-14 11:00:14][5]model finished
+[2016-11-14 11:00:15][8]model finished
+Error in unserialize(node$con) : error reading from connection
+Error in unserialize(node$con) : error reading from connection
+Error in unserialize(node$con) : error reading from connection
+Error in unserialize(node$con) : error reading from connection
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: did not converge in 10 iterations 
+2: did not converge in 10 iterations 
+3: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: did not converge in 10 iterations 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: did not converge in 10 iterations 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: did not converge in 10 iterations 
+2: did not converge in 10 iterations 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: did not converge in 10 iterations 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+3: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: did not converge in 10 iterations 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: did not converge in 10 iterations 
+2: did not converge in 10 iterations 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: did not converge in 10 iterations 
+2: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: did not converge in 10 iterations 
+2: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: did not converge in 10 iterations 
+2: did not converge in 10 iterations 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: did not converge in 10 iterations 
+3: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: did not converge in 10 iterations 
+2: did not converge in 10 iterations 
+3: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+3: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+3: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: did not converge in 10 iterations 
+3: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: did not converge in 10 iterations 
+2: did not converge in 10 iterations 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: did not converge in 10 iterations 
+2: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: did not converge in 10 iterations 
+2: did not converge in 10 iterations 
+3: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: did not converge in 10 iterations 
+2: did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning message:
+did not converge in 10 iterations 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning messages:
+1: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+2: Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+Error in unserialize(node$con) : error reading from connection
+In addition: Warning message:
+Quick-TRANSfer stage steps exceeded maximum (= 171281600) 
+Error in unserialize(node$con) : error reading from connection
+Error in unserialize(node$con) : error reading from connection
+Error in unserialize(node$con) : error reading from connection
+Error in unserialize(node$con) : error reading from connection
+Error in unserialize(node$con) : error reading from connection
+starting worker pid=68340 on localhost:11145 at 11:18:24.409
+starting worker pid=68341 on localhost:11145 at 11:18:24.504
+starting worker pid=68342 on localhost:11145 at 11:18:24.595
+[2016-11-14 11:18:41][2]model finished
+[2016-11-14 11:18:42][5]model finished
+[2016-11-14 11:18:42][8]model finished
+starting worker pid=68352 on localhost:11145 at 11:19:52.993
+starting worker pid=68353 on localhost:11145 at 11:19:53.081
+starting worker pid=68354 on localhost:11145 at 11:19:53.169
+starting worker pid=68355 on localhost:11145 at 11:19:53.263
+starting worker pid=68356 on localhost:11145 at 11:19:53.366
+starting worker pid=68357 on localhost:11145 at 11:19:53.462
+starting worker pid=68358 on localhost:11145 at 11:19:53.543
+starting worker pid=68359 on localhost:11145 at 11:19:53.615
+starting worker pid=68360 on localhost:11145 at 11:19:53.692
+starting worker pid=68361 on localhost:11145 at 11:19:53.772
+starting worker pid=68362 on localhost:11145 at 11:19:53.857
+starting worker pid=68363 on localhost:11145 at 11:19:53.937
+starting worker pid=68364 on localhost:11145 at 11:19:54.019
+starting worker pid=68365 on localhost:11145 at 11:19:54.099
+starting worker pid=68366 on localhost:11145 at 11:19:54.178
+starting worker pid=68367 on localhost:11145 at 11:19:54.250
+starting worker pid=68368 on localhost:11145 at 11:19:54.324
+starting worker pid=68369 on localhost:11145 at 11:19:54.406
+starting worker pid=68370 on localhost:11145 at 11:19:54.493
+starting worker pid=68371 on localhost:11145 at 11:19:54.576
+starting worker pid=68372 on localhost:11145 at 11:19:54.666
+starting worker pid=68373 on localhost:11145 at 11:19:54.756
+starting worker pid=68374 on localhost:11145 at 11:19:54.853
+starting worker pid=68376 on localhost:11145 at 11:19:54.944
+starting worker pid=68377 on localhost:11145 at 11:19:55.052
+starting worker pid=68379 on localhost:11145 at 11:19:55.143
+starting worker pid=68382 on localhost:11145 at 11:19:55.235
+starting worker pid=68383 on localhost:11145 at 11:19:55.317
+starting worker pid=68385 on localhost:11145 at 11:19:55.413
+starting worker pid=68386 on localhost:11145 at 11:19:55.506
+starting worker pid=68387 on localhost:11145 at 11:19:55.585
+starting worker pid=68388 on localhost:11145 at 11:19:55.669
+starting worker pid=68389 on localhost:11145 at 11:19:55.754
+[2016-11-14 11:48:08][8]model finished
+[2016-11-14 11:49:14][2]model finished
+[2016-11-14 11:49:32][5]model finished
+[2016-11-14 11:51:58][11]model finished
+[2016-11-14 11:52:45][20]model finished
+[2016-11-14 11:53:18][38]model finished
+[2016-11-14 11:54:49][17]model finished
+[2016-11-14 11:55:40][14]model finished
+[2016-11-14 11:57:03][35]model finished
+[2016-11-14 11:57:12][29]model finished
+[2016-11-14 11:57:39][26]model finished
+[2016-11-14 11:58:40][50]model finished
+[2016-11-14 11:58:45][23]model finished
+[2016-11-14 12:00:11][32]model finished
+[2016-11-14 12:01:09][47]model finished
+[2016-11-14 12:01:15][41]model finished
+[2016-11-14 12:01:41][65]model finished
+[2016-11-14 12:03:07][53]model finished
+[2016-11-14 12:03:23][44]model finished
+[2016-11-14 12:03:47][68]model finished
+[2016-11-14 12:03:53][62]model finished
+[2016-11-14 12:04:02][56]model finished
+[2016-11-14 12:05:24][71]model finished
+[2016-11-14 12:05:35][77]model finished
+[2016-11-14 12:06:18][59]model finished
+[2016-11-14 12:07:41][80]model finished
+[2016-11-14 12:08:11][74]model finished
+[2016-11-14 12:08:39][86]model finished
+[2016-11-14 12:08:48][89]model finished
+[2016-11-14 12:09:24][92]model finished
+[2016-11-14 12:09:30][83]model finished
+[2016-11-14 12:10:37][95]model finished
+[2016-11-14 12:14:49][98]model finished
+starting worker pid=6683 on localhost:11145 at 15:31:17.057
+starting worker pid=6684 on localhost:11145 at 15:31:17.160
+starting worker pid=6685 on localhost:11145 at 15:31:17.264
+starting worker pid=6686 on localhost:11145 at 15:31:17.358
+starting worker pid=6687 on localhost:11145 at 15:31:17.463
+starting worker pid=6688 on localhost:11145 at 15:31:17.576
+starting worker pid=6689 on localhost:11145 at 15:31:17.703
+starting worker pid=6690 on localhost:11145 at 15:31:17.829
+starting worker pid=6691 on localhost:11145 at 15:31:17.958
+starting worker pid=6692 on localhost:11145 at 15:31:18.069
+starting worker pid=6693 on localhost:11145 at 15:31:18.186
+starting worker pid=6694 on localhost:11145 at 15:31:18.294
+starting worker pid=6695 on localhost:11145 at 15:31:18.401
+starting worker pid=6696 on localhost:11145 at 15:31:18.505
+[2016-11-14 15:53:32][3]model finished
+[2016-11-14 15:53:40][4]model finished
+[2016-11-14 15:53:45][2]model finished
+[2016-11-14 15:53:49][5]model finished
+[2016-11-14 15:53:51][7]model finished
+[2016-11-14 15:54:00][6]model finished
+[2016-11-14 15:54:20][8]model finished
+[2016-11-14 15:54:50][11]model finished
+[2016-11-14 15:54:51][10]model finished
+[2016-11-14 15:54:52][9]model finished
+[2016-11-14 15:55:40][12]model finished
+[2016-11-14 15:55:47][13]model finished
+[2016-11-14 15:56:16][14]model finished
+[2016-11-14 15:56:46][15]model finished
