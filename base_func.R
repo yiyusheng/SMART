@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
-# Filename: dirFunc.R
+# Filename: base_func.R
 #
 # Description: 
 #
@@ -10,7 +10,7 @@
 #
 # Initial created: 2016-10-26 17:31:27
 #
-# Last   modified: 2016-10-26 17:31:30
+# Last   modified: 2017-04-24 20:44:33
 
 
 
