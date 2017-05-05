@@ -27,3 +27,11 @@ sta_ss <- lapplyX(r,'[[',1)
 sta_date <- rbind_sta_date(r)
 sta_sn <- sta_sn_count(sta_date,as.p('2014-05-01'),as.p('2014-08-01'),T)
 save(sta_ss,sta_date,sta_sn,file = file.path(dir_data,'locate_fail_disk.Rda'))
+
+# load(file.path(dir_data,'locate_fail_disk.Rda'))
+# table_model <- melt(table(sta_ss$model))
+# DT <- smart[,setdiff(names(smart),col_smart)]
+# b <- tapply(DT$modelNum,DT$sn,function(x)length(unique(x)));b1 <- melt(b[b>1])
+# DT1 <- subsetX(DT,sn %in% b1$Var1);b2 <- tapply(DT1$modelNum,DT1$sn,function(x)unique(fct2ori(x)))
+# c <- tapply(DT$device,DT$sn,function(x)length(unique(x)));c1 <- melt(c[c>1])
+# DT2 <- subsetX(DT,sn %in% c1$Var1);c2 <- tapply(DT2$device,DT2$sn,function(x)unique(fct2ori(x)))

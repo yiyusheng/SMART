@@ -15,12 +15,25 @@
 #
 #
 
+revise_model <- function(DT){
+  table_model <- melt(tapply(DT$modelNum,DT$sn,function(x)length(unique(fct2ori(x)))))
+  bad_sn <- factorX(subset(table_model,value > 1))
+  DT_bad_sn <- factorX(subset(DT,sn %in% bad_sn$Var1))
+  r <- melt(tapply(DT_bad_sn$modelNum,DT_bad_sn$sn,function(x){
+    x <- fct2ori(unique(x))
+    x[which.max(nchar(x))[1]]
+  }))
+  DT$modelNum[DT$sn %in% DT_bad_sn$sn] <- r$value[match(DT$sn[DT$sn %in% DT_bad_sn$sn],r$Var1)]
+  return(DT)
+}
+
 locate_fail_disk <- function(i){
   fn <- fname[i]
   cat(sprintf('[%s]\tfile:%s\tSTART!!!\n',date(),fn))
   load(file.path(dir_dataSMART14,fn))
   DT <- smart[,setdiff(names(smart),col_smart)]
   DT$time <- factor(as.Date(DT$time))
+  DT <- revise_model(DT)
   DT <- factorX(DT)
   
   sta_ss <- melt_table(DT$svrid,DT$sn)

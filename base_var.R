@@ -5,13 +5,12 @@ col_smart <- c('Raw_Read_Error_Rate_Value','Spin_Up_Time_Value','Reallocated_Sec
                'Seek_Error_Rate_Value','Spin_Retry_Count_Value','Calibration_Retries_Value','Unsafe_Shutdown_Count_Value',
                'Power_Cycle_Count_Value','PowerOnHours_Count_Value','Offline_Uncorrectable_Value','Temperature_Celsius_Value',
                'Udma_CRC_Error_Count_Value','Current_Pending_Sector_Value','Current_Pending_Sector_Raw')
-dir_code <- paste(dir_c,dirName,sep='')
-dir_data <- paste(dir_d,dirName,sep='')
+dir_code <- file.path(dir_c,dirName)
+dir_data <- file.path(dir_d,dirName)
 
-if (osFlag){
+if (osFlag == 'Windows'){
   source('D:/Git/R_libs_user/R_custom_lib.R')
 }else{
-  dir_dataCF <- file.path(dir_d,'Load_Data_Config_Failure')
   dir_dataSMART14 <- file.path(dir_data,'smart5k')
   source('~/Code/R/R_libs_user/R_custom_lib.R')
   # options('width' = 150)
